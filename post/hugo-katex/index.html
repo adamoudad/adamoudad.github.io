@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Hugo and Katex // My blog</title>
+    <title>Hugo and Katex // Adam Oudad</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.55.5" />
+    <meta name="generator" content="Hugo 0.57.2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Adam Oudad" />
     <meta name="description" content="" />
@@ -12,30 +12,21 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo and Katex"/>
-<meta name="twitter:description" content="I followed this good tutorial on how to add \(\KaTeX\) to hugo.
-Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
-Here are some remarks I have about the original tutorial.
-Auto-rendering Add the following script in the footer
-&lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&quot; integrity=&quot;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&quot; crossorigin=&quot;anonymous&quot; onload=&quot;renderMathInElement(document.body);&quot;&gt;&lt;/script&gt;  Other remarks This will activate the auto rendering &lt;li&gt;&lt;code&gt;{{ end }}&lt;/code&gt; is unnecessary, only write the following to include the &lt;code&gt;katex."/>
+<meta name="twitter:description" content="I followed this good tutorial on how to add \(\KaTeX\) to hugo.  Here is an example showing that KaTeX (should) now work. $$∫ab x^2 dx$$  Here are some remarks I have about the original tutorial. Auto-rendering   Add the following script in the footer &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&#34; integrity=&#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&#34; crossorigin=&#34;anonymous&#34; onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;   This will activate the auto rendering Other remarks     {{ end }} is unnecessary, only write the following to include the katex."/>
 
     <meta property="og:title" content="Hugo and Katex" />
-<meta property="og:description" content="I followed this good tutorial on how to add \(\KaTeX\) to hugo.
-Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
-Here are some remarks I have about the original tutorial.
-Auto-rendering Add the following script in the footer
-&lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&quot; integrity=&quot;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&quot; crossorigin=&quot;anonymous&quot; onload=&quot;renderMathInElement(document.body);&quot;&gt;&lt;/script&gt;  Other remarks This will activate the auto rendering &lt;li&gt;&lt;code&gt;{{ end }}&lt;/code&gt; is unnecessary, only write the following to include the &lt;code&gt;katex." />
+<meta property="og:description" content="I followed this good tutorial on how to add \(\KaTeX\) to hugo.  Here is an example showing that KaTeX (should) now work. $$∫ab x^2 dx$$  Here are some remarks I have about the original tutorial. Auto-rendering   Add the following script in the footer &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&#34; integrity=&#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&#34; crossorigin=&#34;anonymous&#34; onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;   This will activate the auto rendering Other remarks     {{ end }} is unnecessary, only write the following to include the katex." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/post/hugo-katex/" />
-<meta property="article:published_time" content="2019-05-20T03:49:04&#43;09:00"/>
-<meta property="article:modified_time" content="2019-05-20T03:49:04&#43;09:00"/>
+<meta property="article:published_time" content="2019-05-20T03:49:04+09:00" />
+<meta property="article:modified_time" content="2019-05-20T03:49:04+09:00" />
 
 
   </head>
   <body>
     <header class="app-header">
       <a href="https://adamoudad.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Adam Oudad" /></a>
-      <h1>My blog</h1>
-      <h6>(not yours)</h6>
+      <h1>Adam Oudad</h1>
       <p>Deep Learning, Natural Language Processing, Music Information Retrieval... and more !</p>
       <div class="app-header-social">
         
@@ -73,31 +64,51 @@ Auto-rendering Add the following script in the footer
         </div></div>
     </header>
     <div class="post-content">
-      <p>I followed this <a href="https://eankeen.github.io/blog/render-latex-with-katex-in-hugo-blog/" title="good tutorial">good tutorial</a> on how to add \(\KaTeX\) to hugo.</p>
-
-<p>Here is an example showing that KaTeX (should) now work.
-$$\int_{a}^{b} x^2 dx$$</p>
-
-<p>Here are some remarks I have about the original tutorial.</p>
-
-<h1 id="auto-rendering">Auto-rendering</h1>
-
-<p>Add the following script in the footer</p>
-
-<pre><code class="language-html">  &lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&quot; integrity=&quot;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&quot; crossorigin=&quot;anonymous&quot; onload=&quot;renderMathInElement(document.body);&quot;&gt;&lt;/script&gt;
-</code></pre>
-
-<h1 id="other-remarks">Other remarks</h1>
-
-<pre><code class="language-html">  This will activate the auto rendering
-&lt;li&gt;&lt;code&gt;{{ end }}&lt;/code&gt; is unnecessary, only write the following to include the &lt;code&gt;katex.html&lt;/code&gt; partial.&lt;/li&gt;
-
-  {{ partial &quot;katex.html&quot; . }}
-</code></pre>
-
+      
+<p>
+I followed this <a href="https://eankeen.github.io/blog/render-latex-with-katex-in-hugo-blog/">good tutorial</a> on how to add \(\KaTeX\) to hugo.
+</p>
+<p>
+Here is an example showing that KaTeX (should) now work.
+$$∫<sub>a</sub><sup>b</sup> x^2 dx$$
+</p>
+<p>
+Here are some remarks I have about the original tutorial.
+</p>
+<h1 id="headline-1">
+Auto-rendering
+</h1>
+<p>
+Add the following script in the footer
+</p>
+<div class="src src-html">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">defer</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span> <span style="color:#a6e22e">onload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;renderMathInElement(document.body);&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+</div>
+<p>
+This will activate the auto rendering
+</p>
+<h1 id="headline-2">
+Other remarks
+</h1>
 <ul>
-<li>\(\KaTeX\) actually works also with <code>.org</code> files ! For inline math, you will need to use <code>\( KaTeX \)</code> rather than <code>$$KaTeX$$</code> or <code>$KaTeX$</code>, which seem not to work yet</li>
-<li><code>katex: true</code> is not necessary</li>
+<li>
+<p>
+<code>{{ end }}</code> is unnecessary, only write the following to include the <code class="verbatim">katex.html</code> partial.
+</p>
+<div class="src src-html">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;katex.html&#34; . }}</code></pre></div>
+</div>
+</li>
+<li>
+<p>
+\(\KaTeX\) actually works also with <code class="verbatim">.org</code> files ! For inline math, you will need to use <code>\( KaTeX \)</code> rather than <code>$$KaTeX$$</code> or <code>$KaTeX$</code>, which seem not to work yet
+</p>
+</li>
+<li>
+<p>
+<code>katex: true</code> is not necessary
+</p>
+</li>
 </ul>
 
     </div>

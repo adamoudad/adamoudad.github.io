@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My blog</title>
+    <title>Adam Oudad</title>
     <link>https://adamoudad.github.io/</link>
-    <description>Recent content on My blog</description>
+    <description>Recent content on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2019 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multiply your productivity by one million with these simple tricks</title>
+      <link>https://adamoudad.github.io/post/productivity/</link>
+      <pubDate>Thu, 10 Oct 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/post/productivity/</guid>
+      <description>The idea behind most productivity tips is that you lose if you touch your mouse, as it is such a time consuming move and unbearable physical effort.  But you also lose points when doing big jumps on your keyboard, for example when you try reaching for the arrow keys.  So what should we do ? Here are some tips. Tridactyl on Firefox   Tridactyl is an extension available for Firefox that enable a keyboard-based navigation.</description>
+    </item>
     
     <item>
       <title>Hugo and Katex</title>
@@ -17,11 +26,7 @@
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/post/hugo-katex/</guid>
-      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.
-Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
-Here are some remarks I have about the original tutorial.
-Auto-rendering Add the following script in the footer
-&amp;lt;script defer src=&amp;quot;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;quot; integrity=&amp;quot;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;quot; crossorigin=&amp;quot;anonymous&amp;quot; onload=&amp;quot;renderMathInElement(document.body);&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Other remarks This will activate the auto rendering &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;{{ end }}&amp;lt;/code&amp;gt; is unnecessary, only write the following to include the &amp;lt;code&amp;gt;katex.</description>
+      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.  Here is an example showing that KaTeX (should) now work. $$∫ab x^2 dx$$  Here are some remarks I have about the original tutorial. Auto-rendering   Add the following script in the footer &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;   This will activate the auto rendering Other remarks     {{ end }} is unnecessary, only write the following to include the katex.</description>
     </item>
     
     <item>
@@ -30,10 +35,7 @@ Auto-rendering Add the following script in the footer
       <pubDate>Thu, 16 May 2019 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/post/my-first-post/</guid>
-      <description>This is the first post.
-I use a theme called m10c created by Vaga, thanks to him !
-I was using Jekyll in previous websites, and Hugo is quite impressive in ease of use.
- Great themes Many shortcodes that lets you embed youtube videos, for example, without coding  </description>
+      <description> This is the first post.  I use a theme called m10c created by Vaga, thanks to him !  I was using Jekyll in previous websites, and Hugo is quite impressive in ease of use.    Great themes    Many shortcodes that lets you embed youtube videos, for example, without coding   </description>
     </item>
     
   </channel>
