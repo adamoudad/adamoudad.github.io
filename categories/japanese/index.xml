@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Japanese on Adam Oudad</title>
+    <link>https://adamoudad.github.io/categories/japanese/</link>
+    <description>Recent content in Japanese on Adam Oudad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Oct 2019 02:31:19 +0900</lastBuildDate>
+    
+	<atom:link href="https://adamoudad.github.io/categories/japanese/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>When to use が or は?</title>
+      <link>https://adamoudad.github.io/post/japanese-1/</link>
+      <pubDate>Thu, 17 Oct 2019 02:31:19 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/post/japanese-1/</guid>
+      <description>This is one of the most fearful grammatical points of any japanese learner during their journey to japanese mastery.  This article gives some rules that will help confusion and will make you sound like a native. Relatively to information intended to be delivered 伝えたい情報   は will always precede the information, whereas が will follow it. Similarily, は will always precede an interrogative, while が will follow it.</description>
+    </item>
+    
+  </channel>
+</rss>
