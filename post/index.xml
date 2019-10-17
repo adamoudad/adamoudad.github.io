@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Oct 2019 02:31:19 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vectorizing text</title>
+      <link>https://adamoudad.github.io/post/vectorizing-text/</link>
+      <pubDate>Thu, 17 Oct 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/post/vectorizing-text/</guid>
+      <description>Character, word, sentence and document embeddings are popular because they are efficient. In the case of words, such embeddings represent words in their meaning, their role and their hierarchy in texts.  We have seen a clear improvement of word embeddings thanks to Mikolov et al. at Google, with Word2Vec in 2014. Since then, many kinds of embeddings have been developped for different purposes. We can cite for example Fasttext by Facebook, Bert by Google.</description>
+    </item>
     
     <item>
       <title>When to use が or は?</title>
