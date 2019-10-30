@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Oct 2019 02:31:19 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>data</title>
+      <link>https://adamoudad.github.io/tags/data/</link>
+      <pubDate>Wed, 30 Oct 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://adamoudad.github.io/tags/machine-learning/</link>
+      <pubDate>Wed, 30 Oct 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>grammar</title>

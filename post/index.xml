@@ -6,18 +6,18 @@
     <description>Recent content in Posts on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Oct 2019 02:31:19 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Usages of する</title>
-      <link>https://adamoudad.github.io/post/japanese-2/</link>
-      <pubDate>Wed, 23 Oct 2019 02:31:19 +0900</pubDate>
+      <title>List of datasets</title>
+      <link>https://adamoudad.github.io/post/datasets/</link>
+      <pubDate>Wed, 30 Oct 2019 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/post/japanese-2/</guid>
-      <description>Do you know する? This verb you can use in many case to say &amp;#34;I do stuff&amp;#34;, right ? Yet what if I told you could say far more than just a lame 私はスポーツする? する basics   We start here with the basics, that is the ~をする form. Use it to express an activity you do regularily. ラグビーをする。  ~がする   You can express a feeling, a sensation with ~がする.</description>
+      <guid>https://adamoudad.github.io/post/datasets/</guid>
+      <description>Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, Google has its own Dataset search tool. There are also big lists of datasets for research purpose, such as this one.</description>
     </item>
     
     <item>
@@ -36,15 +36,6 @@
       
       <guid>https://adamoudad.github.io/post/vectorizing-text/</guid>
       <description>Character, word, sentence and document embeddings are popular because they are efficient. In the case of words, such embeddings represent words in their meaning, their role and their hierarchy in texts.  We have seen a clear improvement of word embeddings thanks to Mikolov et al. at Google, with Word2Vec in 2013. Since then, many kinds of embeddings have been developped for different purposes. We can cite for example Fasttext by Facebook, Bert by Google.</description>
-    </item>
-    
-    <item>
-      <title>When to use が or は?</title>
-      <link>https://adamoudad.github.io/post/japanese-1/</link>
-      <pubDate>Thu, 17 Oct 2019 02:31:19 +0900</pubDate>
-      
-      <guid>https://adamoudad.github.io/post/japanese-1/</guid>
-      <description>This is one of the most fearful grammatical points of any japanese learner during their journey to japanese mastery.  This article gives some rules that will help confusion and will make you sound like a native. Relatively to information intended to be delivered 伝えたい情報   は will always precede the information, whereas が will follow it. Similarily, は will always precede an interrogative, while が will follow it.</description>
     </item>
     
     <item>
