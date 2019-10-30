@@ -40,7 +40,7 @@ if (!doNotTrack) {
     <header class="app-header">
       <a href="https://adamoudad.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Adam Oudad" /></a>
       <h1>Adam Oudad</h1>
-      <p>Deep Learning, Natural Language Processing, Music Information Retrieval... and more!</p>
+      <p>(Machine) Learning blog</p>
       <div class="app-header-social">
         
           <a target="_blank" href="https://github.com/adamoudad"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
@@ -110,7 +110,10 @@ Sound-Word2Vec model
 </h1>
 <p>
 The model is similar to Word2Vec. A hidden layer is a fully-connected layer with softmax activation.
-<img src="figure-1.png" alt="figure-1.png" title="figure-1.png" />
+<figure>
+    <img src="figure-1.png" width="100%"/> 
+</figure>
+
 The task is simply to predict the sound cluster a given input word falls into. A Word2Vec pretrained model is used to take advantage of semantic information already contained in such embeddings. This is relatable to the technique of Transfer Learning, where the model is adapted to a new context, for performing better at sound-related tasks. Indeed, the model is therefore tested on three sound-related tasks:
 </p>
 <dl>
@@ -141,11 +144,17 @@ Nearest neighbors are sound-related
 </h1>
 <p>
 The following table from the original paper show how such embeddings differ from Word2Vec&#39;s embeddings, which are semantically related. <em>apple</em> is associated with <em>bite</em>, <em>chew</em>, <em>munch</em>, instead of <em>fruit</em>, <em>pears</em>.
-<img src="table-3.png" alt="table-3.png" title="table-3.png" />
+<figure>
+    <img src="table-3.png" width="100%"/> 
+</figure>
+
 </p>
 <p>
 Recall results on Text-based sound retrieval task are registered on the following table.
-<img src="table-1.png" alt="table-1.png" title="table-1.png" />
+<figure>
+    <img src="table-1.png" width="100%"/> 
+</figure>
+
 </p>
 <h1 id="headline-6">
 Final words
