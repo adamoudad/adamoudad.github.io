@@ -58,12 +58,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/japanese/</loc>
-    <lastmod>2019-10-23T02:31:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/japanese/suru/</loc>
+    <loc>https://adamoudad.github.io/post/japanese/suru/</loc>
     <lastmod>2019-10-23T02:31:19+09:00</lastmod>
   </url>
   
@@ -93,12 +88,17 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/japanese/ga-or-ha/</loc>
+    <loc>https://adamoudad.github.io/post/japanese/ga-or-ha/</loc>
     <lastmod>2019-10-17T02:31:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/post/productivity/</loc>
+    <lastmod>2019-10-10T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/productivity/</loc>
     <lastmod>2019-10-10T03:49:04+09:00</lastmod>
   </url>
   
