@@ -6,10 +6,19 @@
     <description>Recent content in nlp on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2019 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vectorizing text: Word2Vec</title>
+      <link>https://adamoudad.github.io/post/word2vec/</link>
+      <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/post/word2vec/</guid>
+      <description>The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) + vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) + vec(&#39;Woman&#39;)   Awesome ! How could such results be achieved ? They came from the following assumption   The meaning of a word can be inferred by the company it keeps   Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context.</description>
+    </item>
     
     <item>
       <title>Word embeddings with sound</title>

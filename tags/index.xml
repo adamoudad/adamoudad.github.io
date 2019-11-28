@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Oct 2019 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>embedding</title>
+      <link>https://adamoudad.github.io/tags/embedding/</link>
+      <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/embedding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nlp</title>
+      <link>https://adamoudad.github.io/tags/nlp/</link>
+      <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>data</title>
@@ -44,24 +62,6 @@
       <pubDate>Wed, 23 Oct 2019 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/tags/japanese/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>embedding</title>
-      <link>https://adamoudad.github.io/tags/embedding/</link>
-      <pubDate>Mon, 21 Oct 2019 03:49:04 +0900</pubDate>
-      
-      <guid>https://adamoudad.github.io/tags/embedding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nlp</title>
-      <link>https://adamoudad.github.io/tags/nlp/</link>
-      <pubDate>Mon, 21 Oct 2019 03:49:04 +0900</pubDate>
-      
-      <guid>https://adamoudad.github.io/tags/nlp/</guid>
       <description></description>
     </item>
     
