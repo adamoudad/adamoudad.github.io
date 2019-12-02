@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Nov 2019 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TubeChiller, an automatic youtube videos player</title>
+      <link>https://adamoudad.github.io/post/tubechiller/</link>
+      <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/post/tubechiller/</guid>
+      <description>I wrote a youtube playlist generator in javascript. TubeChiller is a tool for automatically play youtube videos provided in a list of urls. Background   I have been browsing youtube and ended up with a significant amount of youtube urls in my bookmarks, that point to musics or podcasts.  There exists many program that can play youtube videos, such as VLC or Totem. You can provide a single url and it will be played within the program.</description>
+    </item>
     
     <item>
       <title>Vectorizing text: Word2Vec</title>
