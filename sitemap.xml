@@ -8,12 +8,37 @@
   </url>
   
   <url>
+    <loc>https://adamoudad.github.io/tags/api/</loc>
+    <lastmod>2019-12-02T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/</loc>
+    <lastmod>2019-12-02T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/data/</loc>
+    <lastmod>2019-12-02T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://adamoudad.github.io/tags/hacking/</loc>
     <lastmod>2019-12-02T03:49:04+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
+    <lastmod>2019-12-02T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://adamoudad.github.io/post/</loc>
+    <lastmod>2019-12-02T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/post/stream_tweets_tweepy/</loc>
     <lastmod>2019-12-02T03:49:04+09:00</lastmod>
   </url>
   
@@ -25,11 +50,6 @@
   <url>
     <loc>https://adamoudad.github.io/post/tubechiller/</loc>
     <lastmod>2019-12-02T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2019-11-27T03:49:04+09:00</lastmod>
   </url>
   
   <url>
@@ -53,17 +73,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/tags/data/</loc>
-    <lastmod>2019-10-30T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/post/datasets/</loc>
-    <lastmod>2019-10-30T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
     <lastmod>2019-10-30T03:49:04+09:00</lastmod>
   </url>
   
