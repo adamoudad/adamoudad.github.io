@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Dec 2019 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 02:31:19 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bring and take concepts in languages</title>
+      <link>https://adamoudad.github.io/post/japanese/bring-or-take/</link>
+      <pubDate>Fri, 24 Jan 2020 02:31:19 +0900</pubDate>
+      
+      <guid>https://adamoudad.github.io/post/japanese/bring-or-take/</guid>
+      <description>Bring or take confusion   I was reading this article on marca.com, when I came upon this sentence in spanish. Por el momento no hay nada oficial pero varios equipos son los que llevan tiempo pujando por hacerse con sus servicios.   Which made me remember how much I am lost whenever llevar comes out. Should I think &amp;#34;bring&amp;#34; ? &amp;#34;take&amp;#34; ? It bugged me enough to search the internet and find this stackexchange thread.</description>
+    </item>
     
     <item>
       <title>Stream tweets with Tweepy in Python</title>

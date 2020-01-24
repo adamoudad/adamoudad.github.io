@@ -206,11 +206,11 @@ Then
 
   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Info on each token dog, cat, banana, and afskfsd&#34;</span>)
   <span style="color:#66d9ef">for</span> token <span style="color:#f92672">in</span> tokens:
-<span style="color:#66d9ef">print</span>(token<span style="color:#f92672">.</span>text, token<span style="color:#f92672">.</span>has_vector, token<span style="color:#f92672">.</span>vector_norm, token<span style="color:#f92672">.</span>is_oov)
+      <span style="color:#66d9ef">print</span>(token<span style="color:#f92672">.</span>text, token<span style="color:#f92672">.</span>has_vector, token<span style="color:#f92672">.</span>vector_norm, token<span style="color:#f92672">.</span>is_oov)
 
   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Similarity of dog, cat and banana&#34;</span>)
   <span style="color:#66d9ef">for</span> t1, t2 <span style="color:#f92672">in</span> product(tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
-<span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>similarity(t2))</code></pre></div>
+      <span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>similarity(t2))</code></pre></div>
 </div>
 <p>
 Source: <a href="https://spacy.io/usage/vectors-similarity">https://spacy.io/usage/vectors-similarity</a>

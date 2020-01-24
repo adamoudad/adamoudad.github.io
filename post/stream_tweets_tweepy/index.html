@@ -191,14 +191,14 @@ The next step is defining our Listener, that will react on events from the API a
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> sys
   <span style="color:#f92672">from</span> tweepy.streaming <span style="color:#f92672">import</span> StreamListener
   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Listener</span>(StreamListener):
-<span style="color:#66d9ef">def</span> __init__(self, output_file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stdout):
-   super(Listener,self)<span style="color:#f92672">.</span>__init__()
-   self<span style="color:#f92672">.</span>output_file <span style="color:#f92672">=</span> output_file
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_status</span>(self, status):
-   <span style="color:#66d9ef">print</span>(status<span style="color:#f92672">.</span>text, file<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>output_file)
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_error</span>(self, status_code):
-   <span style="color:#66d9ef">print</span>(status_code)
-   <span style="color:#66d9ef">return</span> False</code></pre></div>
+  <span style="color:#66d9ef">def</span> __init__(self, output_file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stdout):
+      super(Listener,self)<span style="color:#f92672">.</span>__init__()
+      self<span style="color:#f92672">.</span>output_file <span style="color:#f92672">=</span> output_file
+      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_status</span>(self, status):
+          <span style="color:#66d9ef">print</span>(status<span style="color:#f92672">.</span>text, file<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>output_file)
+      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_error</span>(self, status_code):
+          <span style="color:#66d9ef">print</span>(status_code)
+          <span style="color:#66d9ef">return</span> False</code></pre></div>
 </div>
 <p>
 <code>on_status</code> is the method that will be called when a tweet is downloaded. We print the tweet the file <code>output_file</code>. This file is by default the <em>standard output</em>, as we specify it in the <code>__init__</code> method.
@@ -223,15 +223,16 @@ Streaming
 We are now ready to stream:
 </p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)<span style="color:#66d9ef">try</span>:
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Start streaming.&#39;</span>)
-stream<span style="color:#f92672">.</span>sample(languages<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;en&#39;</span>])
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)
+  <span style="color:#66d9ef">try</span>:
+      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Start streaming.&#39;</span>)
+      stream<span style="color:#f92672">.</span>sample(languages<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;en&#39;</span>])
   <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span> <span style="color:#66d9ef">as</span> e :
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Stopped.&#34;</span>)
+      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Stopped.&#34;</span>)
   <span style="color:#66d9ef">finally</span>:
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Done.&#39;</span>)
-stream<span style="color:#f92672">.</span>disconnect()
-output<span style="color:#f92672">.</span>close()</code></pre></div>
+      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Done.&#39;</span>)
+      stream<span style="color:#f92672">.</span>disconnect()
+      output<span style="color:#f92672">.</span>close()</code></pre></div>
 </div>
 <p>
 It is good practice to enclose the call to <code>stream.sample()</code> inside <code>try</code> statement to handle <code>KeyboardInterrupt</code> for example.
