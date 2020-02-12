@@ -3,7 +3,7 @@
   <head>
     <title>Tips to write pythonic // Adam Oudad</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Adam Oudad" />
     <meta name="description" content="" />
@@ -87,11 +87,11 @@ if (!doNotTrack) {
 Python community has a special words for talking about code that follows the best practices for writing in python, <em>pythonic</em>. The following are some tips to make the most of Python programming language.
 </p>
 <p>
-I recommend as reference the PEP-8<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+  I recommend as reference the PEP-8<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
 </p>
-<h1 id="headline-1">
+<h2 id="headline-1">
 Naming
-</h1>
+</h2>
 <ul>
 <li>
 <p>
@@ -150,9 +150,9 @@ Choose explicit names. <code>learning_rate</code> is better than <code>lr</code>
 </tr>
 </tbody>
 </table>
-<h1 id="headline-2">
+<h2 id="headline-2">
 Blank lines
-</h1>
+</h2>
 <ul>
 <li>
 <p>
@@ -172,9 +172,9 @@ Blank lines help readability
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pianoroll</span>:
     <span style="color:#66d9ef">pass</span></code></pre></div>
 </div>
-<h1 id="headline-3">
+<h2 id="headline-3">
 Line breaking
-</h1>
+</h2>
 <ul>
 <li>
 <p>
@@ -195,9 +195,9 @@ Break lines if necessary, with <code>( )</code>, <code>\</code>
 </div>
 </li>
 </ul>
-<h1 id="headline-4">
+<h2 id="headline-4">
 Indentation
-</h1>
+</h2>
 <ul>
 <li>
 <p>
@@ -211,35 +211,54 @@ Use it to improve readability
 </div>
 </li>
 </ul>
-<h1 id="headline-5">
+<h2 id="headline-5">
 Use built-in libraries
-</h1>
+</h2>
 <p>
 Instead of reinventing the wheel, most common processing can be done using built-in features of python default libraries.
 </p>
 <dl>
 <dt>
-Handling command-line arguments<dd>
+Handling command-line arguments
+</dt>
+<dd>
 <p>
 argparse
 </p>
-<dd>
+</dd>
 <dt>
-Logging info, error or warning messages<dd>
+Logging info, error or warning messages
+</dt>
+<dd>
 <p>
 logging
 </p>
-<dd>
+</dd>
 <dt>
-Using paths<dd>
+Using paths
+</dt>
+<dd>
 <p>
 pathlib
 </p>
-<dd>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+  <span style="color:#75715e"># Define Path object</span>
+  data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/data/</span><span style="color:#e6db74">&#34;</span>)
+  <span style="color:#75715e"># Composing paths</span>
+  mozart_k330_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">midi</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">mozart_k330.mid</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#75715e"># Iterating over list of .mid files, following subdirectories</span>
+  <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> (data_path <span style="color:#f92672">/</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">midi</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>glob(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">**/*.mid</span><span style="color:#e6db74">&#34;</span>):
+<span style="color:#66d9ef">print</span>(p)
+  <span style="color:#75715e"># Open file</span>
+  <span style="color:#66d9ef">with</span> mozart_k330_path<span style="color:#f92672">.</span>open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">as</span> f:
+<span style="color:#66d9ef">pass</span></code></pre></div>
+</div>
+</dd>
 </dl>
-<h1 id="headline-6">
+<h2 id="headline-6">
 Implementations
-</h1>
+</h2>
 <ul>
 <li>
 <p>
@@ -247,12 +266,12 @@ Use <code>startwith</code> and <code>endwith</code> methods for <code>str</code>
 </p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Not recommended :(</span>
-<span style="color:#66d9ef">if</span> word[:<span style="color:#ae81ff">3</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;cat&#39;</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The word starts with &#34;cat&#34;&#39;</span>)
+<span style="color:#66d9ef">if</span> word[:<span style="color:#ae81ff">3</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cat</span><span style="color:#e6db74">&#39;</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">The word starts with </span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cat</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#39;</span>)
 
 <span style="color:#75715e"># Recommended :)</span>
-<span style="color:#66d9ef">if</span> word<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;cat&#39;</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The word starts with &#34;cat&#34;&#39;</span>)</code></pre></div>
+<span style="color:#66d9ef">if</span> word<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cat</span><span style="color:#e6db74">&#39;</span>):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">The word starts with </span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cat</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#39;</span>)</code></pre></div>
 </div>
 </li>
 <li>
@@ -261,15 +280,15 @@ Use <code>pathlib</code>
 </p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/home/adam/&#34;</span>)
-midi_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span>
+data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/home/adam/</span><span style="color:#e6db74">&#34;</span>)
+midi_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">midi</span><span style="color:#e6db74">&#34;</span>
 <span style="color:#75715e"># Be careful of errors, sometimes use str(midi_)</span></code></pre></div>
 </div>
 </li>
 </ul>
-<h1 id="headline-7">
+<h2 id="headline-7">
 Footnotes
-</h1>
+</h2>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">

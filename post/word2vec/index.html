@@ -3,7 +3,7 @@
   <head>
     <title>Vectorizing text: Word2Vec // Adam Oudad</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Adam Oudad" />
     <meta name="description" content="" />
@@ -92,7 +92,7 @@ vec('Queen') ≈ vec('King') - vec('Man') + vec('Woman')
 </pre>
 <p>
 Awesome !
-How could such results be achieved ? They came from the following assumption
+  How could such results be achieved ? They came from the following assumption
 </p>
 <blockquote>
 <p>
@@ -103,15 +103,15 @@ The meaning of a word can be inferred by the company it keeps
 Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context.
 </p>
 <p>
-The above amazing example of word vectors having semantic relationship when performing arithmetic is actually &#34;too good to be true&#34; for Word2Vec, as you might not obtain the expected relationship if you compute it with the pretrained models. The original paper by the Google team in 2014<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup> however shows the following relationships are obtained when projecting with Principal Component Analysis.
+  The above amazing example of word vectors having semantic relationship when performing arithmetic is actually &#34;too good to be true&#34; for Word2Vec, as you might not obtain the expected relationship if you compute it with the pretrained models. The original paper by the Google team in 2014<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup> however shows the following relationships are obtained when projecting with Principal Component Analysis.
 <figure>
     <img src="word2vec-pca.png" width="100%"/> 
 </figure>
 
 </p>
-<h1 id="headline-1">
+<h2 id="headline-1">
 Continuous Bag-of-words
-</h1>
+</h2>
 <p>
 <figure>
     <img src="https://iksinc.files.wordpress.com/2015/04/screen-shot-2015-04-12-at-10-58-21-pm.png"
@@ -120,44 +120,44 @@ Continuous Bag-of-words
         </figcaption>
 </figure>
 
-The Word2Vec model is used to predict a word, given its context.
+  The Word2Vec model is used to predict a word, given its context.
 </p>
-<h2 id="headline-2">
+<h3 id="headline-2">
 Words are one-hot vectors
-</h2>
+</h3>
 <p>
 Raw words are represented using one-hot encoding. That is, if your vocabulary has \(d\) words, the ith word of the vocabulary is represented by \(w\), a binary vector in \(\mathbb{R}^d\) with the ith bit activated, all other bits being off.
-Say &#34;cat, dog, eat&#34; are all words in your vocabulary. In this order, we will encode &#34;cat&#34; with \([1, 0, 0]\), &#34;dog&#34; with \([0, 1, 0]\), &#34;eat&#34; with \([0, 0, 1]\).
+   Say &#34;cat, dog, eat&#34; are all words in your vocabulary. In this order, we will encode &#34;cat&#34; with \([1, 0, 0]\), &#34;dog&#34; with \([0, 1, 0]\), &#34;eat&#34; with \([0, 0, 1]\).
 </p>
-<h2 id="headline-3">
+<h3 id="headline-3">
 A word&#39;s context is a continuous bag of words
-</h2>
+</h3>
 <p>
 For representing the context of a word, Continuous Bag-of-words (or CBOW) representation is used. In this representation, each words is encoded in a continuous representation, then we take the average representation.
-\[
-h(c_1,c_2,c_3) = \frac{1}{3}(W_i(c_1 + c_2 + c_3)) 
-\]
-\(H\) computes the continous representation of context vector formed by three words \(c_1, c_2, c_3\). \(W_i\) serves in computing a word embedding for context words.
-From this continuous representation, we derive the target word by decoding it into a word vector \(o = W_oh(c_1, c_2, c_3)\).
+   \[
+   h(c_1,c_2,c_3) = \frac{1}{3}(W_i(c_1 + c_2 + c_3)) 
+   \]
+   \(H\) computes the continous representation of context vector formed by three words \(c_1, c_2, c_3\). \(W_i\) serves in computing a word embedding for context words.
+   From this continuous representation, we derive the target word by decoding it into a word vector \(o = W_oh(c_1, c_2, c_3)\).
 </p>
 <p>
-We see such model can be trained in an unsupervised way, taking four consecutive words at a time, and for example using the second word as target, and the remaining three other words as context of the target word.
+   We see such model can be trained in an unsupervised way, taking four consecutive words at a time, and for example using the second word as target, and the remaining three other words as context of the target word.
 </p>
-<h2 id="headline-4">
+<h3 id="headline-4">
 CBOW reversed is Skip-gram 
-</h2>
+</h3>
 <p>
 Skip-gram reverses CBOW model, so that we try to find context words given an input word. To train such network using backpropagation, we sum the output layers, so that only one vector remains.
 </p>
 <p>
-CBOW and Skip-gram both end up computing a hidden representation of words, given a large amount of texts. The original paper by Mikolov et al. used Skip-gram, as well as other advanced techniques, such as negative sampling, which are out of the scope of this article.
+  CBOW and Skip-gram both end up computing a hidden representation of words, given a large amount of texts. The original paper by Mikolov et al. used Skip-gram, as well as other advanced techniques, such as negative sampling, which are out of the scope of this article.
 </p>
-<h1 id="headline-5">
+<h2 id="headline-5">
 Word2vec in action
-</h1>
-<h2 id="headline-6">
-Gensim
 </h2>
+<h3 id="headline-6">
+Gensim
+</h3>
 <p>
 Let&#39;s use <em>gensim</em> library that implements word2vec model. We download english Wikipedia corpus using the convinent <a href="https://github.com/RaRe-Technologies/gensim-data">gensim-data api</a>.
 </p>
@@ -165,9 +165,9 @@ Let&#39;s use <em>gensim</em> library that implements word2vec model. We downloa
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> gensim.models.word2vec <span style="color:#f92672">import</span> Word2Vec
   <span style="color:#f92672">import</span> gensim.downloader <span style="color:#f92672">as</span> api
 
-  corpus <span style="color:#f92672">=</span> api<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;text8&#39;</span>)  <span style="color:#75715e"># download english Wikipedia corpus</span>
+  corpus <span style="color:#f92672">=</span> api<span style="color:#f92672">.</span>load(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">text8</span><span style="color:#e6db74">&#39;</span>)  <span style="color:#75715e"># download english Wikipedia corpus</span>
   model <span style="color:#f92672">=</span> Word2vec(corpus)
-  model<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74">&#34;cat&#34;</span>)</code></pre></div>
+  model<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cat</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
 </div>
 <p>
 We obtain as result
@@ -184,12 +184,12 @@ We obtain as result
   ('ass', 0.7371785640716553),
   ('sheep', 0.7347163558006287)]
 </pre>
-<h2 id="headline-7">
+<h3 id="headline-7">
 spaCy
-</h2>
+</h3>
 <p>
 <a href="https://spacy.io/">spaCy</a> is an advanced library for &#34;industrial-strength NLP&#34;.
-After installing spaCy, download the pretrained model 
+   After installing spaCy, download the pretrained model 
 </p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m download en_core_web_lg</code></pre></div>
@@ -201,23 +201,23 @@ Then
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> product
   <span style="color:#f92672">import</span> spacy
 
-  nlp <span style="color:#f92672">=</span> spacy<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;en_core_web_md&#34;</span>)
-  tokens <span style="color:#f92672">=</span> nlp(<span style="color:#e6db74">&#34;dog cat banana afskfsd&#34;</span>)
+  nlp <span style="color:#f92672">=</span> spacy<span style="color:#f92672">.</span>load(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">en_core_web_md</span><span style="color:#e6db74">&#34;</span>)
+  tokens <span style="color:#f92672">=</span> nlp(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dog cat banana afskfsd</span><span style="color:#e6db74">&#34;</span>)
 
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Info on each token dog, cat, banana, and afskfsd&#34;</span>)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"># Info on each token dog, cat, banana, and afskfsd</span><span style="color:#e6db74">&#34;</span>)
   <span style="color:#66d9ef">for</span> token <span style="color:#f92672">in</span> tokens:
       <span style="color:#66d9ef">print</span>(token<span style="color:#f92672">.</span>text, token<span style="color:#f92672">.</span>has_vector, token<span style="color:#f92672">.</span>vector_norm, token<span style="color:#f92672">.</span>is_oov)
 
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Similarity of dog, cat and banana&#34;</span>)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"># Similarity of dog, cat and banana</span><span style="color:#e6db74">&#34;</span>)
   <span style="color:#66d9ef">for</span> t1, t2 <span style="color:#f92672">in</span> product(tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
       <span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>similarity(t2))</code></pre></div>
 </div>
 <p>
 Source: <a href="https://spacy.io/usage/vectors-similarity">https://spacy.io/usage/vectors-similarity</a>
 </p>
-<h1 id="headline-8">
+<h2 id="headline-8">
 Footnotes
-</h1>
+</h2>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">

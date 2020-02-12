@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Deciphering Python&#39;s &#34;import this&#34; // Adam Oudad</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Adam Oudad" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://adamoudad.github.io/css/main.min.59023e5fd38d6ecb0e1dfbb295077c3c67e00e3b9eb3feaf34b5a5e6b332897a.css" />
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-150494000-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deciphering Python&#39;s &#34;import this&#34;"/>
+<meta name="twitter:description" content="Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers. Print Zen of Python   You can print the 19 aphorisms by simply importing this. import this   This outputs The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex."/>
+
+    <meta property="og:title" content="Deciphering Python&#39;s &#34;import this&#34;" />
+<meta property="og:description" content="Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers. Print Zen of Python   You can print the 19 aphorisms by simply importing this. import this   This outputs The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adamoudad.github.io/post/zen-of-python/" />
+<meta property="article:published_time" content="2020-02-12T03:49:04+09:00" />
+<meta property="article:modified_time" content="2020-02-12T03:49:04+09:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://adamoudad.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Adam Oudad" /></a>
+      <h1>Adam Oudad</h1>
+      <p>(Machine) Learning log</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/adamoudad"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.linkedin.com/in/adam-oudad-9436b866/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Deciphering Python&#39;s &#34;import this&#34;</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 12, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://adamoudad.github.io/tags/python/">python</a></div></div>
+    </header>
+    <div class="post-content">
+      
+<p>
+Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called <em>Zen of Python</em>, which consists in 19 aphorisms giving guidelines to Python programmers.
+</p>
+<h2 id="headline-1">
+Print Zen of Python
+</h2>
+<p>
+You can print the 19 aphorisms by simply importing <code>this</code>.
+</p>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> this</code></pre></div>
+</div>
+<p>
+This outputs
+</p>
+<pre class="example">
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+</pre>
+<h2 id="headline-2">
+Deciphering Zen of Python
+</h2>
+<p>
+There is actually more to <code>this</code>. Four variables are provided by the module: <code>this.c</code>, <code>this.d</code>, <code>this.i</code>, and <code>this.s</code>. <code>this.s</code> contains an encrypted version of <em>Zen of Python</em>, using a permutation of the alphabet, that can be recovered in <code>this.d</code> dictionary. <code>print(this.s)</code> gives
+</p>
+<pre class="example">
+Gur Mra bs Clguba, ol Gvz Crgref
+
+Ornhgvshy vf orggre guna htyl.
+Rkcyvpvg vf orggre guna vzcyvpvg.
+Fvzcyr vf orggre guna pbzcyrk.
+Pbzcyrk vf orggre guna pbzcyvpngrq.
+Syng vf orggre guna arfgrq.
+Fcnefr vf orggre guna qrafr.
+Ernqnovyvgl pbhagf.
+Fcrpvny pnfrf nera'g fcrpvny rabhtu gb oernx gur ehyrf.
+Nygubhtu cenpgvpnyvgl orngf chevgl.
+Reebef fubhyq arire cnff fvyragyl.
+Hayrff rkcyvpvgyl fvyraprq.
+Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.
+Abj vf orggre guna arire.
+Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.
+Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!
+</pre>
+<p>
+Let&#39;s decipher it
+</p>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> this
+deciphered <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> this<span style="color:#f92672">.</span>s:
+    <span style="color:#66d9ef">try</span>:
+        decrypted <span style="color:#f92672">+</span><span style="color:#f92672">=</span> this<span style="color:#f92672">.</span>d[c]
+    <span style="color:#66d9ef">except</span>:                     <span style="color:#75715e"># If the symbol is not encrypted</span>
+        decrypted <span style="color:#f92672">+</span><span style="color:#f92672">=</span> c
+<span style="color:#66d9ef">print</span>(deciphered)</code></pre></div>
+</div>
+<h2 id="headline-3">
+Conclusion
+</h2>
+<p>
+That&#39;s it for this amusing easter egg! As parting note, to understand how <em>Zen of Python</em> embeds the philosophy of Python, consider &#34;practicality beats purity&#34;. This statement takes shape in the design of the <code>len</code> function, which is an exception among special methods, as it can be used as such, for practicality reasons, when implementing your own classes, but is implemented to a C++ level when used on basic data structures such lists, sets and dictionaries, for speed. 
+</p>
+<p>
+<a href="https://hg.python.org/cpython/file/3.5/Lib/this.py">Source code of this module</a>
+</p>
+
+    </div>
+    <div class="post-footer">
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "adamoudad-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </article>
+
+    </main>
+    </body>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+</html>
+

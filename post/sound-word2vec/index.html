@@ -3,7 +3,7 @@
   <head>
     <title>Word embeddings with sound // Adam Oudad</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Adam Oudad" />
     <meta name="description" content="" />
@@ -84,87 +84,93 @@ if (!doNotTrack) {
     <div class="post-content">
       
 <p>
-I came across this article called <a href="https://www.aclweb.org/anthology/D17-1096.pdf">Sound-Word2Vec:Learning Word Representations Grounded in Sounds</a><sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
+  I came across this article called <a href="https://www.aclweb.org/anthology/D17-1096.pdf">Sound-Word2Vec:Learning Word Representations Grounded in Sounds</a><sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
 </p>
-<h1 id="headline-1">
+<h2 id="headline-1">
 What is embedding
-</h1>
+</h2>
 <p>
 Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.
 </p>
 <p>
-For example, one-hot encoding is somewhat a poor embedding method, as it encodes data into a sparse vector space, and interpolation will not work as expected. What I mean by &#34;as expected&#34; is, we would prefer our embedding space to relate distances between vectors to something interpretable, such as semantics (synonyms, antonyms, etc). For this, Word2Vec performs quite well.
+  For example, one-hot encoding is somewhat a poor embedding method, as it encodes data into a sparse vector space, and interpolation will not work as expected. What I mean by &#34;as expected&#34; is, we would prefer our embedding space to relate distances between vectors to something interpretable, such as semantics (synonyms, antonyms, etc). For this, Word2Vec performs quite well.
 </p>
-<h1 id="headline-2">
+<h2 id="headline-2">
 What is the point of using sound ?
-</h1>
+</h2>
 <p>
 Human language can be written and spoken. Embeddings grounded in sounds capture dependancies between words and onomatopeia.
-It is important to give machines an insight on sound dependancies of words, therefore bridging the gap between natural language and speech.
+  It is important to give machines an insight on sound dependancies of words, therefore bridging the gap between natural language and speech.
 </p>
 <p>
-In the research paper, sounds are clustered using various audio features, with K-means clustering. This is then considered as the target of the learning phase for the model.
+  In the research paper, sounds are clustered using various audio features, with K-means clustering. This is then considered as the target of the learning phase for the model.
 </p>
-<h1 id="headline-3">
+<h2 id="headline-3">
 Sound-Word2Vec model
-</h1>
+</h2>
 <p>
 The model is similar to Word2Vec. A hidden layer is a fully-connected layer with softmax activation.
-<figure>
+  <figure>
     <img src="figure-1.png" width="100%"/> 
 </figure>
 
-The task is simply to predict the sound cluster a given input word falls into. A Word2Vec pretrained model is used to take advantage of semantic information already contained in such embeddings. This is relatable to the technique of Transfer Learning, where the model is adapted to a new context, for performing better at sound-related tasks. Indeed, the model is therefore tested on three sound-related tasks:
+  The task is simply to predict the sound cluster a given input word falls into. A Word2Vec pretrained model is used to take advantage of semantic information already contained in such embeddings. This is relatable to the technique of Transfer Learning, where the model is adapted to a new context, for performing better at sound-related tasks. Indeed, the model is therefore tested on three sound-related tasks:
 </p>
 <dl>
 <dt>
-Text-based sound retrieval<dd>
+Text-based sound retrieval
+</dt>
+<dd>
 <p>
 given a textual description, find a corresponding sound in the database
 </p>
-<dd>
+</dd>
 <dt>
-Foley sound discovery<dd>
+Foley sound discovery
+</dt>
+<dd>
 <p>
 Given an outline of describing the technique for producing a sound, find relevant words suitable for producing the same sound
 </p>
-<dd>
+</dd>
 <dt>
-Aurally relevant relatedness<dd>
+Aurally relevant relatedness
+</dt>
 <dd>
+</dd>
 </dl>
-<h1 id="headline-4">
+<h2 id="headline-4">
 Sound data
-</h1>
+</h2>
 <p>
 Sound data was retrieved from <a href="http://www.freesound.org/">freesound.org</a>, a website collecting sounds uploaded by users. This represents a huge database of various tagged sounds with descriptions.
 </p>
-<h1 id="headline-5">
+<h2 id="headline-5">
 Nearest neighbors are sound-related
-</h1>
+</h2>
 <p>
 The following table from the original paper show how such embeddings differ from Word2Vec&#39;s embeddings, which are semantically related. <em>apple</em> is associated with <em>bite</em>, <em>chew</em>, <em>munch</em>, instead of <em>fruit</em>, <em>pears</em>.
-<figure>
+  <figure>
     <img src="table-3.png" width="100%"/> 
 </figure>
 
 </p>
 <p>
-Recall results on Text-based sound retrieval task are registered on the following table.
-<figure>
+  Recall results on Text-based sound retrieval task are registered on the following table.
+  <figure>
     <img src="table-1.png" width="100%"/> 
 </figure>
 
 </p>
-<h1 id="headline-6">
+<h2 id="headline-6">
 Final words
-</h1>
+</h2>
 <p>
 Embeddings are crucial in connectionist view of Machine Learning, as they present input information in a suitable form for subsequent task to perform. I can think of such embeddings being used for lyrics generation, speech recognition, or sentiment analysis. The goal of course is to encapsulate as much relevant information as you can in your embedding, so I believe bridging two fields like sound and natural language is the way to go if we want to obtain rich embeddings.
 </p>
-<h1 id="headline-7">
+<h2 id="headline-7">
 Footnotes
-</h1>
+</h2>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">

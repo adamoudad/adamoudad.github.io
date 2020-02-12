@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Adam Oudad</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2020 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 03:49:04 +0900</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>python</title>
       <link>https://adamoudad.github.io/tags/python/</link>
-      <pubDate>Sun, 02 Feb 2020 03:49:04 +0900</pubDate>
+      <pubDate>Wed, 12 Feb 2020 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/tags/python/</guid>
       <description></description>
