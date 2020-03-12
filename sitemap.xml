@@ -4,21 +4,41 @@
   
   <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2020-02-12T03:49:04+09:00</lastmod>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2020-02-12T03:49:04+09:00</lastmod>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/post/zen-of-python/</loc>
-    <lastmod>2020-02-12T03:49:04+09:00</lastmod>
+    <loc>https://adamoudad.github.io/categories/linux/</loc>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/linux/</loc>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/post/</loc>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/post/remote_desktop_linux_windows/</loc>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/</loc>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/post/zen-of-python/</loc>
     <lastmod>2020-02-12T03:49:04+09:00</lastmod>
   </url>
   
@@ -29,11 +49,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/tags/python/</loc>
-    <lastmod>2020-02-12T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/</loc>
     <lastmod>2020-02-12T03:49:04+09:00</lastmod>
   </url>
   
@@ -179,6 +194,16 @@
   
   <url>
     <loc>https://adamoudad.github.io/about/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/hugo/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/themes/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   

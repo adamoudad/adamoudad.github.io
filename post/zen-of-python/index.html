@@ -3,7 +3,7 @@
   <head>
     <title>Deciphering Python&#39;s &#34;import this&#34; // Adam Oudad</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.67.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Adam Oudad" />
     <meta name="description" content="" />
@@ -155,12 +155,12 @@ Let&#39;s decipher it
 </p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> this
-deciphered <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>
+deciphered <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
 <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> this<span style="color:#f92672">.</span>s:
     <span style="color:#66d9ef">try</span>:
-        decrypted <span style="color:#f92672">+</span><span style="color:#f92672">=</span> this<span style="color:#f92672">.</span>d[c]
+        decrypted <span style="color:#f92672">+=</span> this<span style="color:#f92672">.</span>d[c]
     <span style="color:#66d9ef">except</span>:                     <span style="color:#75715e"># If the symbol is not encrypted</span>
-        decrypted <span style="color:#f92672">+</span><span style="color:#f92672">=</span> c
+        decrypted <span style="color:#f92672">+=</span> c
 <span style="color:#66d9ef">print</span>(deciphered)</code></pre></div>
 </div>
 <h2 id="headline-3">

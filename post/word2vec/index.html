@@ -3,7 +3,7 @@
   <head>
     <title>Vectorizing text: Word2Vec // Adam Oudad</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.67.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Adam Oudad" />
     <meta name="description" content="" />
@@ -165,9 +165,9 @@ Let&#39;s use <em>gensim</em> library that implements word2vec model. We downloa
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> gensim.models.word2vec <span style="color:#f92672">import</span> Word2Vec
   <span style="color:#f92672">import</span> gensim.downloader <span style="color:#f92672">as</span> api
 
-  corpus <span style="color:#f92672">=</span> api<span style="color:#f92672">.</span>load(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">text8</span><span style="color:#e6db74">&#39;</span>)  <span style="color:#75715e"># download english Wikipedia corpus</span>
+  corpus <span style="color:#f92672">=</span> api<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;text8&#39;</span>)  <span style="color:#75715e"># download english Wikipedia corpus</span>
   model <span style="color:#f92672">=</span> Word2vec(corpus)
-  model<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cat</span><span style="color:#e6db74">&#34;</span>)</code></pre></div>
+  model<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74">&#34;cat&#34;</span>)</code></pre></div>
 </div>
 <p>
 We obtain as result
@@ -201,14 +201,14 @@ Then
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> product
   <span style="color:#f92672">import</span> spacy
 
-  nlp <span style="color:#f92672">=</span> spacy<span style="color:#f92672">.</span>load(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">en_core_web_md</span><span style="color:#e6db74">&#34;</span>)
-  tokens <span style="color:#f92672">=</span> nlp(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dog cat banana afskfsd</span><span style="color:#e6db74">&#34;</span>)
+  nlp <span style="color:#f92672">=</span> spacy<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;en_core_web_md&#34;</span>)
+  tokens <span style="color:#f92672">=</span> nlp(<span style="color:#e6db74">&#34;dog cat banana afskfsd&#34;</span>)
 
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"># Info on each token dog, cat, banana, and afskfsd</span><span style="color:#e6db74">&#34;</span>)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Info on each token dog, cat, banana, and afskfsd&#34;</span>)
   <span style="color:#66d9ef">for</span> token <span style="color:#f92672">in</span> tokens:
       <span style="color:#66d9ef">print</span>(token<span style="color:#f92672">.</span>text, token<span style="color:#f92672">.</span>has_vector, token<span style="color:#f92672">.</span>vector_norm, token<span style="color:#f92672">.</span>is_oov)
 
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"># Similarity of dog, cat and banana</span><span style="color:#e6db74">&#34;</span>)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Similarity of dog, cat and banana&#34;</span>)
   <span style="color:#66d9ef">for</span> t1, t2 <span style="color:#f92672">in</span> product(tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
       <span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>similarity(t2))</code></pre></div>
 </div>
