@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Stream tweets with Tweepy in Python - Adam Oudad</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.67.0" /><meta itemprop="name" content="Stream tweets with Tweepy in Python">
+<meta itemprop="description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).">
+<meta itemprop="datePublished" content="2019-12-02T03:49:04&#43;09:00" />
+<meta itemprop="dateModified" content="2019-12-02T03:49:04&#43;09:00" />
+<meta itemprop="wordCount" content="489">
+
+
+
+<meta itemprop="keywords" content="data,api," /><meta property="og:title" content="Stream tweets with Tweepy in Python" />
+<meta property="og:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://adamoudad.github.io/blog/stream_tweets_tweepy/" />
+<meta property="article:published_time" content="2019-12-02T03:49:04+09:00" />
+<meta property="article:modified_time" content="2019-12-02T03:49:04+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Stream tweets with Tweepy in Python"/>
+<meta name="twitter:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)."/>
+<meta name="twitter:site" content="@OudadAdam"/>
+<link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
+        <link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="en" class="link active">English (en)</a>
+  
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Stream%20tweets%20with%20Tweepy%20in%20Python&amp;url=https%3a%2f%2fadamoudad.github.io%2fblog%2fstream_tweets_tweepy%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fblog%2fstream_tweets_tweepy%2f&amp;title=Stream%20tweets%20with%20Tweepy%20in%20Python" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="/avatar.jpg" class="circle" width="150" alt="Adam Oudad" /></a>
+  <header>
+    <h1>Adam Oudad</h1>
+  </header>
+  <main>
+    <p>(Machine) Learning log.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/adamoudad" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+<li><a href="//stackoverflow.com/users/7013114/adam-oudad" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//medium.com/@adam.oudad" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/adam-oudad-9436b866" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/OudadAdam" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Adam_Oudad" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+            
+            <header>
+  <div class="title">
+    
+      <h1><a href="/blog/stream_tweets_tweepy/">Stream tweets with Tweepy in Python</a></h1>
+      
+    
+    
+  </div>
+</header>
+
+            <div id="content">
+                
+<p>
+In this tutorial, you will learn how to stream tweets with Tweepy library in Python.
+<figure>
+    <img src="https://miro.medium.com/max/5167/1*GghmuOlXcZd-F8Pdhqc9Sg.jpeg" width="100%"/> 
+</figure>
+
+</p>
+<h2 id="headline-1">
+Twitter API overview
+</h2>
+<p>
+Twitter offers several API, or methods you can use to retrieve tweets.
+</p>
+<ul>
+<li>
+<p>
+Streaming API
+</p>
+</li>
+<li>
+<p>
+Search API
+</p>
+</li>
+</ul>
+<p>
+What we are interested in here is the <strong>streaming API</strong>. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;<strong>statuses/sample</strong>&#34; endpoint (<a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/GET_statuse_sample">documentation</a>).
+</p>
+<p>
+  Note that this method provides a very small percentage of total public tweets, from the <em>Twitter Firehose</em> which streams in real-time all tweets.
+</p>
+<p>
+  For this tutorial, you will need <em>tweepy</em>. It is available via <code>pip install tweepy</code> or <code>conda install -c conda-forge tweepy</code> if you use anaconda.
+</p>
+<h2 id="headline-2">
+Get your credentials from Twitter.com
+</h2>
+<p>
+Visit <a href="https://developer.twitter.com/en/apps">developer.twitter.com</a>, and log into your Twitter account. Create a new app, and under <em>Keys and tokens</em>, copy your credentials
+</p>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Replace the &#34;None&#34;s by your own credentials</span>
+ACCESS_TOKEN <span style="color:#f92672">=</span> None
+ACCESS_TOKEN_SECRET <span style="color:#f92672">=</span> None
+CONSUMER_KEY <span style="color:#f92672">=</span> None
+CONSUMER_SECRET <span style="color:#f92672">=</span> None</code></pre></div>
+</div>
+<h2 id="headline-3">
+Set up the connection
+</h2>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> OAuthHandler
+  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> API
+  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> Streamauth <span style="color:#f92672">=</span> OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+  auth<span style="color:#f92672">.</span>set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+  api <span style="color:#f92672">=</span> API(auth, wait_on_rate_limit<span style="color:#f92672">=</span>True,
+     wait_on_rate_limit_notify<span style="color:#f92672">=</span>True)</code></pre></div>
+</div>
+<p>
+First we import all necessary classes from tweepy library.
+</p>
+<ul>
+<li>
+<p>
+OAuthHandler stores your credentials
+</p>
+</li>
+<li>
+<p>
+API class sets the connection to Twitter API using your credentials
+</p>
+</li>
+<li>
+<p>
+Stream class streams the downloaded data
+</p>
+</li>
+</ul>
+<p>
+We set up the connection by providing our credentials to an <code>OAuthHandlerinstance</code>, and giving it to an <code>API</code> instance.
+</p>
+<p>
+  Tweepy provides two useful parameters for handling download restrictions from Twitter API:
+</p>
+<dl>
+<dt>
+wait_on_rate_limit
+</dt>
+<dd>
+<p>
+when download limit is reach, the program will wait and try to reconnect when rate limit is replenished
+</p>
+</dd>
+<dt>
+wait_on_rate_limit_notify
+</dt>
+<dd>
+<p>
+a notification will be printed when download limit is reached
+</p>
+</dd>
+</dl>
+<h2 id="headline-4">
+The listener
+</h2>
+<p>
+The next step is defining our Listener, that will react on events from the API and handle the received data.
+</p>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> sys
+  <span style="color:#f92672">from</span> tweepy.streaming <span style="color:#f92672">import</span> StreamListener
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Listener</span>(StreamListener):
+  <span style="color:#66d9ef">def</span> __init__(self, output_file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stdout):
+      super(Listener,self)<span style="color:#f92672">.</span>__init__()
+      self<span style="color:#f92672">.</span>output_file <span style="color:#f92672">=</span> output_file
+      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_status</span>(self, status):
+          <span style="color:#66d9ef">print</span>(status<span style="color:#f92672">.</span>text, file<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>output_file)
+      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_error</span>(self, status_code):
+          <span style="color:#66d9ef">print</span>(status_code)
+          <span style="color:#66d9ef">return</span> False</code></pre></div>
+</div>
+<p>
+<code>on_status</code> is the method that will be called when a tweet is downloaded. We print the tweet the file <code>output_file</code>. This file is by default the <em>standard output</em>, as we specify it in the <code>__init__</code> method.
+</p>
+<p>
+  <code>on_error</code> handles errors returned by the API.
+</p>
+<p>
+  Then, we have to create an instance of the Listener class. You can either choose to put the downloaded tweets into a file.
+</p>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  output <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;stream_output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
+  listener <span style="color:#f92672">=</span> Listener(output_file<span style="color:#f92672">=</span>output)</code></pre></div>
+</div>
+<p>
+or to <em>standard output</em>, by not specifying any file, instantiating with <code>listener = Listener()</code>.
+</p>
+<h2 id="headline-5">
+Streaming
+</h2>
+<p>
+We are now ready to stream:
+</p>
+<div class="src src-python">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)
+  <span style="color:#66d9ef">try</span>:
+      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Start streaming.&#39;</span>)
+      stream<span style="color:#f92672">.</span>sample(languages<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;en&#39;</span>])
+  <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span> <span style="color:#66d9ef">as</span> e :
+      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Stopped.&#34;</span>)
+  <span style="color:#66d9ef">finally</span>:
+      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Done.&#39;</span>)
+      stream<span style="color:#f92672">.</span>disconnect()
+      output<span style="color:#f92672">.</span>close()</code></pre></div>
+</div>
+<p>
+It is good practice to enclose the call to <code>stream.sample()</code> inside <code>try</code> statement to handle <code>KeyboardInterrupt</code> for example.
+</p>
+<h2 id="headline-6">
+Final words
+</h2>
+<p>
+Tweepy is a quite powerful library providing access to Twitter APIs. You can check the <a href="http://docs.tweepy.org/en/latest/index.html">documentation here</a> for more information.
+</p>
+<p>
+  Here is the complete code
+  <script type="application/javascript" src="https://gist.github.com/adamoudad/85a2f1d103df1fd8f731c975edb7b0ca.js"></script>
+
+</p>
+<p>
+  <a href="https://medium.com/@adam.oudad/stream-tweets-with-tweepy-in-python-99e85b6df468">My original post on medium</a>.
+</p>
+
+            </div>
+        </article>
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/pythonic/">Tips to write pythonic</a></h1>
+          <time class="published" datetime="">February 2, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/japanese/bring-or-take/">Bring and take concepts in languages</a></h1>
+          <time class="published" datetime="">January 24, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/datasets/">List of datasets</a></h1>
+          <time class="published" datetime="">October 30, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/japanese/suru/">Usages of する</a></h1>
+          <time class="published" datetime="">October 23, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/blog/vectorizing-text/">Vectorizing text</a></h1>
+          <time class="published" datetime="">October 17, 2019</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/natural-language-processing/">natural-language-processing<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/japanese/">japanese<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/machine-learning/">machine-learning<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/programming/">programming<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linguistic/">linguistic<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/linux/">linux<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/random/">random<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This website is a weblog were I write about computer science, machine learning, language learning.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/adamoudad" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+<li><a href="//stackoverflow.com/users/7013114/adam-oudad" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//medium.com/@adam.oudad" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/adam-oudad-9436b866" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/OudadAdam" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Adam_Oudad" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Adam Oudad
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.67.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-150494000-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
