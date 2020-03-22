@@ -13,19 +13,19 @@
     
     <item>
       <title>Deciphering Python&#39;s &#34;import this&#34;</title>
-      <link>https://adamoudad.github.io/blog/zen-of-python/</link>
+      <link>https://adamoudad.github.io/posts/zen-of-python/</link>
       <pubDate>Wed, 12 Feb 2020 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/blog/zen-of-python/</guid>
+      <guid>https://adamoudad.github.io/posts/zen-of-python/</guid>
       <description>Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers. Print Zen of Python   You can print the 19 aphorisms by simply importing this. import this   This outputs The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.</description>
     </item>
     
     <item>
       <title>Tips to write pythonic</title>
-      <link>https://adamoudad.github.io/blog/pythonic/</link>
+      <link>https://adamoudad.github.io/posts/pythonic/</link>
       <pubDate>Sun, 02 Feb 2020 03:49:04 +0900</pubDate>
       
-      <guid>https://adamoudad.github.io/blog/pythonic/</guid>
+      <guid>https://adamoudad.github.io/posts/pythonic/</guid>
       <description>Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.  I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code. Naming     Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0.</description>
     </item>
     

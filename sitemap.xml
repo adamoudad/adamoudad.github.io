@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/</loc>
-    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/categories/</loc>
     <lastmod>2020-03-13T03:49:04+09:00</lastmod>
   </url>
@@ -28,7 +23,12 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/remote_desktop_linux_windows/</loc>
+    <loc>https://adamoudad.github.io/posts/</loc>
+    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/remote_desktop_linux_windows/</loc>
     <lastmod>2020-03-13T03:49:04+09:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/zen-of-python/</loc>
+    <loc>https://adamoudad.github.io/posts/zen-of-python/</loc>
     <lastmod>2020-02-12T03:49:04+09:00</lastmod>
   </url>
   
@@ -53,12 +53,12 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/pythonic/</loc>
+    <loc>https://adamoudad.github.io/posts/pythonic/</loc>
     <lastmod>2020-02-02T03:49:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/japanese/bring-or-take/</loc>
+    <loc>https://adamoudad.github.io/posts/japanese/bring-or-take/</loc>
     <lastmod>2020-01-24T02:31:19+09:00</lastmod>
   </url>
   
@@ -98,12 +98,12 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/stream_tweets_tweepy/</loc>
+    <loc>https://adamoudad.github.io/posts/stream_tweets_tweepy/</loc>
     <lastmod>2019-12-02T03:49:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/tubechiller/</loc>
+    <loc>https://adamoudad.github.io/posts/tubechiller/</loc>
     <lastmod>2019-12-02T03:49:04+09:00</lastmod>
   </url>
   
@@ -123,12 +123,12 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/word2vec/</loc>
+    <loc>https://adamoudad.github.io/posts/word2vec/</loc>
     <lastmod>2019-11-27T03:49:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/datasets/</loc>
+    <loc>https://adamoudad.github.io/posts/datasets/</loc>
     <lastmod>2019-10-30T03:49:04+09:00</lastmod>
   </url>
   
@@ -143,27 +143,27 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/japanese/suru/</loc>
+    <loc>https://adamoudad.github.io/posts/japanese/suru/</loc>
     <lastmod>2019-10-23T02:31:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/sound-word2vec/</loc>
+    <loc>https://adamoudad.github.io/posts/sound-word2vec/</loc>
     <lastmod>2019-10-21T03:49:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/vectorizing-text/</loc>
+    <loc>https://adamoudad.github.io/posts/vectorizing-text/</loc>
     <lastmod>2019-10-17T03:49:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/japanese/ga-or-ha/</loc>
+    <loc>https://adamoudad.github.io/posts/japanese/ga-or-ha/</loc>
     <lastmod>2019-10-17T02:31:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/productivity/</loc>
+    <loc>https://adamoudad.github.io/posts/productivity/</loc>
     <lastmod>2019-10-10T03:49:04+09:00</lastmod>
   </url>
   
@@ -173,7 +173,32 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/hugo-katex/</loc>
+    <loc>https://adamoudad.github.io/tags/hugo/</loc>
+    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/hugo-katex/</loc>
+    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/katex/</loc>
+    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/latex/</loc>
+    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/web/</loc>
+    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/web/</loc>
     <lastmod>2019-05-20T03:49:04+09:00</lastmod>
   </url>
   
@@ -183,7 +208,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/blog/my-first-post/</loc>
+    <loc>https://adamoudad.github.io/posts/my-first-post/</loc>
     <lastmod>2019-05-16T02:31:19+09:00</lastmod>
   </url>
   
@@ -194,11 +219,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/about/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/hugo/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
   </url>
   
