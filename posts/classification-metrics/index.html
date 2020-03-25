@@ -10,7 +10,7 @@
 <meta itemprop="description" content="Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.     Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.">
 <meta itemprop="datePublished" content="2020-03-25T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="707">
+<meta itemprop="wordCount" content="729">
 
 
 
@@ -266,7 +266,7 @@ Let&#39;s say our system actually finished its graduation exam, and it is now ti
   In the above example with the spam filter, \(\text{Accuracy} = \frac{85 + 800}{85 + 100 + 15 + 800} = 0.885\).
 </p>
 <p>
-  Accuracy sums all answers disregarding their respective classes, this would be ok if our classes were balanced, that is if they contained a roughly equal amount of samples. However in the case of spam filtering (and this is the case for many other applications, commonly denoted as <em>anomaly detection</em>) the &#34;negative&#34; class (non-spam) is usually less populated than the &#34;positive&#34; one (spam). Let&#39;s consider the two confusion matrices.
+  Accuracy sums all answers disregarding their respective classes, this would be ok if our classes were balanced, that is if they contained a roughly equal amount of samples. However, in the case of spam filtering (and this is the case for many other applications, commonly denoted as <em>anomaly detection</em>) the &#34;negative&#34; class (non-spam) is usually <strong>a lot more populated</strong> than the &#34;positive&#34; one (spam), which is should be viewed as the class of outliers of the distribution of &#34;non-spam&#34; emails. Let&#39;s consider the following confusion matrix.
 </p>
 <table>
 <thead>
@@ -304,7 +304,7 @@ We just have to refine the way we grade the exam. Let&#39;s consider only one cl
   \[
   \text{Recall} = \frac{\text{\# of correctly classified spams}}{\text{\# of spams}}
   \]
-  What if your system thinks everything is a spam?
+  Ok. But what if your system thinks everything is a spam?
 </p>
 <table>
 <thead>
@@ -328,7 +328,7 @@ We just have to refine the way we grade the exam. Let&#39;s consider only one cl
 </tbody>
 </table>
 <p>
-  It gets \(\text{Recall} = 1\), the maximum score! We need a metric telling how precise the system is when annotating a mail as &#34;spam&#34;. For this we restrict ourselves to the set of mails predicted as &#34;spam&#34; by the system.
+  It gets \(\text{Recall} = 1\), the maximum score! So we also need a metric telling how precise the system is when annotating a mail as &#34;spam&#34;. For this we restrict ourselves to the set of mails predicted as &#34;spam&#34; by the system.
   \[
   \text{Precision} = \frac{\text{\# of correctly classified spams}}{\text{\# of mails classified as &#34;spams&#34;}}
   \]
