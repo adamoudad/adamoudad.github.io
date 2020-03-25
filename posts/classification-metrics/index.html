@@ -2,27 +2,27 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>List of datasets - Adam Oudad</title>
+<title>A guided tour of classification metrics - Adam Oudad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.67.0" /><meta itemprop="name" content="List of datasets">
-<meta itemprop="description" content="Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, Google has its own Dataset search tool. There are also big lists of datasets for research purpose, such as this one.">
-<meta itemprop="datePublished" content="2019-10-30T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2019-10-30T03:49:04&#43;09:00" />
-<meta itemprop="wordCount" content="176">
+<meta name="generator" content="Hugo 0.67.0" /><meta itemprop="name" content="A guided tour of classification metrics">
+<meta itemprop="description" content="Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.     Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.">
+<meta itemprop="datePublished" content="2020-03-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="707">
 
 
 
-<meta itemprop="keywords" content="data,machine-learning," /><meta property="og:title" content="List of datasets" />
-<meta property="og:description" content="Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, Google has its own Dataset search tool. There are also big lists of datasets for research purpose, such as this one." />
+<meta itemprop="keywords" content="machine-learning,classification," /><meta property="og:title" content="A guided tour of classification metrics" />
+<meta property="og:description" content="Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.     Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://adamoudad.github.io/posts/datasets/" />
-<meta property="article:published_time" content="2019-10-30T03:49:04+09:00" />
-<meta property="article:modified_time" content="2019-10-30T03:49:04+09:00" />
+<meta property="og:url" content="https://adamoudad.github.io/posts/classification-metrics/" />
+<meta property="article:published_time" content="2020-03-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-25T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="List of datasets"/>
-<meta name="twitter:description" content="Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, Google has its own Dataset search tool. There are also big lists of datasets for research purpose, such as this one."/>
+<meta name="twitter:title" content="A guided tour of classification metrics"/>
+<meta name="twitter:description" content="Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.     Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -107,13 +107,13 @@
 
   
     
-    <a href="//twitter.com/share?text=List%20of%20datasets&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdatasets%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=A%20guided%20tour%20of%20classification%20metrics&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fclassification-metrics%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdatasets%2f&amp;title=List%20of%20datasets" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fclassification-metrics%2f&amp;title=A%20guided%20tour%20of%20classification%20metrics" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -188,17 +188,17 @@
   <header>
   <div class="title">
     
-        <h2><a href="/posts/datasets/">List of datasets</a></h2>
+        <h2><a href="/posts/classification-metrics/">A guided tour of classification metrics</a></h2>
     
     
 </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-30 03:49:04 &#43;0900 JST">
-      October 30, 2019
+    <time class="published" datetime="2020-03-25 00:00:00 &#43;0000 UTC">
+      March 25, 2020
     </time>
     <span class="author"></span>
     
-      <p>1 minute read</p>
+      <p>4 minutes read</p>
     
   </div>
 </header>
@@ -211,13 +211,13 @@
 
   
     
-    <a href="//twitter.com/share?text=List%20of%20datasets&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdatasets%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=A%20guided%20tour%20of%20classification%20metrics&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fclassification-metrics%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fdatasets%2f&amp;title=List%20of%20datasets" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fclassification-metrics%2f&amp;title=A%20guided%20tour%20of%20classification%20metrics" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -229,124 +229,124 @@
   <div class="content">
     
 <p>
-Machine Learning requires data. To obtain some, one way is to scrape or retrieve data directly from somewhere. Another way is to reuse datasets freely available over the internet, specially made for most common tasks. Because it has become so frequent for data scientists to take much time searching and processing data, <a href="https://toolbox.google.com/datasetsearch">Google has its own Dataset search tool</a>. There are also big lists of datasets for research purpose, <a href="https://github.com/arXivTimes/arXivTimes/tree/master/datasets">such as this one</a>.
+Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.
 </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th class="align-right">Actual class: Spam</th>
+<th class="align-right">Actual class: Non-spam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prediction class: Spam</td>
+<td class="align-right">85</td>
+<td class="align-right">100</td>
+</tr>
+<tr>
+<td>Prediction class: Non-spam</td>
+<td class="align-right">15</td>
+<td class="align-right">800</td>
+</tr>
+</tbody>
+</table>
 <p>
-  Here is my personal list of datasets I have used or been interested in using, organized by types of data.
+This <em>confusion matrix</em> shows the confusions the system makes in its predictions. But what if we could summarize this matrix in one number? A number that would tell us if the system is any good?
 </p>
 <h2 id="headline-1">
-Music
+How &#34;accurate&#34; are our system&#39;s predictions
 </h2>
+<p>
+Let&#39;s say our system actually finished its graduation exam, and it is now time to grade it. We can count how many good answers the system gave. That is \(85 + 10 = 95\) good answers. Then we give the system a grade which is its number of good answers, over the number of questions. Sounds like what would be done in a common exam, right? Well this is the metric called <em>accuracy</em> in machine learning.
+  \[
+  \text{Accuracy} = \frac{\text{\# of good predictions}}{\text{\# of samples}}
+  \]
+  In the above example with the spam filter, \(\text{Accuracy} = \frac{85 + 800}{85 + 100 + 15 + 800} = 0.885\).
+</p>
+<p>
+  Accuracy sums all answers disregarding their respective classes, this would be ok if our classes were balanced, that is if they contained a roughly equal amount of samples. However in the case of spam filtering (and this is the case for many other applications, commonly denoted as <em>anomaly detection</em>) the &#34;negative&#34; class (non-spam) is usually less populated than the &#34;positive&#34; one (spam). Let&#39;s consider the two confusion matrices.
+</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Notes</th>
+<th></th>
+<th class="align-right">Actual class: Spam</th>
+<th class="align-right">Actual class: Non-spam</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="http://www.mididb.com/">MIDI DB</a></td>
-<td>midi, music</td>
+<td>Prediction class: Spam</td>
+<td class="align-right">0</td>
+<td class="align-right">15</td>
 </tr>
 <tr>
-<td><a href="https://www.feelyoursound.com/scale-chords/">Feelyoursound</a></td>
-<td>music, chord, progression</td>
-</tr>
-<tr>
-<td><a href="https://research.google.com/audioset/dataset/jingle_music.html">Jingle</a></td>
-<td>jingle, music</td>
-</tr>
-<tr>
-<td><a href="https://salu133445.github.io/lakh-pianoroll-dataset/representation.html">Lakh pianoroll</a></td>
-<td>midi, pianoroll, music</td>
-</tr>
-<tr>
-<td><a href="https://staff.aist.go.jp/m.goto/RWC-MDB/">RWC</a></td>
-<td>popular, music</td>
-</tr>
-<tr>
-<td><a href="https://composing.ai/dataset">Composing.ai</a></td>
-<td>midi</td>
-</tr>
-<tr>
-<td><a href="https://www.amitkohli.com/chord-progressions-of-5-000-songs/">Chord progressions of 5000 songs</a></td>
-<td>chords</td>
+<td>Prediction class: Non-spam</td>
+<td class="align-right">100</td>
+<td class="align-right">885</td>
 </tr>
 </tbody>
 </table>
 <p>
-  Links to dataset lists
+Can you see how incredibly useless this system is at predicting spams? Yet accuracy is unchanged, it is still 0.885!
+ Ironically, that shows why accuracy is not a valid metric to assess the accuracy of a system.  <em>Precision</em> and <em>recall</em> are more fine-tuned metrics, in that they measure the performance of the system with respect to the &#34;true class&#34;, or the &#34;spam class&#34; in our example. Let&#39;s look at them.
 </p>
-<ul>
-<li>
-<p>
-<a href="https://www.reddit.com/r/WeAreTheMusicMakers/comments/3ajwe4/the_largest_midi_collection_on_the_internet/">Reddit MIDI collection</a>
-</p>
-</li>
-<li>
-<p>
-<a href="http://grh.mur.at/sites/default/files/mir_datasets_0.html">List maintained by Georg Holzmann</a>
-</p>
-</li>
-</ul>
 <h2 id="headline-2">
-Sentiment
+Precision and recall
 </h2>
 <p>
-MoodyLyrics a sentiment annotated lyrics dataset <a href="https://dl.acm.org/citation.cfm?id=3059340">https://dl.acm.org/citation.cfm?id=3059340</a>
+We just have to refine the way we grade the exam. Let&#39;s consider only one class, the positive one, and look how well our system performs. This is the definition for <em>recall</em>. <em>Recall</em> concentrates the metric on one class only, and measures how well the system predicts it.
+</p>
+<p>
+  There is a bias when we chose which class to consider as positive. In the case of spam filtering, the system should be able to recognize spams among normal examples, so <em>recall</em> should be the highest for spams. The <em>recall</em> metric does not care how you handle non-spam, as long as you recognize correctly &#34;spams&#34;.
+  \[
+  \text{Recall} = \frac{\text{\# of correctly classified spams}}{\text{\# of spams}}
+  \]
+  What if your system thinks everything is a spam?
+</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th class="align-right">Actual class: Spam</th>
+<th class="align-right">Actual class: Non-spam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prediction class: Spam</td>
+<td class="align-right">100</td>
+<td class="align-right">900</td>
+</tr>
+<tr>
+<td>Prediction class: Non-spam</td>
+<td class="align-right">0</td>
+<td class="align-right">0</td>
+</tr>
+</tbody>
+</table>
+<p>
+  It gets \(\text{Recall} = 1\), the maximum score! We need a metric telling how precise the system is when annotating a mail as &#34;spam&#34;. For this we restrict ourselves to the set of mails predicted as &#34;spam&#34; by the system.
+  \[
+  \text{Precision} = \frac{\text{\# of correctly classified spams}}{\text{\# of mails classified as &#34;spams&#34;}}
+  \]
+  So the system has maximum precision when it selects spams without errors. For the previous example, the <em>precision</em> would be \(\frac{100}{900} = 0.0999\).
+</p>
+<p>
+  We constructed two metrics <em>recall</em> and <em>precision</em>, which are more refined than <em>accuracy</em>, by selecting a &#34;positive&#34; class (&#34;spam&#34;) as the target of our classification problem.
 </p>
 <h2 id="headline-3">
-Text
+F1-score, because one number is better than two
 </h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="http://help.sentiment140.com/for-students">Sentiment140</a></td>
-<td>sentiment, twitter</td>
-</tr>
-<tr>
-<td><a href="http://www.isi.edu/~lerman/downloads/twitter/twitter2010.html">Twitter 2010</a></td>
-<td>twitter</td>
-</tr>
-<tr>
-<td><a href="http://www.dai-labor.de/fileadmin/files/publications/narr-twittersentiment-KDML-LWA-2012.pdf">Twitter sentiment</a></td>
-<td>twitter, sentiment</td>
-</tr>
-<tr>
-<td><a href="http://opus.nlpl.eu/">OPUS</a></td>
-<td>parallel, translation</td>
-</tr>
-<tr>
-<td><a href="https://www.aclweb.org/anthology/N16-1138/">Emergent</a></td>
-<td>stance, politics</td>
-</tr>
-<tr>
-<td><a href="http://homepages.inf.ed.ac.uk/pkoehn/publications/europarl-mtsummit05.pdf">Europarl</a></td>
-<td>speech</td>
-</tr>
-<tr>
-<td><a href="https://deft.limsi.fr/">DEFT</a></td>
-<td>speech, french</td>
-</tr>
-</tbody>
-</table>
 <p>
-Links to dataset lists
+The optimal system for our dataset would have maximum <em>recall</em> and <em>precision</em> scores. By taking the harmonic mean of <em>precision</em> and <em>recall</em>, F1-score is a metric of overall performance, that we can use to grade our system&#39;s answers to the exam.
+  \[
+  \text{F1-score} = 2\cdot \frac{\text{precision}\cdot \text{recall}}{\text{precision}+\text{recall}}
+  \]
+  Harmonic mean is preferred over arithmetic mean for example because it penalizes bad score. If recall is high but precision is low, harmonic mean will be low. This is due to the <a href="https://en.wikipedia.org/wiki/Harmonic_mean">geometric properties of the harmonic mean</a>.
 </p>
-<ul>
-<li>
-<p>
-<a href="https://www.icwsm.org/2015/datasets/datasets/">ICSWSM list</a> of Twitter datasets
-</p>
-</li>
-</ul>
 
   </div>
   <footer>
@@ -371,10 +371,10 @@ Links to dataset lists
         <ul>
           
             
-            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/data">data</a></li>
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/machine-learning">machine-learning</a></li>
           
             
-            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/machine-learning">machine-learning</a></li>
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/classification">classification</a></li>
           
         </ul>
       </li>
@@ -413,10 +413,8 @@ Links to dataset lists
 
 <div class="pagination">
   
-    <a href="/posts/japanese/suru/" class="button"><div class="previous"><div>Usages of する</div></div></a>
+    <a href="/posts/remote_desktop_linux_windows/" class="button"><div class="previous"><div>Remote desktop with Linux client and Windows server</div></div></a>
   
-  
-    <a href="/posts/word2vec/" class="button"><div class="next"><div>Vectorizing text: Word2Vec</div></div></a>
   
 </div>
 

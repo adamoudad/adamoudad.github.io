@@ -3,13 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://adamoudad.github.io/posts/classification-metrics/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/classification/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +53,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/posts/</loc>
-    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/posts/remote_desktop_linux_windows/</loc>
-    <lastmod>2020-03-13T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/</loc>
     <lastmod>2020-03-13T03:49:04+09:00</lastmod>
   </url>
   
@@ -93,11 +113,6 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
-    <lastmod>2019-12-02T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/posts/stream_tweets_tweepy/</loc>
     <lastmod>2019-12-02T03:49:04+09:00</lastmod>
   </url>
@@ -129,11 +144,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/posts/datasets/</loc>
-    <lastmod>2019-10-30T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
     <lastmod>2019-10-30T03:49:04+09:00</lastmod>
   </url>
   
