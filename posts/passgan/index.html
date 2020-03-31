@@ -10,7 +10,7 @@
 <meta itemprop="description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.">
 <meta itemprop="datePublished" content="2020-03-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="947">
+<meta itemprop="wordCount" content="945">
 
 
 
@@ -264,16 +264,16 @@ Generative Adversarial Networks are three words that have been used a lot during
 
 </p>
 <h2 id="headline-2">
-How do you train it?
+Training to generate human-like passwords
 </h2>
 <p>
-PassGAN is a password generator used for generating realistic passwords. <em>Realistic</em> means passwords that you and me could actually come up to when we create our account on whatever website. could it be social network, could it be online banking account.
+PassGAN is a password generator used for generating realistic passwords. By <em>realistic</em> I mean passwords that you and me could actually come up to when we create our account on whatever website. It could be a social network account, or it could be an online banking account.
 </p>
 <p>
-  Password cracking is a fastidious task which involves testing a lot of different combinations. However there are combinations more probable than others. For example, you might use a password which makes sense to you, like bluesky1991, with 1991 being your birth date rather than something cryptic as <code class="verbatim">9y2[V^1&gt;e_yfYE,r5q:e&#39;w!cv</code>. This is the assumption of cryptoanalysis techniques which try to crack passwords. They try out the most likely passphrases first.
+  Password cracking is a fastidious task which involves testing a lot of different combinations. However, there are combinations more probable than others. For example, you might use a password which makes sense to you, like bluesky1991, with 1991 being your birth date rather than something cryptic as <code class="verbatim">9y2[V^1&gt;e_yfYE,r5q:e&#39;w!cv</code>. This is the assumption of cryptoanalysis techniques which try to crack passwords. They try out the most likely passphrases first.
 </p>
 <p>
-  HashCat (<a href="https://hashcat.net/hashcat/)">https://hashcat.net/hashcat/)</a> is a password recovery tool implementing most advanced password cracking strategies, such as mask attack. But these strategies rely on strong assumptions, such as fixed password length. On the opposite, PassGAN approach can virtually generate passwords of any length.
+  There already exists plenty of password recovery tools such as HashCat (<a href="https://hashcat.net/hashcat/),">https://hashcat.net/hashcat/),</a> Aircrack-ng (<a href="https://www.aircrack-ng.org/),">https://www.aircrack-ng.org/),</a> which implementing most advanced password cracking strategies, such as mask attack. But these strategies rely on strong assumptions, such as fixed password length. On the opposite, PassGAN approach can virtually generate passwords of any length.
 </p>
 <h2 id="headline-3">
 How good can PassGAN guess your password?
@@ -299,7 +299,7 @@ The researchers used RockYou dataset to train PassGAN, splitting the dataset int
 
 </p>
 <p>
-  A drawback of PassGAN noted by the researchers is it requires a lot of generation to obtain a similar amount of matches compared to other methods, that is up to double the number of generations than other strategies when they require about a billion. To overcome that, they propose using conditioning, which is a popular technique to improve data generation.
+  A drawback of PassGAN noted by the researchers is it requires a lot of generation to obtain a similar amount of matches compared to other methods, that is up to double the number of generations than other strategies when they require about a billion.
 </p>
 <p>
   PassGAN can also be used in conjunction to other strategies. It can guess pretty well passwords that could not be guessed by other strategies, making a huge jump up to 73% of matches overall.
@@ -323,7 +323,7 @@ Now that anxiety is at its climax, <del>I can sell you my revolutionary product 
 References
 </h2>
 <p>
-Link to the paper <a href="https://arxiv.org/abs/1709.00440">https://arxiv.org/abs/1709.00440</a>
+Link to PassGAN paper: <a href="https://arxiv.org/abs/1709.00440">https://arxiv.org/abs/1709.00440</a>
 </p>
 
   </div>
