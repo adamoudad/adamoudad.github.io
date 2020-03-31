@@ -2,27 +2,27 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Stream tweets with Tweepy in Python - Adam Oudad</title>
+<title>Generative Adversarial Networks can crack your password! - Adam Oudad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.67.0" /><meta itemprop="name" content="Stream tweets with Tweepy in Python">
-<meta itemprop="description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).">
-<meta itemprop="datePublished" content="2019-12-02T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2019-12-02T03:49:04&#43;09:00" />
-<meta itemprop="wordCount" content="489">
+<meta name="generator" content="Hugo 0.67.0" /><meta itemprop="name" content="Generative Adversarial Networks can crack your password!">
+<meta itemprop="description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.">
+<meta itemprop="datePublished" content="2020-03-31T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-31T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="947">
 
 
 
-<meta itemprop="keywords" content="data,api," /><meta property="og:title" content="Stream tweets with Tweepy in Python" />
-<meta property="og:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)." />
+<meta itemprop="keywords" content="machine-learning,cryptoanalysis," /><meta property="og:title" content="Generative Adversarial Networks can crack your password!" />
+<meta property="og:description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://adamoudad.github.io/posts/stream_tweets_tweepy/" />
-<meta property="article:published_time" content="2019-12-02T03:49:04+09:00" />
-<meta property="article:modified_time" content="2019-12-02T03:49:04+09:00" />
+<meta property="og:url" content="https://adamoudad.github.io/posts/passgan/" />
+<meta property="article:published_time" content="2020-03-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-31T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Stream tweets with Tweepy in Python"/>
-<meta name="twitter:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)."/>
+<meta name="twitter:title" content="Generative Adversarial Networks can crack your password!"/>
+<meta name="twitter:description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -107,13 +107,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Stream%20tweets%20with%20Tweepy%20in%20Python&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fstream_tweets_tweepy%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Generative%20Adversarial%20Networks%20can%20crack%20your%20password%21&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fpassgan%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fstream_tweets_tweepy%2f&amp;title=Stream%20tweets%20with%20Tweepy%20in%20Python" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fpassgan%2f&amp;title=Generative%20Adversarial%20Networks%20can%20crack%20your%20password%21" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -188,17 +188,17 @@
   <header>
   <div class="title">
     
-        <h2><a href="/posts/stream_tweets_tweepy/">Stream tweets with Tweepy in Python</a></h2>
+        <h2><a href="/posts/passgan/">Generative Adversarial Networks can crack your password!</a></h2>
     
     
 </div>
   <div class="meta">
-    <time class="published" datetime="2019-12-02 03:49:04 &#43;0900 JST">
-      December 2, 2019
+    <time class="published" datetime="2020-03-31 00:00:00 &#43;0000 UTC">
+      March 31, 2020
     </time>
     <span class="author"></span>
     
-      <p>3 minutes read</p>
+      <p>5 minutes read</p>
     
   </div>
 </header>
@@ -211,13 +211,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Stream%20tweets%20with%20Tweepy%20in%20Python&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fstream_tweets_tweepy%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Generative%20Adversarial%20Networks%20can%20crack%20your%20password%21&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fpassgan%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fstream_tweets_tweepy%2f&amp;title=Stream%20tweets%20with%20Tweepy%20in%20Python" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fpassgan%2f&amp;title=Generative%20Adversarial%20Networks%20can%20crack%20your%20password%21" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -229,176 +229,101 @@
   <div class="content">
     
 <p>
-In this tutorial, you will learn how to stream tweets with Tweepy library in Python.
-<figure>
-    <img src="https://miro.medium.com/max/5167/1*GghmuOlXcZd-F8Pdhqc9Sg.jpeg" width="100%"/> 
+  I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
+</p>
+<h2 id="headline-1">
+What are GAN?
+</h2>
+<p>
+Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth. Automatic generation, however, has no such thing as &#34;ground-truth&#34; output to compare with the network&#39;s output, but instead a ground-truth distribution of samples considered as real.
+</p>
+<p>
+  When training the network, two networks are competing with each other in a <em>minmax game</em>. A generator network generates samples which are rated as fake or real by a discriminator network. The discriminator is given real samples from the dataset as well as fake samples generated by the generator. It is trained to discriminate fake samples from real ones. However, the generator gets better and better at generating convincingly realistic samples so the task becomes harder and harder for the discriminator, to the point where it cannot tell the difference between generated and real samples.
+  <figure>
+    <img src="minmax.png"
+         alt="Loss function used in GAN training. Generator and discriminator are duelling each other in minimizing/maximizing the same function." width="100%"/> <figcaption>
+            <p>Loss function used in GAN training. Generator and discriminator are duelling each other in minimizing/maximizing the same function.</p>
+        </figcaption>
 </figure>
 
 </p>
-<h2 id="headline-1">
-Twitter API overview
-</h2>
 <p>
-Twitter offers several API, or methods you can use to retrieve tweets.
-</p>
-<ul>
-<li>
-<p>
-Streaming API
-</p>
-</li>
-<li>
-<p>
-Search API
-</p>
-</li>
-</ul>
-<p>
-What we are interested in here is the <strong>streaming API</strong>. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;<strong>statuses/sample</strong>&#34; endpoint (<a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/GET_statuse_sample">documentation</a>).
+  There are applications of generative models in  image editing, text-to-image generation, music generation.
 </p>
 <p>
-  Note that this method provides a very small percentage of total public tweets, from the <em>Twitter Firehose</em> which streams in real-time all tweets.
+  PassGAN uses an improved version of GAN, overcoming major difficulties of applying GAN to text generation: Improved Wasserstein GAN (or IWGAN). IWGAN notably uses the Wasserstein distance (also called earth-mover distance) to compute errors of the network, which is better suited for evaluating distance between two texts.
 </p>
 <p>
-  For this tutorial, you will need <em>tweepy</em>. It is available via <code>pip install tweepy</code> or <code>conda install -c conda-forge tweepy</code> if you use anaconda.
+  The architecture of PassGAN follows a usual convolutional network architecture with cascade of residual blocks making sure to keep the gradient propagating into deep layers of the network. We can also note the popular use of 1D-convolutions in processing textual data.
+  <figure>
+    <img src="passgan-architecture.png"
+         alt="Architecture of PassGAN" width="100%"/> <figcaption>
+            <p>Architecture of PassGAN</p>
+        </figcaption>
+</figure>
+
 </p>
 <h2 id="headline-2">
-Get your credentials from Twitter.com
+How do you train it?
 </h2>
 <p>
-Visit <a href="https://developer.twitter.com/en/apps">developer.twitter.com</a>, and log into your Twitter account. Create a new app, and under <em>Keys and tokens</em>, copy your credentials
+PassGAN is a password generator used for generating realistic passwords. <em>Realistic</em> means passwords that you and me could actually come up to when we create our account on whatever website. could it be social network, could it be online banking account.
 </p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Replace the &#34;None&#34;s by your own credentials</span>
-ACCESS_TOKEN <span style="color:#f92672">=</span> None
-ACCESS_TOKEN_SECRET <span style="color:#f92672">=</span> None
-CONSUMER_KEY <span style="color:#f92672">=</span> None
-CONSUMER_SECRET <span style="color:#f92672">=</span> None</code></pre></div>
-</div>
+<p>
+  Password cracking is a fastidious task which involves testing a lot of different combinations. However there are combinations more probable than others. For example, you might use a password which makes sense to you, like bluesky1991, with 1991 being your birth date rather than something cryptic as <code class="verbatim">9y2[V^1&gt;e_yfYE,r5q:e&#39;w!cv</code>. This is the assumption of cryptoanalysis techniques which try to crack passwords. They try out the most likely passphrases first.
+</p>
+<p>
+  HashCat (<a href="https://hashcat.net/hashcat/)">https://hashcat.net/hashcat/)</a> is a password recovery tool implementing most advanced password cracking strategies, such as mask attack. But these strategies rely on strong assumptions, such as fixed password length. On the opposite, PassGAN approach can virtually generate passwords of any length.
+</p>
 <h2 id="headline-3">
-Set up the connection
-</h2>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> OAuthHandler
-  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> API
-  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> Streamauth <span style="color:#f92672">=</span> OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-  auth<span style="color:#f92672">.</span>set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-  api <span style="color:#f92672">=</span> API(auth, wait_on_rate_limit<span style="color:#f92672">=</span>True,
-     wait_on_rate_limit_notify<span style="color:#f92672">=</span>True)</code></pre></div>
-</div>
-<p>
-First we import all necessary classes from tweepy library.
-</p>
-<ul>
-<li>
-<p>
-OAuthHandler stores your credentials
-</p>
-</li>
-<li>
-<p>
-API class sets the connection to Twitter API using your credentials
-</p>
-</li>
-<li>
-<p>
-Stream class streams the downloaded data
-</p>
-</li>
-</ul>
-<p>
-We set up the connection by providing our credentials to an <code>OAuthHandlerinstance</code>, and giving it to an <code>API</code> instance.
-</p>
-<p>
-  Tweepy provides two useful parameters for handling download restrictions from Twitter API:
-</p>
-<dl>
-<dt>
-wait_on_rate_limit
-</dt>
-<dd>
-<p>
-when download limit is reach, the program will wait and try to reconnect when rate limit is replenished
-</p>
-</dd>
-<dt>
-wait_on_rate_limit_notify
-</dt>
-<dd>
-<p>
-a notification will be printed when download limit is reached
-</p>
-</dd>
-</dl>
-<h2 id="headline-4">
-The listener
+How good can PassGAN guess your password?
 </h2>
 <p>
-The next step is defining our Listener, that will react on events from the API and handle the received data.
-</p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> sys
-  <span style="color:#f92672">from</span> tweepy.streaming <span style="color:#f92672">import</span> StreamListener
-  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Listener</span>(StreamListener):
-  <span style="color:#66d9ef">def</span> __init__(self, output_file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stdout):
-      super(Listener,self)<span style="color:#f92672">.</span>__init__()
-      self<span style="color:#f92672">.</span>output_file <span style="color:#f92672">=</span> output_file
-      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_status</span>(self, status):
-          <span style="color:#66d9ef">print</span>(status<span style="color:#f92672">.</span>text, file<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>output_file)
-      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_error</span>(self, status_code):
-          <span style="color:#66d9ef">print</span>(status_code)
-          <span style="color:#66d9ef">return</span> False</code></pre></div>
-</div>
-<p>
-<code>on_status</code> is the method that will be called when a tweet is downloaded. We print the tweet the file <code>output_file</code>. This file is by default the <em>standard output</em>, as we specify it in the <code>__init__</code> method.
-</p>
-<p>
-  <code>on_error</code> handles errors returned by the API.
-</p>
-<p>
-  Then, we have to create an instance of the Listener class. You can either choose to put the downloaded tweets into a file.
-</p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  output <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;stream_output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
-  listener <span style="color:#f92672">=</span> Listener(output_file<span style="color:#f92672">=</span>output)</code></pre></div>
-</div>
-<p>
-or to <em>standard output</em>, by not specifying any file, instantiating with <code>listener = Listener()</code>.
-</p>
-<h2 id="headline-5">
-Streaming
-</h2>
-<p>
-We are now ready to stream:
-</p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)
-  <span style="color:#66d9ef">try</span>:
-      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Start streaming.&#39;</span>)
-      stream<span style="color:#f92672">.</span>sample(languages<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;en&#39;</span>])
-  <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span> <span style="color:#66d9ef">as</span> e :
-      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Stopped.&#34;</span>)
-  <span style="color:#66d9ef">finally</span>:
-      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Done.&#39;</span>)
-      stream<span style="color:#f92672">.</span>disconnect()
-      output<span style="color:#f92672">.</span>close()</code></pre></div>
-</div>
-<p>
-It is good practice to enclose the call to <code>stream.sample()</code> inside <code>try</code> statement to handle <code>KeyboardInterrupt</code> for example.
-</p>
-<h2 id="headline-6">
-Final words
-</h2>
-<p>
-Tweepy is a quite powerful library providing access to Twitter APIs. You can check the <a href="http://docs.tweepy.org/en/latest/index.html">documentation here</a> for more information.
-</p>
-<p>
-  Here is the complete code
-  <script type="application/javascript" src="https://gist.github.com/adamoudad/85a2f1d103df1fd8f731c975edb7b0ca.js"></script>
+The researchers used RockYou dataset to train PassGAN, splitting the dataset into a train set and a test set. They also evaluated on a dataset of leaked LinkedIn passwords. Using their PassGAN, they generated many passwords, and looked how many matched real passwords from the test sets. 34.2% of real LinkedIn passwords were found to match generated ones. Of course, PassGAN needs to generate billions of passwords to achieve this score, but the required number of generated passwords is relatively few, reducing substantially the required amount of tries compared to an attack which would test all possibilities.
+  <figure>
+    <img src="passgan-linkedin-results.png"
+         alt="Comparison table of results for PassGAN and other techniques." width="100%"/> <figcaption>
+            <p>Comparison table of results for PassGAN and other techniques.</p>
+        </figcaption>
+</figure>
 
 </p>
 <p>
-  <a href="https://medium.com/@adam.oudad/stream-tweets-with-tweepy-in-python-99e85b6df468">My original post on medium</a>.
+  Due to the expressiveness of Wasserstein GAN (<a href="https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-WGAN.html">check out this nice blog post</a>) used by PassGAN, it is interesting to note that even generated passwords that did not match any in the dataset still look like valid candidates.
+  <figure>
+    <img src="passgan-generation-samples.png"
+         alt="PassGAN generation samples that did not match any password in the test set." width="100%"/> <figcaption>
+            <p>PassGAN generation samples that did not match any password in the test set.</p>
+        </figcaption>
+</figure>
+
+</p>
+<p>
+  A drawback of PassGAN noted by the researchers is it requires a lot of generation to obtain a similar amount of matches compared to other methods, that is up to double the number of generations than other strategies when they require about a billion. To overcome that, they propose using conditioning, which is a popular technique to improve data generation.
+</p>
+<p>
+  PassGAN can also be used in conjunction to other strategies. It can guess pretty well passwords that could not be guessed by other strategies, making a huge jump up to 73% of matches overall.
+</p>
+<p>
+  The main power of PassGAN is in its expressiveness. Virtually, it can generate any password, regardless of its size. So such methods could be ridiculously powerful with prior knowledge on the passwords to crack. Incidentally, that is a proposition of future work by the researchers, that is using conditioning, a popular technique to level up data generation models.
+</p>
+<h2 id="headline-4">
+Your password is in danger
+</h2>
+<p>
+Now that anxiety is at its climax, <del>I can sell you my revolutionary product  for good price!</del> More seriously, with the advances of password cracking, it is fair to say our way to choose password should advance as well.
+</p>
+<p>
+  It is easier to remember one intricate password rather than many, and having many simple or similar passwords makes you vulnerable to password cracking attacks. So the solution is to set a global password to an encrypted database of passwords. Encryption can make your password database virtually impossible to crack, or this would require at least several lifetimes to crack for electronic computers. An example of such tools is pass (<a href="https://www.passwordstore.org/),">https://www.passwordstore.org/),</a> a simple command-line tool using GPG encryption to securely store your passwords.
+</p>
+<p>
+  Websites themselves also implement new ways to authenticate, such as two-factor authentication, or using fingerprint, etc.
+</p>
+<h2 id="headline-5">
+References
+</h2>
+<p>
+Link to the paper <a href="https://arxiv.org/abs/1709.00440">https://arxiv.org/abs/1709.00440</a>
 </p>
 
   </div>
@@ -424,10 +349,10 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
         <ul>
           
             
-            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/data">data</a></li>
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/machine-learning">machine-learning</a></li>
           
             
-            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/api">api</a></li>
+            <li><a class="article-category-link" href="https://adamoudad.github.io/tags/cryptoanalysis">cryptoanalysis</a></li>
           
         </ul>
       </li>
@@ -466,10 +391,8 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
 
 <div class="pagination">
   
-    <a href="/posts/tubechiller/" class="button"><div class="previous"><div>TubeChiller, an automatic youtube videos player</div></div></a>
+    <a href="/posts/classification-metrics/" class="button"><div class="previous"><div>A guided tour of classification metrics</div></div></a>
   
-  
-    <a href="/posts/japanese/bring-or-take/" class="button"><div class="next"><div>Bring and take concepts in languages</div></div></a>
   
 </div>
 

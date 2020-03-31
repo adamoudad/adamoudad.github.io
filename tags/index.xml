@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cryptoanalysis</title>
+      <link>https://adamoudad.github.io/tags/cryptoanalysis/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/cryptoanalysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://adamoudad.github.io/tags/machine-learning/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>classification</title>
@@ -17,15 +35,6 @@
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/tags/classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine-learning</title>
-      <link>https://adamoudad.github.io/tags/machine-learning/</link>
-      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adamoudad.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
