@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.68.3" /><meta itemprop="name" content="Your python interpreter inside a docker container with Emacs">
+<meta name="generator" content="Hugo 0.70.0" /><meta itemprop="name" content="Your python interpreter inside a docker container with Emacs">
 <meta itemprop="description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.  In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.">
 <meta itemprop="datePublished" content="2020-04-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-06T00:00:00&#43;00:00" />
@@ -239,8 +239,8 @@
 <p>
   The default value of this variable is <code>&#34;python&#34;</code>, which will most likely run your system-wide python interpreter. What we want is to run the following command which will send our python code to a running container.
 </p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run <span style="color:#f92672">-</span>it <span style="color:#f92672">-</span>v <span style="color:#f92672">/</span>tmp:<span style="color:#f92672">/</span>tmp <span style="color:#f92672">-</span>v <span style="color:#960050;background-color:#1e0010">$</span>(pwd):<span style="color:#f92672">/</span>code ufoym<span style="color:#f92672">/</span>deepo python3</code></pre></div>
+<div class="src src-bash">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</code></pre></div>
 </div>
 <p>
 See <a href="https://docs.docker.com/engine/reference/commandline/cli/">docker command line reference for details about this command</a>.
@@ -361,6 +361,8 @@ Two remarks on the <code>docker run</code> command:
     <a href="/posts/passgan/" class="button"><div class="previous"><div>Generative Adversarial Networks can crack your password!</div></div></a>
   
   
+    <a href="/posts/data-processing-libraries/" class="button"><div class="next"><div>Data processing libraries in Python</div></div></a>
+  
 </div>
 
 
@@ -371,6 +373,17 @@ Two remarks on the <code>docker run</code> command:
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
+          <h1><a href="/posts/data-processing-libraries/">Data processing libraries in Python</a></h1>
+          <time class="published" datetime="">May 12, 2020</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -416,17 +429,6 @@ Two remarks on the <code>docker run</code> command:
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-
-        </section>
-        <header>
-          <h1><a href="/posts/zen-of-python/">Deciphering Python&#39;s &#34;import this&#34;</a></h1>
-          <time class="published" datetime="">February 12, 2020</time>
-        </header>
-      </article>
-      
       
         <a href="/posts/" class="button">See more</a>
       
@@ -446,7 +448,7 @@ Two remarks on the <code>docker run</code> command:
           
           <li>
             
-              <a href="/categories/machine-learning/">machine-learning<span class="count">4</span></a>
+              <a href="/categories/machine-learning/">machine-learning<span class="count">5</span></a>
             
           
           <li>
@@ -456,12 +458,12 @@ Two remarks on the <code>docker run</code> command:
           
           <li>
             
-              <a href="/categories/japanese/">japanese<span class="count">2</span></a>
+              <a href="/categories/programming/">programming<span class="count">3</span></a>
             
           
           <li>
             
-              <a href="/categories/programming/">programming<span class="count">2</span></a>
+              <a href="/categories/japanese/">japanese<span class="count">2</span></a>
             
           
           <li>
@@ -563,7 +565,7 @@ Two remarks on the <code>docker run</code> command:
         Adam Oudad
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.68.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.70.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
