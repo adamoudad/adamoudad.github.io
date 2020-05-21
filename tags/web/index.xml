@@ -6,10 +6,19 @@
     <description>Recent content in web on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 May 2019 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Have a bot haunt your Slack workspace</title>
+      <link>https://adamoudad.github.io/posts/python-slack-bot/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/python-slack-bot/</guid>
+      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial. Add a webhook for your Slack workspace   We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
+    </item>
     
     <item>
       <title>Hugo and Katex</title>

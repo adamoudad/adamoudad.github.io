@@ -4,12 +4,47 @@
   
   <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/python-slack-bot/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/programming/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/python/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/web/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/web/</loc>
+    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,26 +59,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/posts/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/categories/programming/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/python/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -239,16 +254,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/tags/latex/</loc>
-    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/categories/web/</loc>
-    <lastmod>2019-05-20T03:49:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/web/</loc>
     <lastmod>2019-05-20T03:49:04+09:00</lastmod>
   </url>
   
