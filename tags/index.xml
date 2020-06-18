@@ -6,15 +6,24 @@
     <description>Recent content in Tags on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>linux</title>
+      <link>https://adamoudad.github.io/tags/linux/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>python</title>
       <link>https://adamoudad.github.io/tags/python/</link>
-      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/tags/python/</guid>
       <description></description>
@@ -89,15 +98,6 @@
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/tags/classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://adamoudad.github.io/tags/linux/</link>
-      <pubDate>Fri, 13 Mar 2020 03:49:04 +0900</pubDate>
-      
-      <guid>https://adamoudad.github.io/tags/linux/</guid>
       <description></description>
     </item>
     

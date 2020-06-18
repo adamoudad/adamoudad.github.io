@@ -6,10 +6,19 @@
     <description>Recent content in python on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Schedule random aphorism notifications for your desktop</title>
+      <link>https://adamoudad.github.io/posts/random-aphorism-notifications/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/random-aphorism-notifications/</guid>
+      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.  Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron. Requirements   You will need these    python3 with notify2 library.</description>
+    </item>
     
     <item>
       <title>Have a bot haunt your Slack workspace</title>

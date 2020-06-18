@@ -6,10 +6,19 @@
     <description>Recent content in Linux on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Mar 2020 03:49:04 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Schedule random aphorism notifications for your desktop</title>
+      <link>https://adamoudad.github.io/posts/random-aphorism-notifications/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/random-aphorism-notifications/</guid>
+      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.  Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron. Requirements   You will need these    python3 with notify2 library.</description>
+    </item>
     
     <item>
       <title>Remote desktop with Linux client and Windows server</title>
