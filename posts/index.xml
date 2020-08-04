@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adamoudad.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to format dates in Python3</title>
+      <link>https://adamoudad.github.io/posts/format-dates-python3/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/format-dates-python3/</guid>
+      <description>You have probably used Python&amp;#39;s formatting syntax before. But how do you format a date? With datetime objects, you can use %Y, %m, %d to display respectively, the year, the month and the day of an object, in numerical form (that is, March will be replaced by the number &amp;#34;03&amp;#34;).  Python has several syntax for formatting strings. So that each of these lines will produce the same output.</description>
+    </item>
     
     <item>
       <title>Schedule random aphorism notifications for your desktop</title>
