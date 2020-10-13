@@ -4,12 +4,47 @@
   
   <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/python/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/python/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/posts/</loc>
-    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/categories/programming/</loc>
-    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/python/</loc>
-    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/</loc>
     <lastmod>2020-08-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -69,16 +89,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/posts/data-processing-libraries/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url>
   

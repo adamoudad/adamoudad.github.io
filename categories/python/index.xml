@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Adam Oudad</title>
+    <link>https://adamoudad.github.io/categories/python/</link>
+    <description>Recent content in Python on Adam Oudad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://adamoudad.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Training models with a progress a bar</title>
+      <link>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</guid>
+      <description>tqdm 1is a Python library aimed for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organized this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&amp;#39;s time library as it will let us slow down the program to see the progress bar update.</description>
+    </item>
+    
+  </channel>
+</rss>
