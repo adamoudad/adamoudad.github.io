@@ -7,22 +7,22 @@
 
 
 <meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Training models with a progress a bar">
-<meta itemprop="description" content="tqdm 1is a Python library aimed for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organized this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update.">
+<meta itemprop="description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update.">
 <meta itemprop="datePublished" content="2020-10-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-10-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="874">
+<meta itemprop="wordCount" content="875">
 
 
 
 <meta itemprop="keywords" content="machine-learning,python," /><meta property="og:title" content="Training models with a progress a bar" />
-<meta property="og:description" content="tqdm 1is a Python library aimed for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organized this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update." />
+<meta property="og:description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/progress_bar_with_tqdm/" />
 <meta property="article:published_time" content="2020-10-12T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-10-12T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Training models with a progress a bar"/>
-<meta name="twitter:description" content="tqdm 1is a Python library aimed for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organized this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."/>
+<meta name="twitter:description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -170,6 +170,7 @@
 
 
 
+<li><a href="https://brave.com/ada345" target="_blank" rel="noopener" title="Install Brave with my referral link" class="fas fa-hand-holding-usd"></a></li>
 
       </ul>
     </footer>
@@ -222,10 +223,10 @@
   <div class="content">
     
 <p>
-<code>tqdm</code> <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>is a Python library aimed for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+<code>tqdm</code> <sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
 </p>
 <p>
-I organized this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the <code>sleep</code> function from Python&#39;s <code>time</code> library as it will let us slow down the program to see the progress bar update.
+I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the <code>sleep</code> function from Python&#39;s <code>time</code> library as it will let us slow down the program to see the progress bar update.
 </p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep</code></pre></div>
@@ -291,7 +292,7 @@ Update the progress bar during execution
 </li>
 </ul>
 <p>
-   To use these methods, we need to name the <code>tqdm</code> iterator instance. This can be done either with the <code>=</code> operator or the <code>with</code> keyword in Python.
+   To use these methods, we need to assign the <code>tqdm</code> iterator instance to a variable. This can be done either with the <code>=</code> operator or the <code>with</code> keyword in Python.
 </p>
 <p>
    We can for example update the postfix with the list of divisors of the number <code>i</code>. Let&#39;s use this function to get the list of divisors
@@ -368,7 +369,7 @@ In this section, we use a neural network wrote in PyTorch and train it using <co
      <span style="color:#66d9ef">return</span> output</code></pre></div>
 </div>
 <p>
-This is a simple perceptron model that we can use for processing imgaes of digits from MNIST dataset. The following code for loading MNIST dataset is inspired from a PyTorch example<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>.
+This is a simple perceptron model that we can use for processing images of digits from MNIST dataset. The following code for loading MNIST dataset is inspired from a PyTorch example<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>.
 </p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torchvision <span style="color:#f92672">import</span> datasets, transforms
@@ -423,7 +424,7 @@ We just loaded our data, and defined our model and settings, we can now run a tr
          sleep(<span style="color:#ae81ff">0.1</span>)</code></pre></div>
 </div>
 <p>
-I am once again using <code>sleep</code> function to pause the program so that we can see the update of the progress bar. As you can see, we just applied what we learned in previously here, in particular with <code>tepoch.set_postfix</code> and <code>tepoch.set_description</code> which let you update the information displayed by the progress bar. Here is a capture of the output while the program was running
+I am once again using <code>sleep</code> function to pause the program so that we can see the update of the progress bar. As you can see, we just applied what we learned previously here, in particular with <code>tepoch.set_postfix</code> and <code>tepoch.set_description</code> which let you update the information displayed by the progress bar. Here is a capture of the output while the program was running
 </p>
 <pre class="example">
 Epoch 1:  15%|▉     | 142/937 [00:16&lt;01:32,  8.56batch/s, accuracy=89.1, loss=0.341]
@@ -730,6 +731,7 @@ Footnotes
 
 
 
+<li><a href="https://brave.com/ada345" target="_blank" rel="noopener" title="Install Brave with my referral link" class="fas fa-hand-holding-usd"></a></li>
 
       </ul>
   
