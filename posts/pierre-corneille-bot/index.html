@@ -4,25 +4,26 @@
   <meta charset="utf-8">
 <title>Ask this bot to solve your dilemmas - Adam Oudad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
 <meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Ask this bot to solve your dilemmas">
-<meta itemprop="description" content="Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be choosen.">
+<meta itemprop="description" content="Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be chosen.">
 <meta itemprop="datePublished" content="2020-11-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-11-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="887">
+<meta itemprop="wordCount" content="885">
 
 
 
 <meta itemprop="keywords" content="machine-learning,natural-language-processing," /><meta property="og:title" content="Ask this bot to solve your dilemmas" />
-<meta property="og:description" content="Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be choosen." />
+<meta property="og:description" content="Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be chosen." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/pierre-corneille-bot/" />
 <meta property="article:published_time" content="2020-11-18T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-11-18T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ask this bot to solve your dilemmas"/>
-<meta name="twitter:description" content="Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be choosen."/>
+<meta name="twitter:description" content="Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be chosen."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -226,7 +227,7 @@
 Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.
 </p>
 <p>
-You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be choosen. It can be between two equally unwanted things: would you rather &#34;lose the ability to feel emotions&#34; or &#34;be physically paralyzed&#34;. It can be between two super abilities: would you rather &#34;control the elements&#34; or &#34;control time&#34;. And so on. The best ones are those that makes the choice so hard, you can&#39;t even decide. But have no fear, algorithms might help you there.
+You probably have played a popular game named &#34;Would you rather&#34; in which two options are considered and only one should be chosen. It can be between two equally unwanted things: would you rather &#34;lose the ability to feel emotions&#34; or &#34;be physically paralyzed&#34;. It can be between two super abilities: would you rather &#34;control the elements&#34; or &#34;control time&#34;. And so on. The best ones are those that makes the choice so hard, you can&#39;t even decide. But have no fear, algorithms might help you there.
 </p>
 <p>
 As a fun project for testing out word embeddings, I implemented a neural network which choose between two given statements and called it Pierre Corneille Bot, in reference to the french dramaturgist (1606-1684), well-known for putting his characters in front of undecidable dilemmas. In this article I will go through the steps for realizing this project.
@@ -341,7 +342,7 @@ Use a sigmoid activation function on the output layer, instead of a tanh functio
 Testing
 </h2>
 <p>
-The bot quickly overfits to the dataset, as it is small in size (only a few thousands of samples). On new dilemmas, it tends to predict 50-50 value and cannot really decide. But it depends on cases, and I got interesting outcomes for some, where it was able to make arguable decisions. I noticed the system tends to be more decisive on dilemma with long-sentence options and output 50-50 decisions when options are short sentences, or even words. See some examples here.
+The bot quickly overfits to the dataset, as it is small (only a few thousands of samples). On new dilemmas, it tends to predict 50-50 value and cannot really decide. But it depends on cases, and I got interesting outcomes for some, where it was able to make arguable decisions. I noticed the system tends to be more decisive on dilemma with long-sentence options and output 50-50 decisions when options are short sentences, or even words. See some examples here.
 </p>
 <figure>
 <table>
