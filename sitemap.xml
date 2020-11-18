@@ -4,27 +4,42 @@
   
   <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/pierre-corneille-bot/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/natural-language-processing/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adamoudad.github.io/posts/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -34,11 +49,6 @@
   
   <url>
     <loc>https://adamoudad.github.io/tags/python/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/</loc>
     <lastmod>2020-10-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,12 +133,17 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/tags/cryptoanalysis/</loc>
+    <loc>https://adamoudad.github.io/posts/passgan/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/posts/passgan/</loc>
+    <loc>https://adamoudad.github.io/categories/security/</loc>
+    <lastmod>2020-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/security/</loc>
     <lastmod>2020-03-31T00:00:00+00:00</lastmod>
   </url>
   
