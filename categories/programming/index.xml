@@ -6,18 +6,15 @@
     <description>Recent content in Programming on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://adamoudad.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to format dates in Python3</title>
       <link>https://adamoudad.github.io/posts/format-dates-python3/</link>
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/format-dates-python3/</guid>
-      <description>You have probably used Python&amp;#39;s formatting syntax before. But how do you format a date? With datetime objects, you can use %Y, %m, %d to display respectively, the year, the month and the day of an object, in numerical form (that is, March will be replaced by the number &amp;#34;03&amp;#34;).  Python has several syntax for formatting strings. So that each of these lines will produce the same output.</description>
+      <description>You have probably used Python&amp;#39;s formatting syntax before. But how do you format a date? With datetime objects, you can use %Y, %m, %d to display respectively, the year, the month and the day of an object, in numerical form (that is, March will be replaced by the number &amp;#34;03&amp;#34;).
+ Python has several syntax for formatting strings. So that each of these lines will produce the same output.</description>
     </item>
     
     <item>
@@ -26,7 +23,10 @@
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/random-aphorism-notifications/</guid>
-      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.  Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron. Requirements   You will need these    python3 with notify2 library.</description>
+      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.
+ Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron.
+Requirements  You will need these
+  python3 with notify2 library. Install it with pip install notify2</description>
     </item>
     
     <item>
@@ -35,7 +35,8 @@
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/python-slack-bot/</guid>
-      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial. Add a webhook for your Slack workspace   We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
+      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
+Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
     </item>
     
     <item>
@@ -44,7 +45,8 @@
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/data-processing-libraries/</guid>
-      <description>With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.  Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.</description>
+      <description>With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.</description>
     </item>
     
     <item>
@@ -53,7 +55,10 @@
       <pubDate>Wed, 12 Feb 2020 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/zen-of-python/</guid>
-      <description>Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers. Print Zen of Python   You can print the 19 aphorisms by simply importing this. import this   This outputs The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.</description>
+      <description>Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers.
+Print Zen of Python  You can print the 19 aphorisms by simply importing this.
+import this  This outputs
+The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.</description>
     </item>
     
     <item>
@@ -62,7 +67,9 @@
       <pubDate>Sun, 02 Feb 2020 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/pythonic/</guid>
-      <description>Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.  I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code. Naming     Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0.</description>
+      <description>Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.
+ I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+Naming    Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0.</description>
     </item>
     
   </channel>

@@ -7,23 +7,27 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Word embeddings with sound">
-<meta itemprop="description" content="I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words. What is embedding   Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.">
-<meta itemprop="datePublished" content="2019-10-21T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2019-10-21T03:49:04&#43;09:00" />
+<meta name="generator" content="Hugo 0.78.2" /><meta itemprop="name" content="Word embeddings with sound">
+<meta itemprop="description" content="I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
+What is embedding  Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.">
+<meta itemprop="datePublished" content="2019-10-21T03:49:04+09:00" />
+<meta itemprop="dateModified" content="2019-10-21T03:49:04+09:00" />
 <meta itemprop="wordCount" content="511">
 
 
 
-<meta itemprop="keywords" content="nlp,embedding," /><meta property="og:title" content="Word embeddings with sound" />
-<meta property="og:description" content="I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words. What is embedding   Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data." />
+<meta itemprop="keywords" content="nlp,embedding," />
+<meta property="og:title" content="Word embeddings with sound" />
+<meta property="og:description" content="I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
+What is embedding  Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/sound-word2vec/" />
 <meta property="article:published_time" content="2019-10-21T03:49:04+09:00" />
 <meta property="article:modified_time" content="2019-10-21T03:49:04+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Word embeddings with sound"/>
-<meta name="twitter:description" content="I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words. What is embedding   Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data."/>
+<meta name="twitter:description" content="I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
+What is embedding  Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -224,54 +228,51 @@
   <div class="content">
     
 <p>
-  I came across this article called <a href="https://www.aclweb.org/anthology/D17-1096.pdf">Sound-Word2Vec:Learning Word Representations Grounded in Sounds</a><sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
-</p>
+  I came across this article called <a href="https://www.aclweb.org/anthology/D17-1096.pdf">Sound-Word2Vec:Learning Word Representations Grounded in Sounds</a><sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.</p>
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 What is embedding
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.</p>
 <p>
-Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.
-</p>
-<p>
-  For example, one-hot encoding is somewhat a poor embedding method, as it encodes data into a sparse vector space, and interpolation will not work as expected. What I mean by &#34;as expected&#34; is, we would prefer our embedding space to relate distances between vectors to something interpretable, such as semantics (synonyms, antonyms, etc). For this, Word2Vec performs quite well.
-</p>
+  For example, one-hot encoding is somewhat a poor embedding method, as it encodes data into a sparse vector space, and interpolation will not work as expected. What I mean by &#34;as expected&#34; is, we would prefer our embedding space to relate distances between vectors to something interpretable, such as semantics (synonyms, antonyms, etc). For this, Word2Vec performs quite well.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 What is the point of using sound ?
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>Human language can be written and spoken. Embeddings grounded in sounds capture dependancies between words and onomatopeia.
+  It is important to give machines an insight on sound dependancies of words, therefore bridging the gap between natural language and speech.</p>
 <p>
-Human language can be written and spoken. Embeddings grounded in sounds capture dependancies between words and onomatopeia.
-  It is important to give machines an insight on sound dependancies of words, therefore bridging the gap between natural language and speech.
-</p>
-<p>
-  In the research paper, sounds are clustered using various audio features, with K-means clustering. This is then considered as the target of the learning phase for the model.
-</p>
+  In the research paper, sounds are clustered using various audio features, with K-means clustering. This is then considered as the target of the learning phase for the model.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 Sound-Word2Vec model
 </h2>
-<p>
-The model is similar to Word2Vec. A hidden layer is a fully-connected layer with softmax activation.
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>The model is similar to Word2Vec. A hidden layer is a fully-connected layer with softmax activation.
   <figure>
     <img src="figure-1.png" width="100%"/> 
 </figure>
 
-  The task is simply to predict the sound cluster a given input word falls into. A Word2Vec pretrained model is used to take advantage of semantic information already contained in such embeddings. This is relatable to the technique of Transfer Learning, where the model is adapted to a new context, for performing better at sound-related tasks. Indeed, the model is therefore tested on three sound-related tasks:
-</p>
+  The task is simply to predict the sound cluster a given input word falls into. A Word2Vec pretrained model is used to take advantage of semantic information already contained in such embeddings. This is relatable to the technique of Transfer Learning, where the model is adapted to a new context, for performing better at sound-related tasks. Indeed, the model is therefore tested on three sound-related tasks:</p>
 <dl>
 <dt>
 Text-based sound retrieval
 </dt>
 <dd>
-<p>
-given a textual description, find a corresponding sound in the database
-</p>
+<p>given a textual description, find a corresponding sound in the database</p>
 </dd>
 <dt>
 Foley sound discovery
 </dt>
 <dd>
-<p>
-Given an outline of describing the technique for producing a sound, find relevant words suitable for producing the same sound
-</p>
+<p>Given an outline of describing the technique for producing a sound, find relevant words suitable for producing the same sound</p>
 </dd>
 <dt>
 Aurally relevant relatedness
@@ -279,47 +280,54 @@ Aurally relevant relatedness
 <dd>
 </dd>
 </dl>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 Sound data
 </h2>
-<p>
-Sound data was retrieved from <a href="http://www.freesound.org/">freesound.org</a>, a website collecting sounds uploaded by users. This represents a huge database of various tagged sounds with descriptions.
-</p>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>Sound data was retrieved from <a href="http://www.freesound.org/">freesound.org</a>, a website collecting sounds uploaded by users. This represents a huge database of various tagged sounds with descriptions.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
 <h2 id="headline-5">
 Nearest neighbors are sound-related
 </h2>
-<p>
-The following table from the original paper show how such embeddings differ from Word2Vec&#39;s embeddings, which are semantically related. <em>apple</em> is associated with <em>bite</em>, <em>chew</em>, <em>munch</em>, instead of <em>fruit</em>, <em>pears</em>.
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>The following table from the original paper show how such embeddings differ from Word2Vec&#39;s embeddings, which are semantically related. <em>apple</em> is associated with <em>bite</em>, <em>chew</em>, <em>munch</em>, instead of <em>fruit</em>, <em>pears</em>.
   <figure>
     <img src="table-3.png" width="100%"/> 
 </figure>
-
 </p>
 <p>
   Recall results on Text-based sound retrieval task are registered on the following table.
   <figure>
     <img src="table-1.png" width="100%"/> 
 </figure>
-
 </p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
 <h2 id="headline-6">
 Final words
 </h2>
-<p>
-Embeddings are crucial in connectionist view of Machine Learning, as they present input information in a suitable form for subsequent task to perform. I can think of such embeddings being used for lyrics generation, speech recognition, or sentiment analysis. The goal of course is to encapsulate as much relevant information as you can in your embedding, so I believe bridging two fields like sound and natural language is the way to go if we want to obtain rich embeddings.
-</p>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>Embeddings are crucial in connectionist view of Machine Learning, as they present input information in a suitable form for subsequent task to perform. I can think of such embeddings being used for lyrics generation, speech recognition, or sentiment analysis. The goal of course is to encapsulate as much relevant information as you can in your embedding, so I believe bridging two fields like sound and natural language is the way to go if we want to obtain rich embeddings.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
 <h2 id="headline-7">
 Footnotes
 </h2>
+</div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar, R Vedantam, D. Parikh, EMNLP conference 2017.
-</p>
+<p>Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar, R Vedantam, D. Parikh, EMNLP conference 2017.</p>
 </div>
 </div>
 </div>
@@ -412,6 +420,17 @@ Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar,
 
         </section>
         <header>
+          <h1><a href="/posts/lock_pattern/">How many patterns are there to lock your android smartphone?</a></h1>
+          <time class="published" datetime="">January 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
           <h1><a href="/posts/pierre-corneille-bot/">Ask this bot to solve your dilemmas</a></h1>
           <time class="published" datetime="">November 18, 2020</time>
         </header>
@@ -447,17 +466,6 @@ Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar,
         <header>
           <h1><a href="/posts/random-aphorism-notifications/">Schedule random aphorism notifications for your desktop</a></h1>
           <time class="published" datetime="">June 18, 2020</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-
-        </section>
-        <header>
-          <h1><a href="/posts/python-slack-bot/">Have a bot haunt your Slack workspace</a></h1>
-          <time class="published" datetime="">May 21, 2020</time>
         </header>
       </article>
       
@@ -505,6 +513,16 @@ Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar,
           
           <li>
             
+              <a href="/categories/python/">python<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
               <a href="/categories/web/">web<span class="count">2</span></a>
             
           
@@ -520,17 +538,7 @@ Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar,
           
           <li>
             
-              <a href="/categories/python/">python<span class="count">1</span></a>
-            
-          
-          <li>
-            
               <a href="/categories/random/">random<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/security/">security<span class="count">1</span></a>
             
           
           </li>
@@ -603,12 +611,12 @@ Sound-Word2Vec:Learning Word Representations Grounded in Sounds, A. Vijayakumar,
   
   <p class="copyright">
     
-      &copy; 2020
+      &copy; 2021
       
         Adam Oudad
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.72.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.78.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

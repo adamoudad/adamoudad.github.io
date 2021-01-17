@@ -7,23 +7,33 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Stream tweets with Tweepy in Python">
-<meta itemprop="description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).">
-<meta itemprop="datePublished" content="2019-12-02T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2019-12-02T03:49:04&#43;09:00" />
+<meta name="generator" content="Hugo 0.78.2" /><meta itemprop="name" content="Stream tweets with Tweepy in Python">
+<meta itemprop="description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+  Streaming API
+  Search API
+  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).">
+<meta itemprop="datePublished" content="2019-12-02T03:49:04+09:00" />
+<meta itemprop="dateModified" content="2019-12-02T03:49:04+09:00" />
 <meta itemprop="wordCount" content="489">
 
 
 
-<meta itemprop="keywords" content="data,api," /><meta property="og:title" content="Stream tweets with Tweepy in Python" />
-<meta property="og:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)." />
+<meta itemprop="keywords" content="data,api," />
+<meta property="og:title" content="Stream tweets with Tweepy in Python" />
+<meta property="og:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+  Streaming API
+  Search API
+  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/stream_tweets_tweepy/" />
 <meta property="article:published_time" content="2019-12-02T03:49:04+09:00" />
 <meta property="article:modified_time" content="2019-12-02T03:49:04+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Stream tweets with Tweepy in Python"/>
-<meta name="twitter:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)."/>
+<meta name="twitter:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+  Streaming API
+  Search API
+  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -223,46 +233,38 @@
 
   <div class="content">
     
-<p>
-In this tutorial, you will learn how to stream tweets with Tweepy library in Python.
+<p>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.
 <figure>
     <img src="https://miro.medium.com/max/5167/1*GghmuOlXcZd-F8Pdhqc9Sg.jpeg" width="100%"/> 
 </figure>
-
 </p>
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Twitter API overview
 </h2>
-<p>
-Twitter offers several API, or methods you can use to retrieve tweets.
-</p>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Twitter offers several API, or methods you can use to retrieve tweets.</p>
 <ul>
 <li>
-<p>
-Streaming API
-</p>
+<p>Streaming API</p>
 </li>
 <li>
-<p>
-Search API
-</p>
+<p>Search API</p>
 </li>
 </ul>
+<p>What we are interested in here is the <strong>streaming API</strong>. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;<strong>statuses/sample</strong>&#34; endpoint (<a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/GET_statuse_sample">documentation</a>).</p>
 <p>
-What we are interested in here is the <strong>streaming API</strong>. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;<strong>statuses/sample</strong>&#34; endpoint (<a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/GET_statuse_sample">documentation</a>).
-</p>
+  Note that this method provides a very small percentage of total public tweets, from the <em>Twitter Firehose</em> which streams in real-time all tweets.</p>
 <p>
-  Note that this method provides a very small percentage of total public tweets, from the <em>Twitter Firehose</em> which streams in real-time all tweets.
-</p>
-<p>
-  For this tutorial, you will need <em>tweepy</em>. It is available via <code>pip install tweepy</code> or <code>conda install -c conda-forge tweepy</code> if you use anaconda.
-</p>
+  For this tutorial, you will need <em>tweepy</em>. It is available via <code>pip install tweepy</code> or <code>conda install -c conda-forge tweepy</code> if you use anaconda.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 Get your credentials from Twitter.com
 </h2>
-<p>
-Visit <a href="https://developer.twitter.com/en/apps">developer.twitter.com</a>, and log into your Twitter account. Create a new app, and under <em>Keys and tokens</em>, copy your credentials
-</p>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>Visit <a href="https://developer.twitter.com/en/apps">developer.twitter.com</a>, and log into your Twitter account. Create a new app, and under <em>Keys and tokens</em>, copy your credentials</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Replace the &#34;None&#34;s by your own credentials</span>
 ACCESS_TOKEN <span style="color:#f92672">=</span> None
@@ -270,9 +272,13 @@ ACCESS_TOKEN_SECRET <span style="color:#f92672">=</span> None
 CONSUMER_KEY <span style="color:#f92672">=</span> None
 CONSUMER_SECRET <span style="color:#f92672">=</span> None</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 Set up the connection
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> OAuthHandler
   <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> API
@@ -281,56 +287,43 @@ Set up the connection
   api <span style="color:#f92672">=</span> API(auth, wait_on_rate_limit<span style="color:#f92672">=</span>True,
      wait_on_rate_limit_notify<span style="color:#f92672">=</span>True)</code></pre></div>
 </div>
-<p>
-First we import all necessary classes from tweepy library.
-</p>
+<p>First we import all necessary classes from tweepy library.</p>
 <ul>
 <li>
-<p>
-OAuthHandler stores your credentials
-</p>
+<p>OAuthHandler stores your credentials</p>
 </li>
 <li>
-<p>
-API class sets the connection to Twitter API using your credentials
-</p>
+<p>API class sets the connection to Twitter API using your credentials</p>
 </li>
 <li>
-<p>
-Stream class streams the downloaded data
-</p>
+<p>Stream class streams the downloaded data</p>
 </li>
 </ul>
+<p>We set up the connection by providing our credentials to an <code>OAuthHandlerinstance</code>, and giving it to an <code>API</code> instance.</p>
 <p>
-We set up the connection by providing our credentials to an <code>OAuthHandlerinstance</code>, and giving it to an <code>API</code> instance.
-</p>
-<p>
-  Tweepy provides two useful parameters for handling download restrictions from Twitter API:
-</p>
+  Tweepy provides two useful parameters for handling download restrictions from Twitter API:</p>
 <dl>
 <dt>
 wait_on_rate_limit
 </dt>
 <dd>
-<p>
-when download limit is reach, the program will wait and try to reconnect when rate limit is replenished
-</p>
+<p>when download limit is reach, the program will wait and try to reconnect when rate limit is replenished</p>
 </dd>
 <dt>
 wait_on_rate_limit_notify
 </dt>
 <dd>
-<p>
-a notification will be printed when download limit is reached
-</p>
+<p>a notification will be printed when download limit is reached</p>
 </dd>
 </dl>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 The listener
 </h2>
-<p>
-The next step is defining our Listener, that will react on events from the API and handle the received data.
-</p>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>The next step is defining our Listener, that will react on events from the API and handle the received data.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> sys
   <span style="color:#f92672">from</span> tweepy.streaming <span style="color:#f92672">import</span> StreamListener
@@ -344,28 +337,24 @@ The next step is defining our Listener, that will react on events from the API a
           <span style="color:#66d9ef">print</span>(status_code)
           <span style="color:#66d9ef">return</span> False</code></pre></div>
 </div>
+<p><code>on_status</code> is the method that will be called when a tweet is downloaded. We print the tweet the file <code>output_file</code>. This file is by default the <em>standard output</em>, as we specify it in the <code>__init__</code> method.</p>
 <p>
-<code>on_status</code> is the method that will be called when a tweet is downloaded. We print the tweet the file <code>output_file</code>. This file is by default the <em>standard output</em>, as we specify it in the <code>__init__</code> method.
-</p>
+  <code>on_error</code> handles errors returned by the API.</p>
 <p>
-  <code>on_error</code> handles errors returned by the API.
-</p>
-<p>
-  Then, we have to create an instance of the Listener class. You can either choose to put the downloaded tweets into a file.
-</p>
+  Then, we have to create an instance of the Listener class. You can either choose to put the downloaded tweets into a file.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  output <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;stream_output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
   listener <span style="color:#f92672">=</span> Listener(output_file<span style="color:#f92672">=</span>output)</code></pre></div>
 </div>
-<p>
-or to <em>standard output</em>, by not specifying any file, instantiating with <code>listener = Listener()</code>.
-</p>
+<p>or to <em>standard output</em>, by not specifying any file, instantiating with <code>listener = Listener()</code>.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
 <h2 id="headline-5">
 Streaming
 </h2>
-<p>
-We are now ready to stream:
-</p>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>We are now ready to stream:</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)
   <span style="color:#66d9ef">try</span>:
@@ -378,23 +367,23 @@ We are now ready to stream:
       stream<span style="color:#f92672">.</span>disconnect()
       output<span style="color:#f92672">.</span>close()</code></pre></div>
 </div>
-<p>
-It is good practice to enclose the call to <code>stream.sample()</code> inside <code>try</code> statement to handle <code>KeyboardInterrupt</code> for example.
-</p>
+<p>It is good practice to enclose the call to <code>stream.sample()</code> inside <code>try</code> statement to handle <code>KeyboardInterrupt</code> for example.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
 <h2 id="headline-6">
 Final words
 </h2>
-<p>
-Tweepy is a quite powerful library providing access to Twitter APIs. You can check the <a href="http://docs.tweepy.org/en/latest/index.html">documentation here</a> for more information.
-</p>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>Tweepy is a quite powerful library providing access to Twitter APIs. You can check the <a href="http://docs.tweepy.org/en/latest/index.html">documentation here</a> for more information.</p>
 <p>
   Here is the complete code
   <script type="application/javascript" src="https://gist.github.com/adamoudad/85a2f1d103df1fd8f731c975edb7b0ca.js"></script>
-
 </p>
 <p>
-  <a href="https://medium.com/@adam.oudad/stream-tweets-with-tweepy-in-python-99e85b6df468">My original post on medium</a>.
-</p>
+  <a href="https://medium.com/@adam.oudad/stream-tweets-with-tweepy-in-python-99e85b6df468">My original post on medium</a>.</p>
+</div>
+</div>
 
   </div>
   <footer>
@@ -483,6 +472,17 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
 
         </section>
         <header>
+          <h1><a href="/posts/lock_pattern/">How many patterns are there to lock your android smartphone?</a></h1>
+          <time class="published" datetime="">January 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
           <h1><a href="/posts/pierre-corneille-bot/">Ask this bot to solve your dilemmas</a></h1>
           <time class="published" datetime="">November 18, 2020</time>
         </header>
@@ -518,17 +518,6 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
         <header>
           <h1><a href="/posts/random-aphorism-notifications/">Schedule random aphorism notifications for your desktop</a></h1>
           <time class="published" datetime="">June 18, 2020</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-
-        </section>
-        <header>
-          <h1><a href="/posts/python-slack-bot/">Have a bot haunt your Slack workspace</a></h1>
-          <time class="published" datetime="">May 21, 2020</time>
         </header>
       </article>
       
@@ -576,6 +565,16 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
           
           <li>
             
+              <a href="/categories/python/">python<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
               <a href="/categories/web/">web<span class="count">2</span></a>
             
           
@@ -591,17 +590,7 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
           
           <li>
             
-              <a href="/categories/python/">python<span class="count">1</span></a>
-            
-          
-          <li>
-            
               <a href="/categories/random/">random<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/security/">security<span class="count">1</span></a>
             
           
           </li>
@@ -674,12 +663,12 @@ Tweepy is a quite powerful library providing access to Twitter APIs. You can che
   
   <p class="copyright">
     
-      &copy; 2020
+      &copy; 2021
       
         Adam Oudad
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.72.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.78.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

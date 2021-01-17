@@ -7,23 +7,27 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Data processing libraries in Python">
-<meta itemprop="description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.  Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.">
-<meta itemprop="datePublished" content="2020-05-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-05-12T00:00:00&#43;00:00" />
+<meta name="generator" content="Hugo 0.78.2" /><meta itemprop="name" content="Data processing libraries in Python">
+<meta itemprop="description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.">
+<meta itemprop="datePublished" content="2020-05-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-05-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="768">
 
 
 
-<meta itemprop="keywords" content="machine-learning,python," /><meta property="og:title" content="Data processing libraries in Python" />
-<meta property="og:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.  Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do." />
+<meta itemprop="keywords" content="machine-learning,python," />
+<meta property="og:title" content="Data processing libraries in Python" />
+<meta property="og:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/data-processing-libraries/" />
 <meta property="article:published_time" content="2020-05-12T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-05-12T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Data processing libraries in Python"/>
-<meta name="twitter:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.  Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."/>
+<meta name="twitter:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -224,19 +228,17 @@
   <div class="content">
     
 <p>
-With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
-</p>
+With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.</p>
 <p>
-Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do. In this article, we will go over different libraries, with respect to the type of data they can handle.
-</p>
+Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do. In this article, we will go over different libraries, with respect to the type of data they can handle.</p>
+<div id="outline-container-headline-1" class="outline-3">
 <h3 id="headline-1">
 Tabular data
 </h3>
-<p>
-Tabular data is most of what we call sometimes <em>big data</em>, as it appears in the form of loosely organised rows corresponding to samples and columns, corresponding to features (most of the time at least).
+<div id="outline-text-headline-1" class="outline-text-3">
+<p>Tabular data is most of what we call sometimes <em>big data</em>, as it appears in the form of loosely organised rows corresponding to samples and columns, corresponding to features (most of the time at least).
    <a href="https://pandas.pydata.org/">Pandas</a> is the library that can handle such data. Created for the use of stock markets that heavily require operations on series, such as moving averages, it has evolved in a full-featured library that can handle well tabular data.
-   Here is an example.
-</p>
+   Here is an example.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(<span style="color:#e6db74">&#39;data.csv&#39;</span>)
@@ -244,40 +246,37 @@ df<span style="color:#f92672">.</span>head()               <span style="color:#7
 df<span style="color:#f92672">.</span>describe()           <span style="color:#75715e"># Describes each column with common statistics</span>
 df<span style="color:#f92672">.</span>prices<span style="color:#f92672">.</span>plot()        <span style="color:#75715e"># Will plot column &#34;prices&#34;</span></code></pre></div>
 </div>
-<p>
-As you can see, syntax is quite easy to understand. A sometimes difficult part to understand is the way <code>pandas</code> manages indexing and selecting. It comes down to the what you define as your index column. If no arguments are passed to <code>pd.DataFrame</code>, pandas creates a index column it increments at each row. You can use different ways for selecting a range of values.
-</p>
+<p>As you can see, syntax is quite easy to understand. A sometimes difficult part to understand is the way <code>pandas</code> manages indexing and selecting. It comes down to the what you define as your index column. If no arguments are passed to <code>pd.DataFrame</code>, pandas creates a index column it increments at each row. You can use different ways for selecting a range of values.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-3">
 <h3 id="headline-2">
 Text data
 </h3>
-<p>
-It is first important to note that Python comes with quite a lot of powerful built-in text-processing capabilities.
-</p>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>It is first important to note that Python comes with quite a lot of powerful built-in text-processing capabilities.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw_data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Some text&#34;</span>
 processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>lower()
 processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>strip()</code></pre></div>
 </div>
-<p>
-Yet natural language processing involves many processing techniques, such as tokenization, lemmatization, which are doable using <a href="https://www.nltk.org/">NLTK</a>.
-</p>
+<p>Yet natural language processing involves many processing techniques, such as tokenization, lemmatization, which are doable using <a href="https://www.nltk.org/">NLTK</a>.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> nltk
 nltk<span style="color:#f92672">.</span>download()
 tokens <span style="color:#f92672">=</span> nltk<span style="color:#f92672">.</span>tokenize(s)</code></pre></div>
 </div>
-<p>
-For more advanced natural language processing, and if you are aiming for optimized pipelines, <a href="https://spacy.io/">spacy</a> is a solid choice.
-</p>
+<p>For more advanced natural language processing, and if you are aiming for optimized pipelines, <a href="https://spacy.io/">spacy</a> is a solid choice.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
 <h3 id="headline-3">
 Audio and musical data
 </h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<p>Audio processing is enabled with libraries such as <a href="https://librosa.github.io/librosa/">librosa</a> and <a href="https://essentia.upf.edu/">essentia</a> for audio processing. These are very popular libraries among music information retrieval research community for example.</p>
 <p>
-Audio processing is enabled with libraries such as <a href="https://librosa.github.io/librosa/">librosa</a> and <a href="https://essentia.upf.edu/">essentia</a> for audio processing. These are very popular libraries among music information retrieval research community for example.
-</p>
-<p>
-   For symbolic music, that is when working with MIDI for example, <a href="https://mido.readthedocs.io/en/latest/">mido</a> and <a href="https://craffel.github.io/pretty-midi/">pretty_midi</a> are a good choice. More advanced, there is <a href="https://web.mit.edu/music21/">music21</a>, a powerful library which is aimed mainly at musicology analysis, with wide range of abstractions, for example dividing a score into Stream, Part, Track and Measure objects. It also has a straightforward syntax.
-</p>
+   For symbolic music, that is when working with MIDI for example, <a href="https://mido.readthedocs.io/en/latest/">mido</a> and <a href="https://craffel.github.io/pretty-midi/">pretty_midi</a> are a good choice. More advanced, there is <a href="https://web.mit.edu/music21/">music21</a>, a powerful library which is aimed mainly at musicology analysis, with wide range of abstractions, for example dividing a score into Stream, Part, Track and Measure objects. It also has a straightforward syntax.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> converter
 <span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> note, chord
@@ -301,39 +300,43 @@ midi<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;te
 midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;midi&#34;</span>)               <span style="color:#75715e"># Show a PNG image of the score from measures 5 to 10</span>
 midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>plot()                     <span style="color:#75715e"># Display pianoroll of measures 5 to 10</span></code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
 <h3 id="headline-4">
 Images
 </h3>
-<p>
-<a href="https://python-pillow.org/">Pillow</a> is the library in Python for handling images. It can do what an image editor program would do.
-</p>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p><a href="https://python-pillow.org/">Pillow</a> is the library in Python for handling images. It can do what an image editor program would do.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageFilter
 im <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/home/adam/Pictures/test.png&#39;</span>)
 new_im <span style="color:#f92672">=</span> im<span style="color:#f92672">.</span>rotate(<span style="color:#ae81ff">90</span>)<span style="color:#f92672">.</span>filter(ImageFilter<span style="color:#f92672">.</span>GaussianBlur())</code></pre></div>
 </div>
-<p>
-<a href="https://scikit-image.org/">scikit-image</a> is also used for image processing, and provides most of filters and algorithms. <a href="https://opencv.org/">opencv</a> is a library aimed at computer vision, and can serve for processing videos or working with data from a camera.
-   If you work with uncommon or very specific image formats, <a href="https://imageio.github.io/">imageio</a> will be able to provide the image data to your python script thanks to its <a href="https://imageio.readthedocs.io/en/stable/formats.html">wide range of supported format</a>.
-</p>
+<p><a href="https://scikit-image.org/">scikit-image</a> is also used for image processing, and provides most of filters and algorithms. <a href="https://opencv.org/">opencv</a> is a library aimed at computer vision, and can serve for processing videos or working with data from a camera.
+   If you work with uncommon or very specific image formats, <a href="https://imageio.github.io/">imageio</a> will be able to provide the image data to your python script thanks to its <a href="https://imageio.readthedocs.io/en/stable/formats.html">wide range of supported format</a>.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
 <h3 id="headline-5">
 Numerical data
 </h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>All above libraries have the power to read specific data formats. When this is converted in python objects and data structures, <a href="https://numpy.org/">numpy</a> usually comes into play, to manipulate these numerical values.</p>
 <p>
-All above libraries have the power to read specific data formats. When this is converted in python objects and data structures, <a href="https://numpy.org/">numpy</a> usually comes into play, to manipulate these numerical values.
-</p>
-<p>
-   Before getting deep learning bazookas out, it is recommended to perform some analysis of the data, using <a href="https://scikit-learn.org/">sklearn</a>, <a href="https://scipy.org/">scipy</a> and/or <a href="https://seaborn.pydata.org/">seaborn</a>.
-</p>
+   Before getting deep learning bazookas out, it is recommended to perform some analysis of the data, using <a href="https://scikit-learn.org/">sklearn</a>, <a href="https://scipy.org/">scipy</a> and/or <a href="https://seaborn.pydata.org/">seaborn</a>.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
 Conclusion
 </h3>
+<div id="outline-text-headline-6" class="outline-text-3">
+<p>Once all this data processing and analysis is performed, we get enough information on the data to consider what model to choose for our task, and hopefully machine learning techniques can be unfolded at their full potential.</p>
 <p>
-Once all this data processing and analysis is performed, we get enough information on the data to consider what model to choose for our task, and hopefully machine learning techniques can be unfolded at their full potential.
-</p>
-<p>
-   This article covers most used libraries with respect to the type of data we want to process. These libraries are the ones commonly used in machine learning courses, and there is nothing better than building some experience using these tools on practical problems!
-</p>
+   This article covers most used libraries with respect to the type of data we want to process. These libraries are the ones commonly used in machine learning courses, and there is nothing better than building some experience using these tools on practical problems!</p>
+</div>
+</div>
 
   </div>
   <footer>
@@ -425,6 +428,17 @@ Once all this data processing and analysis is performed, we get enough informati
 
         </section>
         <header>
+          <h1><a href="/posts/lock_pattern/">How many patterns are there to lock your android smartphone?</a></h1>
+          <time class="published" datetime="">January 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
           <h1><a href="/posts/pierre-corneille-bot/">Ask this bot to solve your dilemmas</a></h1>
           <time class="published" datetime="">November 18, 2020</time>
         </header>
@@ -460,17 +474,6 @@ Once all this data processing and analysis is performed, we get enough informati
         <header>
           <h1><a href="/posts/random-aphorism-notifications/">Schedule random aphorism notifications for your desktop</a></h1>
           <time class="published" datetime="">June 18, 2020</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-
-        </section>
-        <header>
-          <h1><a href="/posts/python-slack-bot/">Have a bot haunt your Slack workspace</a></h1>
-          <time class="published" datetime="">May 21, 2020</time>
         </header>
       </article>
       
@@ -518,6 +521,16 @@ Once all this data processing and analysis is performed, we get enough informati
           
           <li>
             
+              <a href="/categories/python/">python<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
               <a href="/categories/web/">web<span class="count">2</span></a>
             
           
@@ -533,17 +546,7 @@ Once all this data processing and analysis is performed, we get enough informati
           
           <li>
             
-              <a href="/categories/python/">python<span class="count">1</span></a>
-            
-          
-          <li>
-            
               <a href="/categories/random/">random<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/security/">security<span class="count">1</span></a>
             
           
           </li>
@@ -616,12 +619,12 @@ Once all this data processing and analysis is performed, we get enough informati
   
   <p class="copyright">
     
-      &copy; 2020
+      &copy; 2021
       
         Adam Oudad
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.72.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.78.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

@@ -7,23 +7,27 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Generative Adversarial Networks can crack your password!">
-<meta itemprop="description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.">
-<meta itemprop="datePublished" content="2020-03-31T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-31T00:00:00&#43;00:00" />
+<meta name="generator" content="Hugo 0.78.2" /><meta itemprop="name" content="Generative Adversarial Networks can crack your password!">
+<meta itemprop="description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
+What are GAN?  Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.">
+<meta itemprop="datePublished" content="2020-03-31T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-31T00:00:00+00:00" />
 <meta itemprop="wordCount" content="950">
 
 
 
-<meta itemprop="keywords" content="machine-learning,security," /><meta property="og:title" content="Generative Adversarial Networks can crack your password!" />
-<meta property="og:description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth." />
+<meta itemprop="keywords" content="machine-learning,security," />
+<meta property="og:title" content="Generative Adversarial Networks can crack your password!" />
+<meta property="og:description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
+What are GAN?  Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/passgan/" />
 <meta property="article:published_time" content="2020-03-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-31T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Generative Adversarial Networks can crack your password!"/>
-<meta name="twitter:description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth."/>
+<meta name="twitter:description" content="I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
+What are GAN?  Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -224,14 +228,13 @@
   <div class="content">
     
 <p>
-  I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
-</p>
+  I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).</p>
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 What are GAN?
 </h2>
-<p>
-Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth. Automatic generation, however, has no such thing as &#34;ground-truth&#34; output to compare with the network&#39;s output, but instead a ground-truth distribution of samples considered as real.
-</p>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth. Automatic generation, however, has no such thing as &#34;ground-truth&#34; output to compare with the network&#39;s output, but instead a ground-truth distribution of samples considered as real.</p>
 <p>
   When training the network, two networks are competing with each other in a <em>minmax game</em>. A generator network generates samples which are rated as fake or real by a discriminator network. The discriminator is given real samples from the dataset as well as fake samples generated by the generator. It is trained to discriminate fake samples from real ones. However, the generator gets better and better at generating convincingly realistic samples so the task becomes harder and harder for the discriminator, to the point where it cannot tell the difference between generated and real samples.
   <figure>
@@ -240,14 +243,11 @@ Generative Adversarial Networks are three words that have been used a lot during
             <p>Loss function used in GAN training. Generator and discriminator are duelling each other in minimizing/maximizing the same function.</p>
         </figcaption>
 </figure>
-
 </p>
 <p>
-  There are applications of generative models in  image editing, text-to-image generation, music generation.
-</p>
+  There are applications of generative models in  image editing, text-to-image generation, music generation.</p>
 <p>
-  PassGAN uses an improved version of GAN, overcoming major difficulties of applying GAN to text generation: Improved Wasserstein GAN (or IWGAN). IWGAN notably uses the Wasserstein distance (also called earth-mover distance) to compute errors of the network, which is better suited for evaluating distance between two texts.
-</p>
+  PassGAN uses an improved version of GAN, overcoming major difficulties of applying GAN to text generation: Improved Wasserstein GAN (or IWGAN). IWGAN notably uses the Wasserstein distance (also called earth-mover distance) to compute errors of the network, which is better suited for evaluating distance between two texts.</p>
 <p>
   The architecture of PassGAN follows a usual convolutional network architecture with cascade of residual blocks making sure to keep the gradient propagating into deep layers of the network. We can also note the popular use of 1D-convolutions in processing textual data.
   <figure>
@@ -256,32 +256,33 @@ Generative Adversarial Networks are three words that have been used a lot during
             <p>Architecture of PassGAN</p>
         </figcaption>
 </figure>
-
 </p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 Training to generate human-like passwords
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>PassGAN is a password generator used for generating realistic passwords. By <em>realistic</em> I mean passwords that you and me could actually come up to when we create our account on whatever website. It could be a social network account, or it could be an online banking account.</p>
 <p>
-PassGAN is a password generator used for generating realistic passwords. By <em>realistic</em> I mean passwords that you and me could actually come up to when we create our account on whatever website. It could be a social network account, or it could be an online banking account.
-</p>
+  Password cracking is a fastidious task which involves testing a lot of different combinations. However, there are combinations more probable than others. For example, you might use a password which makes sense to you, like bluesky1991, with 1991 being your birth date rather than something cryptic like <code class="verbatim">9y2[V^1&gt;e_yfYE,r5q:e&#39;w!cv</code>. This is the assumption of cryptoanalysis techniques which try to crack passwords. They try out the most likely passphrases first.</p>
 <p>
-  Password cracking is a fastidious task which involves testing a lot of different combinations. However, there are combinations more probable than others. For example, you might use a password which makes sense to you, like bluesky1991, with 1991 being your birth date rather than something cryptic like <code class="verbatim">9y2[V^1&gt;e_yfYE,r5q:e&#39;w!cv</code>. This is the assumption of cryptoanalysis techniques which try to crack passwords. They try out the most likely passphrases first.
-</p>
-<p>
-  There already exists plenty of password recovery tools such as HashCat (<a href="https://hashcat.net/hashcat/),">https://hashcat.net/hashcat/),</a> Aircrack-ng (<a href="https://www.aircrack-ng.org/),">https://www.aircrack-ng.org/),</a> which implementing most advanced password cracking strategies, such as mask attack. But these strategies rely on strong assumptions, such as fixed password length. On the opposite, PassGAN approach can virtually generate passwords of any length.
-</p>
+  There already exists plenty of password recovery tools such as HashCat (<a href="https://hashcat.net/hashcat/),">https://hashcat.net/hashcat/),</a> Aircrack-ng (<a href="https://www.aircrack-ng.org/),">https://www.aircrack-ng.org/),</a> which implementing most advanced password cracking strategies, such as mask attack. But these strategies rely on strong assumptions, such as fixed password length. On the opposite, PassGAN approach can virtually generate passwords of any length.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 How good is PassGAN at guessing your password?
 </h2>
-<p>
-The researchers used RockYou dataset to train PassGAN, splitting the dataset into a train set and a test set. They also evaluated on a dataset of leaked LinkedIn passwords. Using their PassGAN, they generated many passwords, and looked how many matched real passwords from the test sets. 34.2% of real LinkedIn passwords were found to match generated ones. Of course, PassGAN needs to generate billions of passwords to achieve this score, but the required number of generated passwords is relatively few, reducing substantially the required amount of tries compared to an attack which would test all possibilities.
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>The researchers used RockYou dataset to train PassGAN, splitting the dataset into a train set and a test set. They also evaluated on a dataset of leaked LinkedIn passwords. Using their PassGAN, they generated many passwords, and looked how many matched real passwords from the test sets. 34.2% of real LinkedIn passwords were found to match generated ones. Of course, PassGAN needs to generate billions of passwords to achieve this score, but the required number of generated passwords is relatively few, reducing substantially the required amount of tries compared to an attack which would test all possibilities.
   <figure>
     <img src="passgan-linkedin-results.png"
          alt="Comparison table of results for PassGAN and other techniques." width="100%"/> <figcaption>
             <p>Comparison table of results for PassGAN and other techniques.</p>
         </figcaption>
 </figure>
-
 </p>
 <p>
   Due to the expressiveness of Wasserstein GAN (<a href="https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-WGAN.html">check out this nice blog post</a>) used by PassGAN, it is interesting to note that even generated passwords that did not match any in the dataset still look like valid candidates.
@@ -291,36 +292,36 @@ The researchers used RockYou dataset to train PassGAN, splitting the dataset int
             <p>PassGAN generation samples that did not match any password in the test set.</p>
         </figcaption>
 </figure>
-
 </p>
 <p>
-  A drawback of PassGAN noted by the researchers is it requires a lot of generation to obtain a similar amount of matches compared to other methods, that is up to double the number of generations than other strategies when they require about a billion.
-</p>
+  A drawback of PassGAN noted by the researchers is it requires a lot of generation to obtain a similar amount of matches compared to other methods, that is up to double the number of generations than other strategies when they require about a billion.</p>
 <p>
-  PassGAN can also be used in conjunction to other strategies. It can guess pretty well passwords that could not be guessed by other strategies, making a huge jump up to 73% of matches overall.
-</p>
+  PassGAN can also be used in conjunction to other strategies. It can guess pretty well passwords that could not be guessed by other strategies, making a huge jump up to 73% of matches overall.</p>
 <p>
-  The main power of PassGAN is in its expressiveness. Virtually, it can generate any password, regardless of its size. So such methods could be ridiculously powerful with prior knowledge on the passwords to crack. Incidentally, that is a proposition of future work by the researchers, that is using conditioning, a popular technique to level up data generation models.
-</p>
+  The main power of PassGAN is in its expressiveness. Virtually, it can generate any password, regardless of its size. So such methods could be ridiculously powerful with prior knowledge on the passwords to crack. Incidentally, that is a proposition of future work by the researchers, that is using conditioning, a popular technique to level up data generation models.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 Your password is in danger
 </h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>Now that anxiety is at its climax, <del>I can sell you my revolutionary product  for good price!</del> More seriously, with the advances of password cracking, it is fair to say our way to choose password should advance as well.</p>
 <p>
-Now that anxiety is at its climax, <del>I can sell you my revolutionary product  for good price!</del> More seriously, with the advances of password cracking, it is fair to say our way to choose password should advance as well.
-</p>
+  It is easier to remember one intricate password rather than many, and having many simple or similar passwords makes you vulnerable to password cracking attacks. So the solution is to set a global password to an encrypted database of passwords. Encryption can make your password database virtually impossible to crack, or this would require at least several lifetimes to crack for electronic computers. An example of such tools is pass (<a href="https://www.passwordstore.org/),">https://www.passwordstore.org/),</a> a simple command-line tool using GPG encryption to securely store your passwords.</p>
 <p>
-  It is easier to remember one intricate password rather than many, and having many simple or similar passwords makes you vulnerable to password cracking attacks. So the solution is to set a global password to an encrypted database of passwords. Encryption can make your password database virtually impossible to crack, or this would require at least several lifetimes to crack for electronic computers. An example of such tools is pass (<a href="https://www.passwordstore.org/),">https://www.passwordstore.org/),</a> a simple command-line tool using GPG encryption to securely store your passwords.
-</p>
-<p>
-  Websites themselves also implement new ways to authenticate, such as two-factor authentication, or using fingerprint, etc.
-</p>
+  Websites themselves also implement new ways to authenticate, such as two-factor authentication, or using fingerprint, etc.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
 <h2 id="headline-5">
 References
 </h2>
-<p>
-Link to PassGAN paper: <a href="https://arxiv.org/abs/1709.00440">https://arxiv.org/abs/1709.00440</a>
-Article on my website
-</p>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>Link to PassGAN paper: <a href="https://arxiv.org/abs/1709.00440">https://arxiv.org/abs/1709.00440</a>
+Article on my website</p>
+</div>
+</div>
 
   </div>
   <footer>
@@ -412,6 +413,17 @@ Article on my website
 
         </section>
         <header>
+          <h1><a href="/posts/lock_pattern/">How many patterns are there to lock your android smartphone?</a></h1>
+          <time class="published" datetime="">January 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
           <h1><a href="/posts/pierre-corneille-bot/">Ask this bot to solve your dilemmas</a></h1>
           <time class="published" datetime="">November 18, 2020</time>
         </header>
@@ -447,17 +459,6 @@ Article on my website
         <header>
           <h1><a href="/posts/random-aphorism-notifications/">Schedule random aphorism notifications for your desktop</a></h1>
           <time class="published" datetime="">June 18, 2020</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-
-        </section>
-        <header>
-          <h1><a href="/posts/python-slack-bot/">Have a bot haunt your Slack workspace</a></h1>
-          <time class="published" datetime="">May 21, 2020</time>
         </header>
       </article>
       
@@ -505,6 +506,16 @@ Article on my website
           
           <li>
             
+              <a href="/categories/python/">python<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
               <a href="/categories/web/">web<span class="count">2</span></a>
             
           
@@ -520,17 +531,7 @@ Article on my website
           
           <li>
             
-              <a href="/categories/python/">python<span class="count">1</span></a>
-            
-          
-          <li>
-            
               <a href="/categories/random/">random<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/security/">security<span class="count">1</span></a>
             
           
           </li>
@@ -603,12 +604,12 @@ Article on my website
   
   <p class="copyright">
     
-      &copy; 2020
+      &copy; 2021
       
         Adam Oudad
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.72.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.78.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

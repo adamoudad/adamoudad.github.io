@@ -6,10 +6,17 @@
     <description>Recent content on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://adamoudad.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How many patterns are there to lock your android smartphone?</title>
+      <link>https://adamoudad.github.io/posts/lock_pattern/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/lock_pattern/</guid>
+      <description>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
+   Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
+    </item>
     
     <item>
       <title>Ask this bot to solve your dilemmas</title>
@@ -17,7 +24,8 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/pierre-corneille-bot/</guid>
-      <description>Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.  You probably have played a popular game named &amp;#34;Would you rather&amp;#34; in which two options are considered and only one should be chosen.</description>
+      <description>Life is full of dilemma and tough choices for our greatest enjoyment. Well, some might be annoying to resolve. So I present to you the contribution from machine learning in the direction of relieving ourselves the burden of having to make choices in our lives.
+ You probably have played a popular game named &amp;#34;Would you rather&amp;#34; in which two options are considered and only one should be chosen. It can be between two equally unwanted things: would you rather &amp;#34;lose the ability to feel emotions&amp;#34; or &amp;#34;be physically paralyzed&amp;#34;.</description>
     </item>
     
     <item>
@@ -26,7 +34,8 @@
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/progress_bar_with_tqdm/</guid>
-      <description>tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.  I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&amp;#39;s time library as it will let us slow down the program to see the progress bar update.</description>
+      <description>tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
+ I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&amp;#39;s time library as it will let us slow down the program to see the progress bar update.</description>
     </item>
     
     <item>
@@ -35,7 +44,8 @@
       <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/format-dates-python3/</guid>
-      <description>You have probably used Python&amp;#39;s formatting syntax before. But how do you format a date? With datetime objects, you can use %Y, %m, %d to display respectively, the year, the month and the day of an object, in numerical form (that is, March will be replaced by the number &amp;#34;03&amp;#34;).  Python has several syntax for formatting strings. So that each of these lines will produce the same output.</description>
+      <description>You have probably used Python&amp;#39;s formatting syntax before. But how do you format a date? With datetime objects, you can use %Y, %m, %d to display respectively, the year, the month and the day of an object, in numerical form (that is, March will be replaced by the number &amp;#34;03&amp;#34;).
+ Python has several syntax for formatting strings. So that each of these lines will produce the same output.</description>
     </item>
     
     <item>
@@ -44,7 +54,10 @@
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/random-aphorism-notifications/</guid>
-      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.  Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron. Requirements   You will need these    python3 with notify2 library.</description>
+      <description>In times when we lack inspiration, it might help to have a program randomly picking an aphorism for us. An aphorism is a concise expression of a general truth or principle. But you can also use a joke or anything else.
+ Let&amp;#39;s see how we can implement this with desktop notifications, python, and cron.
+Requirements  You will need these
+  python3 with notify2 library. Install it with pip install notify2</description>
     </item>
     
     <item>
@@ -53,7 +66,8 @@
       <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/python-slack-bot/</guid>
-      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial. Add a webhook for your Slack workspace   We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
+      <description>In this article we&amp;#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
+Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook.</description>
     </item>
     
     <item>
@@ -62,7 +76,8 @@
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/data-processing-libraries/</guid>
-      <description>With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.  Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.</description>
+      <description>With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
+ Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do.</description>
     </item>
     
     <item>
@@ -71,7 +86,9 @@
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</guid>
-      <description>Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.  In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
+      <description>Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
     </item>
     
     <item>
@@ -80,7 +97,8 @@
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/passgan/</guid>
-      <description>I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN). What are GAN?   Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.</description>
+      <description>I stumbled upon an article using neural networks that guess passwords. It shows an original application of Generative Adversarial Networks (GAN).
+What are GAN?  Generative Adversarial Networks are three words that have been used a lot during the past few years in Artificial Intelligence research. It refers to neural networks that have been trained in the adversarial framework. A neural network is a function with many parameters that can be optimized from assessing the errors the network makes from the expected output, or ground-truth.</description>
     </item>
     
     <item>
@@ -89,7 +107,8 @@
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/classification-metrics/</guid>
-      <description>Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.     Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.</description>
+      <description>Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.
+    Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.</description>
     </item>
     
     <item>
@@ -98,7 +117,8 @@
       <pubDate>Fri, 13 Mar 2020 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/remote_desktop_linux_windows/</guid>
-      <description>I just had to set up a remote desktop between Linux and Windows, to find out how intricate of a problem it can become. My goal was to access a Windows desktop from my Linux machine. Remmina and Windows RDP   I first tried using my go-to software, Remmina client on Linux, using the plugin for connecting to Windows remote desktop protocol (RDP). There were various unsuccessful attempts, with different settings.</description>
+      <description>I just had to set up a remote desktop between Linux and Windows, to find out how intricate of a problem it can become. My goal was to access a Windows desktop from my Linux machine.
+Remmina and Windows RDP  I first tried using my go-to software, Remmina client on Linux, using the plugin for connecting to Windows remote desktop protocol (RDP). There were various unsuccessful attempts, with different settings.</description>
     </item>
     
     <item>
@@ -107,7 +127,10 @@
       <pubDate>Wed, 12 Feb 2020 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/zen-of-python/</guid>
-      <description>Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers. Print Zen of Python   You can print the 19 aphorisms by simply importing this. import this   This outputs The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.</description>
+      <description>Among well known easter eggs, Python embeds a library for displaying its famous PEP 20, called Zen of Python, which consists in 19 aphorisms giving guidelines to Python programmers.
+Print Zen of Python  You can print the 19 aphorisms by simply importing this.
+import this  This outputs
+The Zen of Python, by Tim Peters Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.</description>
     </item>
     
     <item>
@@ -116,7 +139,9 @@
       <pubDate>Sun, 02 Feb 2020 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/pythonic/</guid>
-      <description>Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.  I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code. Naming     Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0.</description>
+      <description>Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.
+ I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+Naming    Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0.</description>
     </item>
     
     <item>
@@ -125,7 +150,8 @@
       <pubDate>Fri, 24 Jan 2020 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/japanese/bring-or-take/</guid>
-      <description>Bring or take confusion   I was reading this article on marca.com, when I came upon this sentence in spanish. Por el momento no hay nada oficial pero varios equipos son los que llevan tiempo pujando por hacerse con sus servicios.   Which made me remember how much I am lost whenever llevar comes out. Should I think &amp;#34;bring&amp;#34; ? &amp;#34;take&amp;#34; ? It bugged me enough to search the internet and find this stackexchange thread.</description>
+      <description>Bring or take confusion   I was reading this article on marca.com, when I came upon this sentence in spanish.
+Por el momento no hay nada oficial pero varios equipos son los que llevan tiempo pujando por hacerse con sus servicios.  Which made me remember how much I am lost whenever llevar comes out. Should I think &amp;#34;bring&amp;#34; ? &amp;#34;take&amp;#34; ? It bugged me enough to search the internet and find this stackexchange thread.</description>
     </item>
     
     <item>
@@ -134,7 +160,10 @@
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/stream_tweets_tweepy/</guid>
-      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview   Twitter offers several API, or methods you can use to retrieve tweets.    Streaming API    Search API    What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).</description>
+      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+  Streaming API
+  Search API
+  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).</description>
     </item>
     
     <item>
@@ -143,8 +172,10 @@
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/tubechiller/</guid>
-      <description>I wrote a youtube playlist generator in javascript. TubeChiller is a tool for automatically play youtube videos provided in a list of urls.    Credit: https://pixabay.com/images/id-3080834/
-  Background   I have been browsing youtube and ended up with a significant amount of youtube urls in my bookmarks, that point to musics or podcasts.  There exists many program that can play youtube videos, such as VLC or Totem.</description>
+      <description>I wrote a youtube playlist generator in javascript. TubeChiller is a tool for automatically play youtube videos provided in a list of urls.
+   Credit: https://pixabay.com/images/id-3080834/
+  Background  I have been browsing youtube and ended up with a significant amount of youtube urls in my bookmarks, that point to musics or podcasts.
+ There exists many program that can play youtube videos, such as VLC or Totem.</description>
     </item>
     
     <item>
@@ -153,7 +184,10 @@
       <pubDate>Wed, 27 Nov 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/word2vec/</guid>
-      <description>The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics vec(&amp;#39;Rome&amp;#39;) ≈ vec(&amp;#39;Paris&amp;#39;) - vec(&amp;#39;France&amp;#39;) + vec(&amp;#39;Italy&amp;#39;) vec(&amp;#39;Queen&amp;#39;) ≈ vec(&amp;#39;King&amp;#39;) - vec(&amp;#39;Man&amp;#39;) + vec(&amp;#39;Woman&amp;#39;)   Awesome ! How could such results be achieved ? They came from the following assumption   The meaning of a word can be inferred by the company it keeps   Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context.</description>
+      <description>The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics
+vec(&amp;#39;Rome&amp;#39;) ≈ vec(&amp;#39;Paris&amp;#39;) - vec(&amp;#39;France&amp;#39;) + vec(&amp;#39;Italy&amp;#39;) vec(&amp;#39;Queen&amp;#39;) ≈ vec(&amp;#39;King&amp;#39;) - vec(&amp;#39;Man&amp;#39;) + vec(&amp;#39;Woman&amp;#39;)  Awesome ! How could such results be achieved ? They came from the following assumption
+ The meaning of a word can be inferred by the company it keeps
+ Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context.</description>
     </item>
     
     <item>
@@ -171,7 +205,9 @@
       <pubDate>Wed, 23 Oct 2019 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/japanese/suru/</guid>
-      <description>Do you know する? This verb you can use in many case to say &amp;#34;I do stuff&amp;#34;, right ? Yet what if I told you could say far more than just a lame 私はスポーツする? する basics   We start here with the basics, that is the ~をする form. Use it to express an activity you do regularily. ラグビーをする。  ~がする   You can express a feeling, a sensation with ~がする.</description>
+      <description>Do you know する? This verb you can use in many case to say &amp;#34;I do stuff&amp;#34;, right ? Yet what if I told you could say far more than just a lame 私はスポーツする?
+する basics  We start here with the basics, that is the ~をする form. Use it to express an activity you do regularily.
+ラグビーをする。    ~がする  You can express a feeling, a sensation with ~がする.</description>
     </item>
     
     <item>
@@ -180,7 +216,8 @@
       <pubDate>Mon, 21 Oct 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/sound-word2vec/</guid>
-      <description>I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words. What is embedding   Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.</description>
+      <description>I came across this article called Sound-Word2Vec:Learning Word Representations Grounded in Sounds1, which caught my attention as it aims at creating word embeddings in an original way, using voiced sounds of words.
+What is embedding  Embedding in Machine Learning refers to a method for capturing the information of an input data into a dense representation. This way, we obtain an embedding space, which should have interesting properties like being friendly to vector arithmetics, which is not the case of original raw data.</description>
     </item>
     
     <item>
@@ -189,7 +226,8 @@
       <pubDate>Thu, 17 Oct 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/vectorizing-text/</guid>
-      <description>Character, word, sentence and document embeddings are popular because they are efficient. In the case of words, such embeddings represent words in their meaning, their role and their hierarchy in texts.  We have seen a clear improvement of word embeddings thanks to Mikolov et al. at Google, with Word2Vec in 2013. Since then, many kinds of embeddings have been developped for different purposes. We can cite for example Fasttext by Facebook, Bert by Google.</description>
+      <description>Character, word, sentence and document embeddings are popular because they are efficient. In the case of words, such embeddings represent words in their meaning, their role and their hierarchy in texts.
+ We have seen a clear improvement of word embeddings thanks to Mikolov et al. at Google, with Word2Vec in 2013. Since then, many kinds of embeddings have been developped for different purposes. We can cite for example Fasttext by Facebook, Bert by Google.</description>
     </item>
     
     <item>
@@ -198,7 +236,9 @@
       <pubDate>Thu, 17 Oct 2019 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/japanese/ga-or-ha/</guid>
-      <description>This is one of the most fearful grammatical points of any japanese learner during their journey to japanese mastery.  This article gives some rules that will help confusion and will make you sound like a native. Relatively to information intended to be delivered 伝えたい情報   は will always precede the information, whereas が will follow it. Similarily, は will always precede an interrogative, while が will follow it.</description>
+      <description>This is one of the most fearful grammatical points of any japanese learner during their journey to japanese mastery.
+ This article gives some rules that will help confusion and will make you sound like a native.
+Relatively to information intended to be delivered 伝えたい情報  は will always precede the information, whereas が will follow it. Similarily, は will always precede an interrogative, while が will follow it.</description>
     </item>
     
     <item>
@@ -207,7 +247,10 @@
       <pubDate>Thu, 10 Oct 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/productivity/</guid>
-      <description>The idea behind most productivity tips is that you lose if you touch your mouse, as it is such a time consuming move and unbearable physical effort.  But you also lose points when doing big jumps on your keyboard, for example when you try reaching for the arrow keys.  So what should we do ? Here are some tips. Tridactyl on Firefox   Tridactyl is an extension available for Firefox that enable a keyboard-based navigation.</description>
+      <description>The idea behind most productivity tips is that you lose if you touch your mouse, as it is such a time consuming move and unbearable physical effort.
+ But you also lose points when doing big jumps on your keyboard, for example when you try reaching for the arrow keys.
+ So what should we do ? Here are some tips.
+Tridactyl on Firefox  Tridactyl is an extension available for Firefox that enable a keyboard-based navigation.</description>
     </item>
     
     <item>
@@ -216,7 +259,12 @@
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/hugo-katex/</guid>
-      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.  Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$  Here are some remarks I have about the original tutorial. Auto-rendering   Add the following script in the footer &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;   This will activate the auto rendering Other remarks     {{ end }} is unnecessary, only write the following to include the katex.</description>
+      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.
+ Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
+ Here are some remarks I have about the original tutorial.
+Auto-rendering  Add the following script in the footer
+&amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  This will activate the auto rendering
+  Other remarks    {{ end }} is unnecessary, only write the following to include the katex.</description>
     </item>
     
     <item>
@@ -225,7 +273,12 @@
       <pubDate>Thu, 16 May 2019 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/my-first-post/</guid>
-      <description> This is the first post.  I use a theme called m10c created by Vaga, thanks to him !  I was using Jekyll in previous websites, and Hugo is quite impressive in ease of use.    Great themes    Many shortcodes that lets you embed youtube videos, for example, without coding   </description>
+      <description> This is the first post.
+ I use a theme called m10c created by Vaga, thanks to him !
+ I was using Jekyll in previous websites, and Hugo is quite impressive in ease of use.
+  Great themes
+  Many shortcodes that lets you embed youtube videos, for example, without coding
+  </description>
     </item>
     
   </channel>

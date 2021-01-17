@@ -6,18 +6,19 @@
     <description>Recent content in hugo on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 May 2019 03:49:04 +0900</lastBuildDate>
-    
-	<atom:link href="https://adamoudad.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 20 May 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo and Katex</title>
       <link>https://adamoudad.github.io/posts/hugo-katex/</link>
       <pubDate>Mon, 20 May 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/hugo-katex/</guid>
-      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.  Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$  Here are some remarks I have about the original tutorial. Auto-rendering   Add the following script in the footer &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;   This will activate the auto rendering Other remarks     {{ end }} is unnecessary, only write the following to include the katex.</description>
+      <description>I followed this good tutorial on how to add \(\KaTeX\) to hugo.
+ Here is an example showing that KaTeX (should) now work. $$\int_{a}^{b} x^2 dx$$
+ Here are some remarks I have about the original tutorial.
+Auto-rendering  Add the following script in the footer
+&amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; onload=&amp;#34;renderMathInElement(document.body);&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  This will activate the auto rendering
+  Other remarks    {{ end }} is unnecessary, only write the following to include the katex.</description>
     </item>
     
     <item>
@@ -26,7 +27,9 @@
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/about/</guid>
-      <description>I write code to automate things, compose music, and analyze data. My main interests are in machine learning, natural language processing and music processing, but I also read on various topics such as decentralized technologies, and mathetmatics in general. My projects   You can check my public projects on https://github.com/adamoudad/  They include melody generation using LSTM, hashtag annotation for text, easy playlist creator for youtube videos without needing an account, algorithmic trading, scripts for web scraping, and more to come !</description>
+      <description>I write code to automate things, compose music, and analyze data. My main interests are in machine learning, natural language processing and music processing, but I also read on various topics such as decentralized technologies, and mathetmatics in general.
+My projects  You can check my public projects on https://github.com/adamoudad/
+ They include melody generation using LSTM, hashtag annotation for text, easy playlist creator for youtube videos without needing an account, algorithmic trading, scripts for web scraping, and more to come !</description>
     </item>
     
   </channel>

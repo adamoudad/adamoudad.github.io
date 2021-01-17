@@ -7,23 +7,30 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Your python interpreter inside a docker container with Emacs">
-<meta itemprop="description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.  In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.">
-<meta itemprop="datePublished" content="2020-04-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-06T00:00:00&#43;00:00" />
+<meta name="generator" content="Hugo 0.78.2" /><meta itemprop="name" content="Your python interpreter inside a docker container with Emacs">
+<meta itemprop="description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.">
+<meta itemprop="datePublished" content="2020-04-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-04-06T00:00:00+00:00" />
 <meta itemprop="wordCount" content="261">
 
 
 
-<meta itemprop="keywords" content="docker,productivity,python,programming,emacs," /><meta property="og:title" content="Your python interpreter inside a docker container with Emacs" />
-<meta property="og:description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.  In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter." />
+<meta itemprop="keywords" content="docker,productivity,python,programming,emacs," />
+<meta property="og:title" content="Your python interpreter inside a docker container with Emacs" />
+<meta property="og:description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/" />
 <meta property="article:published_time" content="2020-04-06T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-06T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Your python interpreter inside a docker container with Emacs"/>
-<meta name="twitter:description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.  In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter."/>
+<meta name="twitter:description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.a86839252b4aa4853111ceba45af5da1d6c3dc66a6a3b6854750bb2df61dfe37.css" integrity="sha256-qGg5JStKpIUxEc66Ra9dodbD3Gamo7aFR1C7LfYd/jc=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -223,59 +230,42 @@
 
   <div class="content">
     <p>
-  Emacs has this very powerful package <a href="https://github.com/jorgenschaefer/elpy">Elpy</a> which is usually recommended if you want to code in Python.
-</p>
+  Emacs has this very powerful package <a href="https://github.com/jorgenschaefer/elpy">Elpy</a> which is usually recommended if you want to code in Python.</p>
 <p>
-  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
-</p>
+  Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.</p>
 <p>
-  In Emacs with elpy installed, <code class="verbatim">C-c C-c</code> binding (<em>C</em> is for Control key) runs <code>elpy-shell-send-region-to-buffer</code> and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable <code>python-shell-interpreter</code> for the python interpreter.
-</p>
+  In Emacs with elpy installed, <code class="verbatim">C-c C-c</code> binding (<em>C</em> is for Control key) runs <code>elpy-shell-send-region-to-buffer</code> and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable <code>python-shell-interpreter</code> for the python interpreter.</p>
 <p>
-  The default value of this variable is <code>&#34;python&#34;</code>, which will most likely run your system-wide python interpreter. What we want is to run the following command which will send our python code to a running container.
-</p>
+  The default value of this variable is <code>&#34;python&#34;</code>, which will most likely run your system-wide python interpreter. What we want is to run the following command which will send our python code to a running container.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</code></pre></div>
 </div>
-<p>
-See <a href="https://docs.docker.com/engine/reference/commandline/cli/">docker command line reference for details about this command</a>.
-However just setting <code>python-shell-interpreter</code> to this will raise an error.
-</p>
+<p>See <a href="https://docs.docker.com/engine/reference/commandline/cli/">docker command line reference for details about this command</a>.
+However just setting <code>python-shell-interpreter</code> to this will raise an error.</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Python shell interpreter &#39;docker run -it -v /tmp:/tmp -v $(pwd):/code ufoym/deepo python3&#39; cannot be found. Please set the value &#39;python-shell-interpreter&#39; to a valid binary.</code></pre></div>
 </div>
-<p>
-Emacs needs a shell script, so for example, you can set
-</p>
+<p>Emacs needs a shell script, so for example, you can set</p>
 <div class="src src-elisp">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq python-shell-interpreter <span style="color:#e6db74">&#34;~/.docker-python-shell.sh&#34;</span>)</code></pre></div>
 </div>
-<p>
-Then the file <code class="verbatim">~/.docker-python-shell.sh</code> will contain
-</p>
+<p>Then the file <code class="verbatim">~/.docker-python-shell.sh</code> will contain</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</code></pre></div>
 </div>
-<p>
-Don&#39;t forget to make the script executable.
-</p>
+<p>Don&#39;t forget to make the script executable.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x ~/.docker-python-shell.sh</code></pre></div>
 </div>
 <p>
-Two remarks on the <code>docker run</code> command:
-</p>
+Two remarks on the <code>docker run</code> command:</p>
 <ul>
 <li>
-<p>
-<code>-v /tmp:/tmp</code> can solve some errors caused by Python trying to read a file contained in <code class="verbatim">/tmp</code>, see <a href="https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container">https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container</a>
-</p>
+<p><code>-v /tmp:/tmp</code> can solve some errors caused by Python trying to read a file contained in <code class="verbatim">/tmp</code>, see <a href="https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container">https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container</a></p>
 </li>
 <li>
-<p>
-<code>-v $(pwd):/code</code> mount the directory of your python script to <code class="verbatim">/code</code> in the docker container, which is handy if you need to access another module or some data
-</p>
+<p><code>-v $(pwd):/code</code> mount the directory of your python script to <code class="verbatim">/code</code> in the docker container, which is handy if you need to access another module or some data</p>
 </li>
 </ul>
 
@@ -375,6 +365,17 @@ Two remarks on the <code>docker run</code> command:
 
         </section>
         <header>
+          <h1><a href="/posts/lock_pattern/">How many patterns are there to lock your android smartphone?</a></h1>
+          <time class="published" datetime="">January 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+
+        </section>
+        <header>
           <h1><a href="/posts/pierre-corneille-bot/">Ask this bot to solve your dilemmas</a></h1>
           <time class="published" datetime="">November 18, 2020</time>
         </header>
@@ -410,17 +411,6 @@ Two remarks on the <code>docker run</code> command:
         <header>
           <h1><a href="/posts/random-aphorism-notifications/">Schedule random aphorism notifications for your desktop</a></h1>
           <time class="published" datetime="">June 18, 2020</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-
-        </section>
-        <header>
-          <h1><a href="/posts/python-slack-bot/">Have a bot haunt your Slack workspace</a></h1>
-          <time class="published" datetime="">May 21, 2020</time>
         </header>
       </article>
       
@@ -468,6 +458,16 @@ Two remarks on the <code>docker run</code> command:
           
           <li>
             
+              <a href="/categories/python/">python<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/security/">security<span class="count">2</span></a>
+            
+          
+          <li>
+            
               <a href="/categories/web/">web<span class="count">2</span></a>
             
           
@@ -483,17 +483,7 @@ Two remarks on the <code>docker run</code> command:
           
           <li>
             
-              <a href="/categories/python/">python<span class="count">1</span></a>
-            
-          
-          <li>
-            
               <a href="/categories/random/">random<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/security/">security<span class="count">1</span></a>
             
           
           </li>
@@ -566,12 +556,12 @@ Two remarks on the <code>docker run</code> command:
   
   <p class="copyright">
     
-      &copy; 2020
+      &copy; 2021
       
         Adam Oudad
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.72.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.78.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
