@@ -12,7 +12,7 @@
  I found few resources or articles comparing codes in both Keras and PyTorch and I will show such example in this article, to help understand the key differences in terms of syntax and naming between frameworks.">
 <meta itemprop="datePublished" content="2021-03-02T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-03-02T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1089">
+<meta itemprop="wordCount" content="1067">
 
 
 
@@ -231,8 +231,8 @@
  <a href="https://keras.io/">Keras</a> and <a href="pytorch.org/">PyTorch</a> are popular frameworks for building programs with deep learning. The former, Keras, is more precisely an abstraction layer for Tensorflow and offers the capability to prototype models fast.
  There are similar abstraction layers developped on top of <a href="https://pytorch.org/">PyTorch</a>, such as <a href="https://pytorch.org/ignite/">PyTorch Ignite</a> or <a href="https://github.com/PyTorchLightning/pytorch-lightning">PyTorch lightning</a>. They are not yet as mature as Keras, but are worth the try!</p>
 <p>
- I found few resources or articles comparing codes in both Keras and PyTorch and I will show such example in this article, to help understand the key differences in terms of syntax and naming between frameworks. To have a comparison on a concrete example, I implemented, using both frameworks, the same sentiment classifier architecture and trained it on IMDB dataset.
- This article is the first of a series, in which we will compare the syntaxes. I will publish later this month another article where I compare Keras and PyTorch in a practical experiment on sentiment classification.</p>
+I found few resources or articles comparing codes in both Keras and PyTorch and I will show such example in this article, to help understand the key differences in terms of syntax and naming between frameworks.
+ This article is the first of a series. After comparing syntaxes in this article, I will demonstrate a practical example on sentiment classification comparing both frameworks in a subsequent article I will publish later this month.</p>
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Prepare the data
@@ -241,12 +241,13 @@ Prepare the data
 <p>The first comparison is on how data is loaded and prepared. Loading data can be achieved in a very similar fashion between both frameworks,  using <code>utils.Sequence</code> class in Keras and using <code>utils.dataset</code> in PyTorch.
   In Keras you would have something like</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tensorflow.keras.utils <span style="color:#f92672">import</span> Sequence
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> tensorflow.keras.utils <span style="color:#f92672">import</span> Sequence
 <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PianorollGenerator</span>(Sequence):
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomGenerator</span>(Sequence):
 <span style="color:#66d9ef">def</span> __init__(self, path):
     self<span style="color:#f92672">.</span>path <span style="color:#f92672">=</span> Path(path)
-    self<span style="color:#f92672">.</span>filenames <span style="color:#f92672">=</span> list(self<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;**/*.mid&#34;</span>))
+    self<span style="color:#f92672">.</span>filenames <span style="color:#f92672">=</span> list(self<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;**/*.npy&#34;</span>))
 
 <span style="color:#66d9ef">def</span> __len__(self):
     <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>filenames)
@@ -258,19 +259,20 @@ Prepare the data
 </div>
 <p>And here is the same code in PyTorch.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> Dataset
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> Dataset
 <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomDataset</span>(Dataset):
 <span style="color:#66d9ef">def</span> __init__(self, path):
     self<span style="color:#f92672">.</span>path <span style="color:#f92672">=</span> Path(path)
-    self<span style="color:#f92672">.</span>filenames <span style="color:#f92672">=</span> list(self<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;**/*.mid&#34;</span>))
+    self<span style="color:#f92672">.</span>filenames <span style="color:#f92672">=</span> list(self<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;**/*.npy&#34;</span>))
 
 <span style="color:#66d9ef">def</span> __len__(self):
     <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>filenames)
 
 <span style="color:#66d9ef">def</span> __getitem__(self, index):
     fn <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>filenames[index]
-    vector <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>load(fn)
+    vector <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>from_numpy(np<span style="color:#f92672">.</span>load(fn))
     <span style="color:#66d9ef">return</span> vector</code></pre></div>
 </div>
 </div>
@@ -319,7 +321,8 @@ output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</s
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> torch
   criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BCELoss()
-  optimizer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(model<span style="color:#f92672">.</span>parameters())</code></pre></div>
+  optimizer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(model<span style="color:#f92672">.</span>parameters())
+  model <span style="color:#f92672">=</span> CustomModel()</code></pre></div>
 </div>
 <p>In most cases, default parameters in Keras will match defaults in PyTorch, as it is the case for the Adam optimizer and the BCE (Binary Cross-Entropy) loss.</p>
 <p>
@@ -370,7 +373,7 @@ output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</s
 </div>
 <div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
-Work with tensors
+Manipulate tensors
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
 <p>Both frameworks have their own specificities in syntax for manipulating tensors. Here we will compare PyTorch and Tensorflow.</p>
@@ -379,13 +382,13 @@ Work with tensors
 Shape of tensors
 </h3>
 <div id="outline-text-headline-4" class="outline-text-3">
-<p>Pytorch has .shape and .size which are both equivalent to access the shape of tensors.</p>
+<p>Pytorch has <code>.shape</code> and <code>.size</code> which are both equivalent to access the shape of tensors.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>))
 <span style="color:#66d9ef">print</span>(t<span style="color:#f92672">.</span>shape, t<span style="color:#f92672">.</span>size())         <span style="color:#75715e"># Both equal to (4, 3)</span>
 t<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>], t<span style="color:#f92672">.</span>size(<span style="color:#ae81ff">1</span>)     <span style="color:#75715e"># Both equal to 3</span></code></pre></div>
 </div>
-<p>Tensorflow works like this.</p>
+<p>Tensorflow has only <code>.shape</code></p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>))
 <span style="color:#66d9ef">print</span>(t<span style="color:#f92672">.</span>shape)            <span style="color:#75715e"># .size is not available</span>
@@ -395,7 +398,7 @@ t<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]
 </div>
 <div id="outline-container-headline-5" class="outline-3">
 <h3 id="headline-5">
-Order of dimensions in Pytorch
+Order of dimensions
 </h3>
 <div id="outline-text-headline-5" class="outline-text-3">
 <p>Keras usually orders dimensions as <code>(batch_size, seq_len, input_dim)</code>, whereas Pytorch prefers to order them by default as <code>(seq_len, batch_size, input_dim)</code>. In PyTorch, recurrent networks like LSTM, GRU have a switch parameter <code>batch_first</code> which, if set to <code>True</code>, will expect inputs to be of shape <code>(seq_len, batch_size, input_dim)</code>. However modules like Transformer do not have such parameter. In this case, the input will have to be adapted. To do so, you can switch dimensions in Pytorch using <code>.transpose</code> method.</p>
@@ -409,12 +412,12 @@ data<span style="color:#f92672">.</span>transpose(<span style="color:#ae81ff">0<
 </div>
 <div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
-Initialize vectors in PyTorch
+Initialize vectors
 </h3>
 <div id="outline-text-headline-6" class="outline-text-3">
 <p>PyTorch has a syntax very similar to numpy.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">torch<span style="color:#f92672">.</span>ones(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>)         <span style="color:#75715e"># Matrix of size (2, 4, 1) filled with 1. Same with torch.zeros</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">torch<span style="color:#f92672">.</span>ones(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>)         <span style="color:#75715e"># Matrix of size (2, 4, 1) filled with 1. Same as torch.zeros</span>
 torch<span style="color:#f92672">.</span>eye(<span style="color:#ae81ff">3</span>)                <span style="color:#75715e"># Identity matrix of size (3,3)</span></code></pre></div>
 </div>
 <p>Good news! All above methods are present and work the same in Tensorflow.
@@ -446,7 +449,7 @@ tf<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>
 Conclusion
 </h2>
 <div id="outline-text-headline-7" class="outline-text-2">
-<p>While Keras and Pytorch have very similar data loading logic, there syntax is quite different for the rest. PyTorch has a pythonic and elegant syntax while Keras is designed for writing short and concise programs, without taking too much time on rewriting the building blocks. There are many more points of comparison but I hope this article gives some insights on both frameworks. For the sake of completeness, I share some resources I found covering a comparison between Keras and PyTorch.</p>
+<p>While Keras and Pytorch have very similar data loading logic, their syntax quite differs for the rest. PyTorch has a pythonic syntax while Keras is designed for writing short and concise programs, without taking too much time on expliciting building blocks. There are many more points of comparison but I hope this article gives some insights on both frameworks. For the sake of completeness, I share some resources I found covering a comparison between Keras and PyTorch.</p>
 <dl>
 <dt>
 Comparison and speed benchmark of Keras and PyTorch with a ConvNet architecture
