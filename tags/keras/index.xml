@@ -9,25 +9,12 @@
     <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comparison of Keras and PyTorch syntaxes</title>
-      <link>https://adamoudad.github.io/posts/keras_pytorch_comparison/</link>
+      <link>https://adamoudad.github.io/posts/keras_torch_comparison/syntax/</link>
       <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/posts/keras_pytorch_comparison/</guid>
+      <guid>https://adamoudad.github.io/posts/keras_torch_comparison/syntax/</guid>
       <description>Keras and PyTorch are popular frameworks for building programs with deep learning. The former, Keras, is more precisely an abstraction layer for Tensorflow and offers the capability to prototype models fast. There are similar abstraction layers developped on top of PyTorch, such as PyTorch Ignite or PyTorch lightning. They are not yet as mature as Keras, but are worth the try!
  I found few resources or articles comparing codes in both Keras and PyTorch and I will show such example in this article, to help understand the key differences in terms of syntax and naming between frameworks.</description>
-    </item>
-    
-    <item>
-      <title>Guide to swtich between Keras and PyTorch</title>
-      <link>https://adamoudad.github.io/posts/keras_torch_comparison/</link>
-      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adamoudad.github.io/posts/keras_torch_comparison/</guid>
-      <description>Introduction of deep learning frameworks  Introduction of deep learning frameworks    Keras is developped by Google. It is included inside Tensorflow. Last version is 2.3.0
-  Pytorch is developped by Facebook. Last version is 1.6.0
-  Pytorch lightning is for fast prototyping (similar to Keras) 1
-  Pytorch Ignite is another fast protoyping library for PyTorch. It is developped by PyTorch team.2
-      In this tutorial, we&amp;#39;ll see how to swtich between Keras and Pytorch code</description>
     </item>
     
   </channel>
