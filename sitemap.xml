@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/keras_pytorch_comparison/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/keras/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/pytorch/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/tags/</loc>
+    <lastmod>2021-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adamoudad.github.io/posts/keras_torch_comparison/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/posts/lock_pattern/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/posts/</loc>
     <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,22 +83,7 @@
   </url>
   
   <url>
-    <loc>https://adamoudad.github.io/tags/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adamoudad.github.io/posts/pierre-corneille-bot/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adamoudad.github.io/tags/machine-learning/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
   </url>
   

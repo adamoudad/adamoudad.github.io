@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Adam Oudad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>keras</title>
+      <link>https://adamoudad.github.io/tags/keras/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/keras/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://adamoudad.github.io/tags/machine-learning/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytorch</title>
+      <link>https://adamoudad.github.io/tags/pytorch/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>android</title>
       <link>https://adamoudad.github.io/tags/android/</link>
@@ -31,15 +58,6 @@
       <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine-learning</title>
-      <link>https://adamoudad.github.io/tags/machine-learning/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adamoudad.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
