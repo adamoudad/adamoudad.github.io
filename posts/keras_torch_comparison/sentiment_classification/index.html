@@ -9,14 +9,14 @@
 
 <meta name="generator" content="Hugo 0.81.0" /><meta itemprop="name" content="Comparing Keras and PyTorch on sentiment classification">
 <meta itemprop="description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch are different in design
-  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc"><meta itemprop="datePublished" content="2021-03-20T00:00:00&#43;00:00" />
+  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc
+  PyTorch is aimed at modularity and versatility."><meta itemprop="datePublished" content="2021-03-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2207">
+<meta itemprop="wordCount" content="2194">
 <meta itemprop="keywords" content="machine-learning,pytorch,keras," /><meta property="og:title" content="Comparing Keras and PyTorch on sentiment classification" />
 <meta property="og:description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch are different in design
-  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc" />
+  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc
+  PyTorch is aimed at modularity and versatility." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-20T00:00:00&#43;00:00" />
@@ -25,8 +25,8 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Comparing Keras and PyTorch on sentiment classification"/>
 <meta name="twitter:description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch are different in design
-  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc"/>
+  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc
+  PyTorch is aimed at modularity and versatility."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.ad272b0b754e62bca88b3a2e460326e9e57fed16f6962f836489c20161b6c8ef.css" integrity="sha256-rScrC3VOYryoizouRgMm6eV/7Rb2li&#43;DZInCAWG2yO8=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -227,9 +227,7 @@
   <div class="content">
     
 <p>
-After <a href="..//posts/keras_torch_comparison/syntax/">part one</a> which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.</p>
-<p>
-As we saw in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, Keras and PyTorch are different in design</p>
+After <a href="../syntax">part one</a> which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.</p>
 <ul>
 <li>
 <p>Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc</p>
@@ -247,7 +245,7 @@ Dataset of IMDB movie reviews
 <div id="outline-text-headline-1" class="outline-text-2">
 <p>We will use IMDB dataset, a popular toy dataset in machine learning, which consists of movie reviews from the IMDB website annotated by positive or negative sentiment.</p>
 <p>
-Both Keras and PyTorch have helper functions to download and load the IMDB dataset. So instead of using dataloaders as we saw in <a href="..//posts/keras_torch_comparison/syntax/">part one</a> we will use this code in which we import the IMDB dataset in Keras.</p>
+Both Keras and PyTorch have helper functions to download and load the IMDB dataset. So instead of using dataloaders as we saw in <a href="../syntax">part one</a> we will use this code in which we import the IMDB dataset in Keras.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> imdb
 input_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">20000</span>
@@ -358,7 +356,7 @@ model<span style="color:#f92672">.</span>summary()</code></pre></div>
       output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>activation(output)
       <span style="color:#66d9ef">return</span> output</code></pre></div>
 </div>
-<p>If you read <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, there won&#39;t be any surprise in this code. In PyTorch we simply detail a bit more the computation whereas Keras infer them as we stack the layers.</p>
+<p>If you read <a href="../syntax">part one</a>, there won&#39;t be any surprise in this code. In PyTorch we simply detail a bit more the computation whereas Keras infer them as we stack the layers.</p>
 <p>
   Now the sad news is this implementation is not exactly the same as the one with Keras. And the main difference is initialization! It requires a fair amount of digging to make both frameworks agree on initializations. For example, you can see that the <code>Embedding</code> layer <a href="https://keras.io/api/layers/core_layers/embedding/">from Keras initialize its weights with a uniform distribution</a>, whereas it is <a href="https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html">a normal distribution which is used by PyTorch</a>. Let&#39;s get straight to the point and use the following method to adapt PyTorch initialization to Keras. </p>
 <div class="src src-python">
@@ -523,7 +521,7 @@ Notice the use of <code>model.train()</code> and <code>model.eval()</code> metho
 <p>
 I used <code>torch.nn.utils.clip_grad_norm_(model.parameters(), 5)</code> to clip weight gradients to 5. I am not sure how Keras deals with gradient clipping but it is usually good practice to implement this technique to avoid the problem of exploding gradient.</p>
 <p>
-A final remark concerns the ordering of dimensions. As I explained in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, Keras expects by default batch dimension to be first while PyTorch expects it in second position. So with <code>samples.transpose(0, 1)</code> we effectively permute first and second dimensions to fit PyTorch data model.</p>
+A final remark concerns the ordering of dimensions. As I explained in <a href="../syntax">part one</a>, Keras expects by default batch dimension to be first while PyTorch expects it in second position. So with <code>samples.transpose(0, 1)</code> we effectively permute first and second dimensions to fit PyTorch data model.</p>
 <p>
 Now, likewise Keras, when we reach the end of an epoch, we want to evaluate the model.</p>
 <div class="src src-python">
