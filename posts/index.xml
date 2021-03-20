@@ -8,13 +8,13 @@
     <language>en</language>
     <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sentiment classification with Keras and PyTorch</title>
+      <title>Comparing Keras and PyTorch on sentiment classification</title>
       <link>https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/</guid>
       <description>After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch have two different approaches
+ As we saw in part one, Keras and PyTorch are different in design
   Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc</description>
     </item>
     

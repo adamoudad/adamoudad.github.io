@@ -2,20 +2,20 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Sentiment classification with Keras and PyTorch - Adam Oudad</title>
+<title>Comparing Keras and PyTorch on sentiment classification - Adam Oudad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.81.0" /><meta itemprop="name" content="Sentiment classification with Keras and PyTorch">
+<meta name="generator" content="Hugo 0.81.0" /><meta itemprop="name" content="Comparing Keras and PyTorch on sentiment classification">
 <meta itemprop="description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch have two different approaches
+ As we saw in part one, Keras and PyTorch are different in design
   Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc"><meta itemprop="datePublished" content="2021-03-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2225">
-<meta itemprop="keywords" content="machine-learning,pytorch,keras," /><meta property="og:title" content="Sentiment classification with Keras and PyTorch" />
+<meta itemprop="wordCount" content="2207">
+<meta itemprop="keywords" content="machine-learning,pytorch,keras," /><meta property="og:title" content="Comparing Keras and PyTorch on sentiment classification" />
 <meta property="og:description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch have two different approaches
+ As we saw in part one, Keras and PyTorch are different in design
   Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/" /><meta property="article:section" content="posts" />
@@ -23,9 +23,9 @@
 <meta property="article:modified_time" content="2021-03-20T00:00:00&#43;00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sentiment classification with Keras and PyTorch"/>
+<meta name="twitter:title" content="Comparing Keras and PyTorch on sentiment classification"/>
 <meta name="twitter:description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
- As we saw in part one, Keras and PyTorch have two different approaches
+ As we saw in part one, Keras and PyTorch are different in design
   Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc"/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.ad272b0b754e62bca88b3a2e460326e9e57fed16f6962f836489c20161b6c8ef.css" integrity="sha256-rScrC3VOYryoizouRgMm6eV/7Rb2li&#43;DZInCAWG2yO8=">
@@ -104,13 +104,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Sentiment%20classification%20with%20Keras%20and%20PyTorch&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Comparing%20Keras%20and%20PyTorch%20on%20sentiment%20classification&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f&amp;title=Sentiment%20classification%20with%20Keras%20and%20PyTorch" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f&amp;title=Comparing%20Keras%20and%20PyTorch%20on%20sentiment%20classification" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -186,7 +186,7 @@
   <header>
   <div class="title">
     
-        <h2><a href="/posts/keras_torch_comparison/sentiment_classification/">Sentiment classification with Keras and PyTorch</a></h2>
+        <h2><a href="/posts/keras_torch_comparison/sentiment_classification/">Comparing Keras and PyTorch on sentiment classification</a></h2>
     
     
 </div>
@@ -209,13 +209,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Sentiment%20classification%20with%20Keras%20and%20PyTorch&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Comparing%20Keras%20and%20PyTorch%20on%20sentiment%20classification&amp;url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f&amp;title=Sentiment%20classification%20with%20Keras%20and%20PyTorch" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fadamoudad.github.io%2fposts%2fkeras_torch_comparison%2fsentiment_classification%2f&amp;title=Comparing%20Keras%20and%20PyTorch%20on%20sentiment%20classification" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -229,17 +229,17 @@
 <p>
 After <a href="..//posts/keras_torch_comparison/syntax/">part one</a> which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.</p>
 <p>
-As we saw in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, Keras and PyTorch have two different approaches</p>
+As we saw in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, Keras and PyTorch are different in design</p>
 <ul>
 <li>
 <p>Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc</p>
 </li>
 <li>
 <p>PyTorch is aimed at modularity and versatility. Fine-grained control on the flow of computations</p>
-<p>
-Yet both frameworks lets you accomplish very much the same, which is training deep neural networks. The number of resources of &#34;rosetta stone&#34; style tutorials is very limited on internet, especially resources demonstrating practical examples, so I hope this will help demistifying the differences and similarities between the two frameworks. Now let&#39;s get started!</p>
 </li>
 </ul>
+<p>
+  Yet both frameworks are meant to do the same, that is training deep neural networks. The number of resources of &#34;rosetta stone&#34; style tutorials is very limited on internet, especially resources demonstrating practical examples, so I hope this will help demistifying the differences and similarities between the two frameworks. Now let&#39;s get started!</p>
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Dataset of IMDB movie reviews
@@ -247,7 +247,7 @@ Dataset of IMDB movie reviews
 <div id="outline-text-headline-1" class="outline-text-2">
 <p>We will use IMDB dataset, a popular toy dataset in machine learning, which consists of movie reviews from the IMDB website annotated by positive or negative sentiment.</p>
 <p>
-Instead of using dataloaders as we saw in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, both Keras and PyTorch have helper functions to download and load the IMDB dataset. In Keras, the IMDB dataset can be imported with</p>
+Both Keras and PyTorch have helper functions to download and load the IMDB dataset. So instead of using dataloaders as we saw in <a href="..//posts/keras_torch_comparison/syntax/">part one</a> we will use this code in which we import the IMDB dataset in Keras.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> imdb
 input_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">20000</span>
@@ -261,7 +261,7 @@ input_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">20000
 25000 Validation sequences
 </pre>
 <p>
-With <a href="https://pytorch.org/text/_modules/torchtext/datasets/imdb.html">torchtext, PyTorch can also download and load the IMDB dataset</a> in the same fashion. Yet, to make sure the data we feed to Keras and the data we feed to PyTorch is the same, I will simply adapt the downloaded data using Keras to PyTorch. This is to ensure we have consistent data between both implementations, especially in terms of data cleaning and how the text is tokenized.</p>
+With <a href="https://pytorch.org/text/_modules/torchtext/datasets/imdb.html">torchtext, PyTorch can also download and load the IMDB dataset</a> in the same fashion. Yet, to make sure the data we feed to Keras and the data we feed to PyTorch is the same, I will simply adapt the downloaded data using Keras to PyTorch, so we are sure to have consistency between both implementations, especially in terms of data cleaning and how the text is tokenized.</p>
 <p>
 In addition, we will pad the movie reviews to have sequences of same length. This is important to train on batches as it is not possible to parallelize computation of the error gradient on sequences of variable length.</p>
 <div class="src src-python">
@@ -290,9 +290,9 @@ recover_text(x_train[<span style="color:#ae81ff">50</span>], index_to_word)</cod
 <div class="verse-block">
 <p>&lt;START&gt; i actually saw this movie at a theater as soon as i handed the cashier my money she said two words i had never heard at a theater before or since no &lt;UNK&gt; as soon as i heard those words i should have just &lt;UNK&gt; bye bye to my cash and gone home but no foolishly i went in and watched the movie this movie didn&#39;t make anyone in the theater laugh not even once not even &lt;UNK&gt; mostly we sat there in stunned silence every ten minutes or so someone would yell this movie sucks the audience would applaud enthusiastically then sit there in stunned bored silence for another ten minutes &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; […]</p>
 </div>
-<p>We can print the sentiment associated with this review, it is <code>y_train[50]</code> which is <code>0</code> for &#34;negative&#34;. Seems about right.</p>
+<p>We can print the sentiment associated with this review, it is <code>y_train[50]</code> which is <code>0</code> for &#34;negative&#34;. Looks right.</p>
 <p>
-   But wait! We want to need to adapt our data for PyTorch. This code will do the job.</p>
+   But wait! We need to adapt our data for PyTorch. This code will do the job.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> TensorDataset, DataLoader
 train_data <span style="color:#f92672">=</span> TensorDataset(torch<span style="color:#f92672">.</span>from_numpy(x_train), torch<span style="color:#f92672">.</span>from_numpy(y_train))
@@ -309,7 +309,7 @@ A side note here, concerning the use of <code>DataLoader</code> instance to load
 </div>
 <div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
-Define the classification model
+Classifier model
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <p>Our classifier is a bidirectional two-layers LSTM on top of an embedding layer, and followed by a dense layer which gives one output value. This output value gives the probability of a review being positive. the closer to zero, the more negative the review is predicted and the closer to one, the more positive the review is predicted. To obtain such probability, we use a sigmoid function, which takes the final output of the neural network and squeezes the value between 0 and 1.</p>
@@ -374,7 +374,7 @@ model<span style="color:#f92672">.</span>summary()</code></pre></div>
   <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> b:
       nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>constant(t, <span style="color:#ae81ff">0</span>)</code></pre></div>
 </div>
-<p>This is a nice taken from <code>torchMoji</code>, <a href="https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983">a PyTorch implementation of DeepMoji by HuggingFace</a>. We now our updated BiLSTM class in PyTorch</p>
+<p>It is a nice snippet taken from <code>torchMoji</code>, <a href="https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983">a PyTorch implementation of DeepMoji by HuggingFace</a>. We now have our updated BiLSTM class in PyTorch</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch
 <span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
@@ -416,9 +416,9 @@ model<span style="color:#f92672">.</span>summary()</code></pre></div>
       <span style="color:#66d9ef">return</span> output, None</code></pre></div>
 </div>
 <p>
-  Well… As you can see, even for very basic architectures, transferring code is not an easy job. The details are quite important to achieve similar results, but bear with me, because this is the closest I could get to the Keras implementation.</p>
+  Well… As you can see, even for very basic architectures, transferring code is not an easy job. And even the details are quite important to achieve similar results, but bear with me, because this is the closest I could get to the Keras implementation.</p>
 <p>
-  A quick sanity check is to check the number of parameters of both implementations which should be matching. <code>model.summary()</code> in Keras outputs the following.</p>
+  A quick sanity check would be to verify the number of parameters of both implementations match. <code>model.summary()</code> in Keras outputs the following.</p>
 <pre class="example">
  Model: &#34;sequential&#34;
 _________________________________________________________________
@@ -447,7 +447,7 @@ BiLSTM(
 )
 </pre>
 <p>
-      But this does not inform us on the number of parameters. This short snippets gives what we want (<a href="https://discuss.pytorch.org/t/how-do-i-check-the-number-of-parameters-of-a-model/4325/8">thanks to Federico Baldassare</a>)</p>
+      But this does not inform us on the number of parameters. This line gives what we want (<a href="https://discuss.pytorch.org/t/how-do-i-check-the-number-of-parameters-of-a-model/4325/8">thanks to Federico Baldassare</a>)</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sum(p<span style="color:#f92672">.</span>numel() <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> model<span style="color:#f92672">.</span>parameters() <span style="color:#66d9ef">if</span> p<span style="color:#f92672">.</span>requires_grad)</code></pre></div>
 </div>
@@ -474,7 +474,7 @@ In Keras, this one line will do</p>
         validation_data<span style="color:#f92672">=</span>(x_val, y_val))</code></pre></div>
 </div>
 <p>
-  Now with PyTorch. Everything Keras does under the hood must be explicitly written in PyTorch. First is to initialize the logs, loss criterion, model, device and optimizer.</p>
+Now with PyTorch, remember that everything Keras does under the hood must be explicitly written. First is to initialize the logs, loss criterion, model, device and optimizer.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model <span style="color:#f92672">=</span> BiLSTM(input_dim, embedding_dim, hidden_dim)
 device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
@@ -493,7 +493,7 @@ epoch_history <span style="color:#f92672">=</span> {
 }</code></pre></div>
 </div>
 <p>
-Following is the training loop. I use the <code>tqdm</code> library which I recommend for printing a nice progress bar in the same fashion as Keras. <a href="https://towardsdatascience.com/training-models-with-a-progress-a-bar-2b664de3e13e">You can check this guide on how to use it for adding a progress bar to your machine learning experiments</a>.</p>
+What follows  is the training loop. I use the <code>tqdm</code> library <a href="https://towardsdatascience.com/training-models-with-a-progress-a-bar-2b664de3e13e">which I recommend for printing a nice progress bar in the same fashion as Keras</a>.</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm, trange
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> trange(epochs, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;epoch&#34;</span>, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Train&#34;</span>):
@@ -519,11 +519,11 @@ Following is the training loop. I use the <code>tqdm</code> library which I reco
                                acc<span style="color:#f92672">=</span>sum(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]))</code></pre></div>
 </div>
 <p>
-Notice the use of <code>model.train()</code> and <code>model.eval()</code> methods which set <code>model.training</code> to either <code>True</code> or <code>False</code>, deciding whether or not to keep the gradient during the forward pass, which will be used for optimizing the network in the backward pass.</p>
+Notice the use of <code>model.train()</code> and <code>model.eval()</code> methods which set <code>model.training</code> to either <code>True</code> or <code>False</code>. It decides whether or not to keep the gradient during the forward pass, which will be used for optimizing the network in the backward pass.</p>
 <p>
 I used <code>torch.nn.utils.clip_grad_norm_(model.parameters(), 5)</code> to clip weight gradients to 5. I am not sure how Keras deals with gradient clipping but it is usually good practice to implement this technique to avoid the problem of exploding gradient.</p>
 <p>
-A final remark concerns the ordering of dimensions. As I explained in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, Keras by default expects batch dimension to be first while PyTorch expects it in second position. So with <code>samples.transpose(0, 1)</code> we effectively permute first and second dimensions to fit PyTorch data model.</p>
+A final remark concerns the ordering of dimensions. As I explained in <a href="..//posts/keras_torch_comparison/syntax/">part one</a>, Keras expects by default batch dimension to be first while PyTorch expects it in second position. So with <code>samples.transpose(0, 1)</code> we effectively permute first and second dimensions to fit PyTorch data model.</p>
 <p>
 Now, likewise Keras, when we reach the end of an epoch, we want to evaluate the model.</p>
 <div class="src src-python">
@@ -605,7 +605,7 @@ Epoch results on the training set.
 </tbody>
 </table>
 <figcaption>
-Epoch results on the validation set
+Epoch results on the validation set.
 </figcaption>
 </figure>
 <p>
@@ -625,7 +625,7 @@ Epoch results on the validation set
 </figure>
 </p>
 <p>
-We can notice a sudden jump in accuracy and loss for the Keras implementation. This might be fixed if we optimize the learning rate.</p>
+We can notice a sudden jump in accuracy and loss for the Keras implementation. This may be reduced if we optimize the learning rate.</p>
 </div>
 </div>
 <div id="outline-container-headline-5" class="outline-2">
@@ -635,9 +635,9 @@ Last words
 <div id="outline-text-headline-5" class="outline-text-2">
 <p>Even with great care, it is hard to obtain the very same results with identical architecture, data processing and training, because each framework has its own internal mechanisms, designs, with in addition specific tricks to guarantee numerical stability. Nonetheless, the results we got are close.</p>
 <p>
-  Ambitious projects such as <a href="https://onnx.ai/">ONNX</a> are creating a standard between deep learning frameworks, to practically solve the discrepancies we witnessed in this article.</p>
+  There are ambitious projects such as <a href="https://onnx.ai/">ONNX</a> creating a standard between deep learning frameworks, to practically solve the discrepancies we witnessed in this article.</p>
 <p>
-  I hope you enjoyed this comparison of Keras and PyTorch and hope to read your ideas and feedbacks! Hope you the best in your machine learning journey!</p>
+  I hope you enjoyed this comparison of Keras and PyTorch want to read your ideas and feedbacks! Hope you the best in your machine learning journey!</p>
 </div>
 </div>
 <div id="outline-container-headline-6" class="outline-2">
@@ -745,7 +745,7 @@ Footnotes
 
         </section>
         <header>
-          <h1><a href="/posts/keras_torch_comparison/sentiment_classification/">Sentiment classification with Keras and PyTorch</a></h1>
+          <h1><a href="/posts/keras_torch_comparison/sentiment_classification/">Comparing Keras and PyTorch on sentiment classification</a></h1>
           <time class="published" datetime="">March 20, 2021</time>
         </header>
       </article>
