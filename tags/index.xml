@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Adam Oudad</title>
+    <title>Tags on (Machine) Learning log.</title>
     <link>https://adamoudad.github.io/tags/</link>
-    <description>Recent content in Tags on Adam Oudad</description>
+    <description>Recent content in Tags on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -238,15 +238,6 @@
       <pubDate>Thu, 16 May 2019 02:31:19 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/tags/first/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://adamoudad.github.io/tags/themes/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://adamoudad.github.io/tags/themes/</guid>
       <description></description>
     </item>
     

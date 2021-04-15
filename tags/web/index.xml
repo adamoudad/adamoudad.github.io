@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web on Adam Oudad</title>
+    <title>web on (Machine) Learning log.</title>
     <link>https://adamoudad.github.io/tags/web/</link>
-    <description>Recent content in web on Adam Oudad</description>
+    <description>Recent content in web on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />

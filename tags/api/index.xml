@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>api on Adam Oudad</title>
+    <title>api on (Machine) Learning log.</title>
     <link>https://adamoudad.github.io/tags/api/</link>
-    <description>Recent content in api on Adam Oudad</description>
+    <description>Recent content in api on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Dec 2019 03:49:04 +0900</lastBuildDate><atom:link href="https://adamoudad.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
