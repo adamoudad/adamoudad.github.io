@@ -14,7 +14,7 @@
       
       <guid>https://adamoudad.github.io/posts/tubechiller/</guid>
       <description>I wrote a youtube playlist generator in javascript. TubeChiller is a tool for automatically play youtube videos provided in a list of urls.
-   Credit: https://pixabay.com/images/id-3080834/
+  Credit: https://pixabay.com/images/id-3080834/
   Background  I have been browsing youtube and ended up with a significant amount of youtube urls in my bookmarks, that point to musics or podcasts.
  There exists many program that can play youtube videos, such as VLC or Totem.</description>
     </item>

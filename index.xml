@@ -44,7 +44,7 @@
       
       <guid>https://adamoudad.github.io/posts/lock_pattern/</guid>
       <description>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-   Android lockscreen.
+  Android lockscreen.
    This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
     </item>
     
@@ -190,7 +190,7 @@ Por el momento no hay nada oficial pero varios equipos son los que llevan tiempo
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/stream_tweets_tweepy/</guid>
-      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.   Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.  Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
   Streaming API
   Search API
   What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation).</description>
@@ -203,7 +203,7 @@ Por el momento no hay nada oficial pero varios equipos son los que llevan tiempo
       
       <guid>https://adamoudad.github.io/posts/tubechiller/</guid>
       <description>I wrote a youtube playlist generator in javascript. TubeChiller is a tool for automatically play youtube videos provided in a list of urls.
-   Credit: https://pixabay.com/images/id-3080834/
+  Credit: https://pixabay.com/images/id-3080834/
   Background  I have been browsing youtube and ended up with a significant amount of youtube urls in my bookmarks, that point to musics or podcasts.
  There exists many program that can play youtube videos, such as VLC or Totem.</description>
     </item>

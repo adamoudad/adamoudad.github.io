@@ -7,15 +7,15 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.82.0" /><meta itemprop="name" content="How many patterns are there to lock your android smartphone?">
+<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="How many patterns are there to lock your android smartphone?">
 <meta itemprop="description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-   Android lockscreen.
+  Android lockscreen.
    This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"><meta itemprop="datePublished" content="2021-01-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-01-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="954">
+<meta itemprop="wordCount" content="1062">
 <meta itemprop="keywords" content="android,security,python," /><meta property="og:title" content="How many patterns are there to lock your android smartphone?" />
 <meta property="og:description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-   Android lockscreen.
+  Android lockscreen.
    This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/lock_pattern/" /><meta property="article:section" content="posts" />
@@ -25,10 +25,10 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How many patterns are there to lock your android smartphone?"/>
 <meta name="twitter:description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-   Android lockscreen.
+  Android lockscreen.
    This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"/>
 <meta name="twitter:site" content="@OudadAdam"/>
-<link rel="stylesheet" href="/css/bundle.min.22a947ad3444124d2e0e46ad3cd55a2f3e239c1bfec4ae02f770347f51b39c6c.css" integrity="sha256-IqlHrTREEk0uDkatPNVaLz4jnBv&#43;xK4C93A0f1GznGw=">
+<link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
 </head>
 
@@ -232,9 +232,8 @@
     
 <p>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.</p>
 <p>
-<figure>
-    <img src="android_lockscreen.png"
-         alt="Android lockscreen."/> <figcaption>
+<figure><img src="android_lockscreen.png"
+         alt="Android lockscreen."/><figcaption>
             <p>Android lockscreen.</p>
         </figcaption>
 </figure>
@@ -251,9 +250,9 @@ This lock mechanism is more intuitive than using a sequence of numbers (such as 
 </ul>
 <p>These two attacks to the lock mechanism are commonly referred to as <em>heuristic attack</em> and <em>smudge attack</em><sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> <sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup> <sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup>.</p>
 <p>
-Now the question is how many unlocking patterns are there, really? 389,112.</p>
+Now the question is how many unlocking patterns are there, really? The answer is 389,112.</p>
 <p>
-Ok, wait. This number came from this research paper<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup>. But, now our goal is to verify that!</p>
+This number came from this research paper<sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup>. Let&#39;s verify this!</p>
 <div id="outline-container-headline-1" class="outline-4">
 <h4 id="headline-1">
 Rules for a valid pattern
@@ -273,9 +272,8 @@ Rules for a valid pattern
 </ol>
 <p>
     Rules 1. and 2. imply that there should be at least one direction change in the pattern, so you cannot have obvious patterns like a straight line. However rule 3. is the most interesting because… sorry what? Oh, don&#39;t worry! It is a simple rule too, here is a graphical explanation.
-    <figure>
-    <img src="screenlock_pattern_dots_rule3.png"
-         alt="Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point."/> <figcaption>
+    <figure><img src="screenlock_pattern_dots_rule3.png"
+         alt="Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point."/><figcaption>
             <p>Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point.</p>
         </figcaption>
 </figure>
@@ -308,9 +306,8 @@ Programmatical resolution
 </h4>
 <div id="outline-text-headline-3" class="outline-text-4">
 <p>In our code, we label each point using a digit.
-    <figure>
-    <img src="screenlock_pattern.png"
-         alt="Labelled points"/> <figcaption>
+    <figure><img src="screenlock_pattern.png"
+         alt="Labelled points"/><figcaption>
             <p>Labelled points</p>
         </figcaption>
 </figure>
@@ -405,13 +402,14 @@ plt<span style="color:#f92672">.</span>legend()
 plt<span style="color:#f92672">.</span>show()</code></pre></div>
 </div>
 <p>
-   <figure>
-    <img src="screenlock_patterns-permutations_points.png"
-         alt="Number of patterns and permutations by the number of connected points"/> <figcaption>
+   <figure><img src="screenlock_patterns-permutations_points.png"
+         alt="Number of patterns and permutations by the number of connected points"/><figcaption>
             <p>Number of patterns and permutations by the number of connected points</p>
         </figcaption>
 </figure>
 </p>
+<p>
+   This last graph shows the number of patterns connecting the same given number of dots. So if you sum them all, you should obtain the number of total patterns that we computed. Remember to discard patterns with less than 3 dots and you get the number 389,112 for the blue line. We can also notice that the number of 8-dot patterns is the same as 9-dot patterns how is that so? Well, since there are only 9 dots available, when we have joined 8 dots together, there is only one remaining to form a 9-dot pattern, so in practical, 8-dot patterns are equivalent to 9-dot patterns.</p>
 </div>
 </div>
 <div id="outline-container-headline-5" class="outline-4">
@@ -419,7 +417,7 @@ plt<span style="color:#f92672">.</span>show()</code></pre></div>
 Conclusion
 </h4>
 <div id="outline-text-headline-5" class="outline-text-4">
-<p>That was some fun play with statistics! What do you think?</p>
+<p>And this concludes our short journey. That was some fun play with statistics! What do you think?</p>
 </div>
 </div>
 <div id="outline-container-headline-6" class="outline-2">
@@ -751,7 +749,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.82.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

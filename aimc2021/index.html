@@ -3,10 +3,9 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-15 Thu 21:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Musical duet generation with variational autoencoder</title>
+<title>Musical Duet Generation with Tree-Structured Variational Autoencoder</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -217,7 +216,7 @@
 </head>
 <body>
 <div id="content">
-<h1 class="title">Musical duet generation with variational autoencoder
+<h1 class="title">Musical Duet Generation with Tree-Structured Variational Autoencoder
 <br />
 <span class="subtitle">Audio samples</span>
 </h1>
@@ -225,23 +224,45 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga9a6cfa">1. Reconstructions</a></li>
-<li><a href="#orge03f5f6">2. Generations</a></li>
-<li><a href="#org5ece1bd">3. stuff</a></li>
+<li><a href="#org303155c">About</a></li>
+<li><a href="#org08c6614">Reconstructions</a></li>
+<li><a href="#org4e9e09e">2-bars duet interpolation</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga9a6cfa" class="outline-2">
-<h2 id="orga9a6cfa"><span class="section-number-2">1</span> Reconstructions</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org5ae1323" class="outline-3">
-<h3 id="org5ae1323"><span class="section-number-3">1.1</span> 1-bar pianorolls</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org303155c" class="outline-2">
+<h2 id="org303155c">About</h2>
+<div class="outline-text-2" id="text-org303155c">
 <p>
-Duet is merged into one instrument solo.
+Samples accompanying <i>Musical Duet Generation with Variational Autoencoder</i>.
 </p>
+
+<dl class="org-dl">
+<dt>Melody</dt><dd>is assigned MIDI program 24 which is <i>Acoustic Guitar</i>.</dd>
+<dt>Accompaniment</dt><dd>is assigned MIDI program 0 which is <i>Grand Piano</i>.</dd>
+</dl>
+
+
+
+
+<p>
+The PianoTree VAE baseline does not generate separated melody and accompaniment tracks so we assign <i>Grand Piano</i> instrument to the single track.
+</p>
+
+<p>
+MIDI is converted to WAV format using fluidsynth.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08c6614" class="outline-2">
+<h2 id="org08c6614">Reconstructions</h2>
+<div class="outline-text-2" id="text-org08c6614">
+</div>
+<div id="outline-container-org836a5d9" class="outline-3">
+<h3 id="org836a5d9">1-bar duets</h3>
+<div class="outline-text-3" id="text-org836a5d9">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -254,8 +275,8 @@ Duet is merged into one instrument solo.
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Original merged solo</th>
-<th scope="col" class="org-left">PianoTree VAE</th>
+<th scope="col" class="org-left">Ground-truth duet</th>
+<th scope="col" class="org-left">PianoTree VAE (baseline)</th>
 <th scope="col" class="org-left">HierarchicalTree VAE</th>
 <th scope="col" class="org-left">SharedHierarchicalTree VAE</th>
 <th scope="col" class="org-left">MergedTree VAE</th>
@@ -263,64 +284,49 @@ Duet is merged into one instrument solo.
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_original_0.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_original_0.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_reconstruction_0.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-1bar/tf0-0_reconstruction_0.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_flat-1bar/tf0-0_reconstruction_0.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-1bar/tf0-0_reconstruction_0.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_reconstruction_0.wav"> </audio></td>
 </tr>
 
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_original_1.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_original_1.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_reconstruction_1.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-1bar/tf0-0_reconstruction_1.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_flat-1bar/tf0-0_reconstruction_1.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-1bar/tf0-0_reconstruction_1.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_reconstruction_1.wav"> </audio></td>
 </tr>
 
 
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_original_2.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_reconstruction_2.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-1bar/tf0-0_reconstruction_2.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-1bar/tf0-0_reconstruction_2.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_reconstruction_2.wav"> </audio></td>
-</tr>
-
 
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_original_3.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_original_3.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_reconstruction_3.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-1bar/tf0-0_reconstruction_3.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_flat-1bar/tf0-0_reconstruction_3.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-1bar/tf0-0_reconstruction_3.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_reconstruction_3.wav"> </audio></td>
 </tr>
 
 
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_original_4.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_original_4.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/baseline-1bar/tf0-0_reconstruction_4.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-1bar/tf0-0_reconstruction_4.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_flat-1bar/tf0-0_reconstruction_4.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-1bar/tf0-0_reconstruction_4.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/mergedtree-1bar/tf0-0_reconstruction_4.wav"> </audio></td>
 </tr>
 
 </tbody>
 </table>
-
-
-<p>
-Duet reconstruction
-</p>
 </div>
 </div>
 
-<div id="outline-container-org62c9faf" class="outline-3">
-<h3 id="org62c9faf"><span class="section-number-3">1.2</span> 2-bars pianorolls</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-Duet is merged into one instrument solo.
-</p>
+
+<div id="outline-container-org7c70d27" class="outline-3">
+<h3 id="org7c70d27">2-bars duets</h3>
+<div class="outline-text-3" id="text-org7c70d27">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -333,241 +339,98 @@ Duet is merged into one instrument solo.
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Original merged solo</th>
-<th scope="col" class="org-left">PianoTree VAE</th>
-<!-- <th scope="col" class="org-left">HierarchicalTree VAE</th> -->
-<!-- <th scope="col" class="org-left">SharedHierarchicalTree VAE</th> -->
+<th scope="col" class="org-left">Ground-truth duet</th>
+<th scope="col" class="org-left">PianoTree VAE (baseline)</th>
+<th scope="col" class="org-left">HierarchicalTree VAE</th>
+<th scope="col" class="org-left">SharedHierarchicalTree VAE</th>
 <th scope="col" class="org-left">MergedTree VAE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_0.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_0.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_0.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_0.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_0.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_1.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_1.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_1.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_1.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_1.wav"> </audio></td>
-</tr>
-
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_2.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_2.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_2.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_2.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_2.wav"> </audio></td>
-</tr>
-
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_3.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_3.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_3.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_3.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_3.wav"> </audio></td>
-</tr>
-
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_4.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_original_4.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_4.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_4.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_4.wav"> </audio></td> -->
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_4.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_4.wav"> </audio></td>
 <td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_4.wav"> </audio></td>
 </tr>
 
+
+<tr>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_original_5.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_5.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_5.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_5.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_5.wav"> </audio></td>
+</tr>
+
+
+<tr>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_original_6.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_6.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_6.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_6.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_6.wav"> </audio></td>
+</tr>
+
+
+<tr>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_original_8.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_8.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_8.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_8.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_reconstruction_8.wav"> </audio></td>
+</tr>
+
 </tbody>
 </table>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4e9e09e" class="outline-2">
+<h2 id="org4e9e09e">2-bars duet interpolation</h2>
+<div class="outline-text-2" id="text-org4e9e09e">
+<p>
+In the following audio, the models reconstruct the first and last 2-bars segments, and generate a transition between the two segments using latent space interpolation of the variational autoencoder.
+</p>
 
 <p>
-Duet reconstruction
+A metronome bell signals every 2-bars segment start and a metronome tick signals every beat.
 </p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
 <colgroup>
-<col  class="org-left" />
-<col  class="org-left" />
-<col  class="org-left" />
 <col  class="org-left" />
 <col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Original duet</th>
-<!-- <th scope="col" class="org-left">HierarchicalTree VAE</th> -->
-<!-- <th scope="col" class="org-left">SharedHierarchicalTree VAE</th> -->
+<th scope="col" class="org-left">PianoTree VAE (baseline)</th>
 <th scope="col" class="org-left">MergedTree VAE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_0.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_0.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_0.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_duet_reconstruction_0.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_points3_interpolation_0.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_points3_interpolation_0.wav"> </audio></td>
 </tr>
-
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_1.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_1.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_1.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_1.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_duet_reconstruction_1.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_points3_interpolation_1.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_points3_interpolation_1.wav"> </audio></td>
 </tr>
-
-
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_2.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_2.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_2.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_2.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_duet_reconstruction_2.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_points3_interpolation_2.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_points3_interpolation_2.wav"> </audio></td>
 </tr>
-
-
 <tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_3.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_3.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_3.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_3.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_duet_reconstruction_3.wav"> </audio></td>
-</tr>
-
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_original_4.wav"> </audio></td>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_reconstruction_4.wav"> </audio></td>
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/hierarchicaltree_gru-2bars/tf0-0_reconstruction_4.wav"> </audio></td> -->
-<!-- <td class="org-left"><audio controls=""> <source src="./assets/sharedhierarchicaltree_gru-2bars/tf0-0_reconstruction_4.wav"> </audio></td> -->
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_duet_reconstruction_4.wav"> </audio></td>
-</tr>
-
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-orge03f5f6" class="outline-2">
-<h2 id="orge03f5f6"><span class="section-number-2">2</span> Generations</h2>
-<div class="outline-text-2" id="text-2">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">MergedTree VAE 2-bars generation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_0.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_1.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_2.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_3.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_4.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_5.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_6.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/mergedtree/generation_7.wav"> </audio></td>
-</tr>
-</tbody>
-</table>
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">MergedTree VAE 2-bars generation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_0.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_1.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_2.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_3.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_4.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_5.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_6.wav"> </audio></td>
-</tr>
-
-<tr>
-<td class="org-left"><audio controls=""> <source src="./assets/baseline/generation_7.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/baseline-2bars/tf0-0_points3_interpolation_3.wav"> </audio></td>
+<td class="org-left"><audio controls=""> <source src="./assets/mergedtree-2bars/tf0-0_points3_interpolation_3.wav"> </audio></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-
-
-<div id="outline-container-org5ece1bd" class="outline-2">
-<h2 id="org5ece1bd"><span class="section-number-2">3</span> stuff</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-a b c d
-</p>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Created: 2021-04-15 Thu 21:34</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

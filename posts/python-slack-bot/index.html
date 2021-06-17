@@ -7,7 +7,7 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.82.0" /><meta itemprop="name" content="Have a bot haunt your Slack workspace">
+<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Have a bot haunt your Slack workspace">
 <meta itemprop="description" content="In this article we&#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
 Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook."><meta itemprop="datePublished" content="2020-05-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-05-21T00:00:00&#43;00:00" />
@@ -25,7 +25,7 @@ Add a webhook for your Slack workspace  We first need to configure a web hook to
 <meta name="twitter:description" content="In this article we&#39;ll see how to code your simple bot for Slack, and schedule it to run regularily. As some testing might be necessary, I recommend to create a dummy Slack workspace for this tutorial.
 Add a webhook for your Slack workspace  We first need to configure a web hook to communicate to our Slack workspace. Go to this url, choose your channel and click on add a webhook."/>
 <meta name="twitter:site" content="@OudadAdam"/>
-<link rel="stylesheet" href="/css/bundle.min.22a947ad3444124d2e0e46ad3cd55a2f3e239c1bfec4ae02f770347f51b39c6c.css" integrity="sha256-IqlHrTREEk0uDkatPNVaLz4jnBv&#43;xK4C93A0f1GznGw=">
+<link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
 </head>
 
@@ -254,8 +254,7 @@ slack <span style="color:#f92672">=</span> slackweb<span style="color:#f92672">.
 slack<span style="color:#f92672">.</span>notify(text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello world!&#34;</span>)</code></pre></div>
 </div>
 <p>Replace the content of <code>HOOK_URL</code> by your hook url copied from the previous step. Then run the code and check if it works; you should see in <code class="verbatim">#random</code> a message from your program. The first line of the above code specifies the location of the python interpreter to run, and the second line should be used if the file contains unicode characters, such as japanese kanji or french é, à, etc.
-   <figure>
-    <img src="slackbot-hello_world.jpg" width="auto"/> 
+   <figure><img src="slackbot-hello_world.jpg" width="auto"/>
 </figure>
 </p>
 </div>
@@ -266,25 +265,21 @@ Schedule the program
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
 <p>You could decide to schedule the program to run on your own computer, but if you want it to run even when your computer is shut down, we need a web server. <a href="https://www.pythonanywhere.com/">PythonAnywhere</a> offers free server space and python environment for development purpose. So let&#39;s create an account and head to our <a href="https://www.pythonanywhere.com/dashboard/">PythonAnywhere dashboard</a>.
-  <figure>
-    <img src="pythonanywhere_dashboard.jpg" width="auto"/> 
+  <figure><img src="pythonanywhere_dashboard.jpg" width="auto"/>
 </figure>
 
   Go to the <em>Files</em> tab and upload your file <code class="verbatim">slackbot.py</code> to your directory <code class="verbatim">/home/your_username/</code>.
-  <figure>
-    <img src="pythonanywhere_files.jpg" width="auto"/> 
+  <figure><img src="pythonanywhere_files.jpg" width="auto"/>
 </figure>
 
   Then, let&#39;s install the dependancy. Open a bash terminal and run <code>pip3 install --user slackweb</code>.
-  <figure>
-    <img src="pythonanywhere_bash.jpg" width="auto"/> 
+  <figure><img src="pythonanywhere_bash.jpg" width="auto"/>
 </figure>
 
   Inside the same terminal, we can check that everything works. Run <code>python3 slackbot.py</code>, and see if the message appears again in #random channel.</p>
 <p>
   Scheduling is done in the <em>Task</em> tab. Create your task by specifying a frequency and the command to run: <code>/home/adamoudad/slackbot.py</code>. You can see the expiry date of your task when you created it, which is probably roughly one month. For the free plan, PythonAnywhere requests you to log at least once a month for your scheduled tasks to remain valid.
-  <figure>
-    <img src="pythonanywhere_tasks.jpg" width="auto"/> 
+  <figure><img src="pythonanywhere_tasks.jpg" width="auto"/>
 </figure>
 </p>
 </div>
@@ -589,7 +584,7 @@ Conclusion
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.82.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
