@@ -87,16 +87,16 @@
     <loc>https://adamoudad.github.io/posts/lock_pattern/</loc>
     <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/categories/python/</loc>
-    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://adamoudad.github.io/tags/python/</loc>
     <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/categories/security/</loc>
+    <loc>https://adamoudad.github.io/categories/python/</loc>
     <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/tags/security/</loc>
+    <lastmod>2021-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adamoudad.github.io/categories/security/</loc>
     <lastmod>2021-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/pierre-corneille-bot/</loc>
@@ -114,10 +114,10 @@
     <loc>https://adamoudad.github.io/categories/programming/</loc>
     <lastmod>2020-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/categories/linux/</loc>
+    <loc>https://adamoudad.github.io/tags/linux/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/tags/linux/</loc>
+    <loc>https://adamoudad.github.io/categories/linux/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/random-aphorism-notifications/</loc>
@@ -126,10 +126,10 @@
     <loc>https://adamoudad.github.io/posts/python-slack-bot/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/categories/web/</loc>
+    <loc>https://adamoudad.github.io/tags/web/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/tags/web/</loc>
+    <loc>https://adamoudad.github.io/categories/web/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/data-processing-libraries/</loc>
@@ -138,10 +138,10 @@
     <loc>https://adamoudad.github.io/tags/docker/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/categories/emacs/</loc>
+    <loc>https://adamoudad.github.io/tags/emacs/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/tags/emacs/</loc>
+    <loc>https://adamoudad.github.io/categories/emacs/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/tags/productivity/</loc>
@@ -171,7 +171,7 @@
     <loc>https://adamoudad.github.io/posts/pythonic/</loc>
     <lastmod>2020-02-02T03:49:04+09:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/posts/japanese/bring-or-take/</loc>
+    <loc>https://adamoudad.github.io/posts/language/bring-or-take/</loc>
     <lastmod>2020-01-24T02:31:19+09:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/tags/grammar/</loc>
@@ -216,7 +216,7 @@
     <loc>https://adamoudad.github.io/categories/japanese/</loc>
     <lastmod>2019-10-23T02:31:19+09:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/posts/japanese/suru/</loc>
+    <loc>https://adamoudad.github.io/posts/language/suru/</loc>
     <lastmod>2019-10-23T02:31:19+09:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/sound-word2vec/</loc>
@@ -225,7 +225,7 @@
     <loc>https://adamoudad.github.io/posts/vectorizing-text/</loc>
     <lastmod>2019-10-17T03:49:04+09:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/posts/japanese/ga-or-ha/</loc>
+    <loc>https://adamoudad.github.io/posts/language/ga-or-ha/</loc>
     <lastmod>2019-10-17T02:31:19+09:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/productivity/</loc>
@@ -242,6 +242,16 @@
   </url><url>
     <loc>https://adamoudad.github.io/tags/latex/</loc>
     <lastmod>2019-05-20T03:49:04+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://adamoudad.github.io/fr/tags/latex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://adamoudad.github.io/tags/latex/"
+                />
   </url><url>
     <loc>https://adamoudad.github.io/tags/first/</loc>
     <lastmod>2019-05-16T02:31:19+09:00</lastmod>

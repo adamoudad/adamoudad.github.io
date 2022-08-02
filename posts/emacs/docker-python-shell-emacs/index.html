@@ -7,26 +7,26 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Your python interpreter inside a docker container with Emacs">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Your python interpreter inside a docker container with Emacs">
 <meta itemprop="description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
- Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
- In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter."><meta itemprop="datePublished" content="2020-04-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-06T00:00:00&#43;00:00" />
+Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter."><meta itemprop="datePublished" content="2020-04-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-04-06T00:00:00+00:00" />
 <meta itemprop="wordCount" content="261">
 <meta itemprop="keywords" content="docker,productivity,python,programming,emacs," /><meta property="og:title" content="Your python interpreter inside a docker container with Emacs" />
 <meta property="og:description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
- Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
- In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter." />
+Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-04-06T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-04-06T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-06T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Your python interpreter inside a docker container with Emacs"/>
 <meta name="twitter:description" content="Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
- Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
- In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter."/>
+Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -90,9 +90,9 @@
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -238,35 +238,31 @@
 <p>
   The default value of this variable is <code>&#34;python&#34;</code>, which will most likely run your system-wide python interpreter. What we want is to run the following command which will send our python code to a running container.</p>
 <div class="src src-bash">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</span></span></code></pre></div>
 </div>
 <p>See <a href="https://docs.docker.com/engine/reference/commandline/cli/">docker command line reference for details about this command</a>.
 However just setting <code>python-shell-interpreter</code> to this will raise an error.</p>
 <div class="src src-text">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Python shell interpreter &#39;docker run -it -v /tmp:/tmp -v $(pwd):/code ufoym/deepo python3&#39; cannot be found. Please set the value &#39;python-shell-interpreter&#39; to a valid binary.</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Python shell interpreter &#39;docker run -it -v /tmp:/tmp -v $(pwd):/code ufoym/deepo python3&#39; cannot be found. Please set the value &#39;python-shell-interpreter&#39; to a valid binary.</span></span></code></pre></div>
 </div>
 <p>Emacs needs a shell script, so for example, you can set</p>
 <div class="src src-elisp">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq python-shell-interpreter <span style="color:#e6db74">&#34;~/.docker-python-shell.sh&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(setq python-shell-interpreter <span style="color:#e6db74">&#34;~/.docker-python-shell.sh&#34;</span>)</span></span></code></pre></div>
 </div>
 <p>Then the file <code class="verbatim">~/.docker-python-shell.sh</code> will contain</p>
 <div class="src src-bash">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>docker run -it -v /tmp:/tmp -v <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>:/code ufoym/deepo python3</span></span></code></pre></div>
 </div>
 <p>Don&#39;t forget to make the script executable.</p>
 <div class="src src-bash">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod u+x ~/.docker-python-shell.sh</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod u+x ~/.docker-python-shell.sh</span></span></code></pre></div>
 </div>
 <p>
 Two remarks on the <code>docker run</code> command:</p>
 <ul>
-<li>
-<p><code>-v /tmp:/tmp</code> can solve some errors caused by Python trying to read a file contained in <code class="verbatim">/tmp</code>, see <a href="https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container">https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container</a></p>
-</li>
-<li>
-<p><code>-v $(pwd):/code</code> mount the directory of your python script to <code class="verbatim">/code</code> in the docker container, which is handy if you need to access another module or some data</p>
-</li>
+<li><code>-v /tmp:/tmp</code> can solve some errors caused by Python trying to read a file contained in <code class="verbatim">/tmp</code>, see <a href="https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container">https://stackoverflow.com/questions/43194627/how-to-connect-emacs-elpy-in-buffer-python-interpreter-to-docker-container</a></li>
+<li><code>-v $(pwd):/code</code> mount the directory of your python script to <code class="verbatim">/code</code> in the docker container, which is handy if you need to access another module or some data</li>
 </ul>
 
   </div>
@@ -318,7 +314,7 @@ Two remarks on the <code>docker run</code> command:</p>
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -566,7 +562,7 @@ Two remarks on the <code>docker run</code> command:</p>
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -577,7 +573,7 @@ Two remarks on the <code>docker run</code> command:</p>
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

@@ -14,7 +14,7 @@
       
       <guid>https://adamoudad.github.io/posts/classification-metrics/</guid>
       <description>Accuracy, precision, recall, and F1-score are metrics used to assess automatic classifiers. These metrics are calculated from a confusion matrix. Say we have spam filter which tells whether a mail is spam or not. With a test dataset of 100 spam emails and 900 non-spam, we get the following results.
-    Actual class: Spam Actual class: Non-spam     Prediction class: Spam 85 100   Prediction class: Non-spam 15 800     This confusion matrix shows the confusions the system makes in its predictions.</description>
+Actual class: Spam Actual class: Non-spam Prediction class: Spam 85 100 Prediction class: Non-spam 15 800 This confusion matrix shows the confusions the system makes in its predictions.</description>
     </item>
     
   </channel>

@@ -7,29 +7,23 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Stream tweets with Tweepy in Python">
-<meta itemprop="description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.  Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
-  Streaming API
-  Search API
-  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)."><meta itemprop="datePublished" content="2019-12-02T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2019-12-02T03:49:04&#43;09:00" />
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Stream tweets with Tweepy in Python">
+<meta itemprop="description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python. Twitter API overview Twitter offers several API, or methods you can use to retrieve tweets.
+Streaming API Search API What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;statuses/sample&#34; endpoint (documentation)."><meta itemprop="datePublished" content="2019-12-02T03:49:04+09:00" />
+<meta itemprop="dateModified" content="2019-12-02T03:49:04+09:00" />
 <meta itemprop="wordCount" content="489">
 <meta itemprop="keywords" content="data,api," /><meta property="og:title" content="Stream tweets with Tweepy in Python" />
-<meta property="og:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.  Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
-  Streaming API
-  Search API
-  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)." />
+<meta property="og:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python. Twitter API overview Twitter offers several API, or methods you can use to retrieve tweets.
+Streaming API Search API What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;statuses/sample&#34; endpoint (documentation)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/stream_tweets_tweepy/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-12-02T03:49:04&#43;09:00" />
-<meta property="article:modified_time" content="2019-12-02T03:49:04&#43;09:00" />
+<meta property="article:published_time" content="2019-12-02T03:49:04+09:00" />
+<meta property="article:modified_time" content="2019-12-02T03:49:04+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Stream tweets with Tweepy in Python"/>
-<meta name="twitter:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python.  Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
-  Streaming API
-  Search API
-  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation)."/>
+<meta name="twitter:description" content="In this tutorial, you will learn how to stream tweets with Tweepy library in Python. Twitter API overview Twitter offers several API, or methods you can use to retrieve tweets.
+Streaming API Search API What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;statuses/sample&#34; endpoint (documentation)."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -93,9 +87,9 @@
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -244,12 +238,8 @@ Twitter API overview
 <div id="outline-text-headline-1" class="outline-text-2">
 <p>Twitter offers several API, or methods you can use to retrieve tweets.</p>
 <ul>
-<li>
-<p>Streaming API</p>
-</li>
-<li>
-<p>Search API</p>
-</li>
+<li>Streaming API</li>
+<li>Search API</li>
 </ul>
 <p>What we are interested in here is the <strong>streaming API</strong>. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &#34;<strong>statuses/sample</strong>&#34; endpoint (<a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/GET_statuse_sample">documentation</a>).</p>
 <p>
@@ -265,11 +255,11 @@ Get your credentials from Twitter.com
 <div id="outline-text-headline-2" class="outline-text-2">
 <p>Visit <a href="https://developer.twitter.com/en/apps">developer.twitter.com</a>, and log into your Twitter account. Create a new app, and under <em>Keys and tokens</em>, copy your credentials</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Replace the &#34;None&#34;s by your own credentials</span>
-ACCESS_TOKEN <span style="color:#f92672">=</span> None
-ACCESS_TOKEN_SECRET <span style="color:#f92672">=</span> None
-CONSUMER_KEY <span style="color:#f92672">=</span> None
-CONSUMER_SECRET <span style="color:#f92672">=</span> None</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Replace the &#34;None&#34;s by your own credentials</span>
+</span></span><span style="display:flex;"><span>ACCESS_TOKEN <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>ACCESS_TOKEN_SECRET <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>CONSUMER_KEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>CONSUMER_SECRET <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span></span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -279,24 +269,18 @@ Set up the connection
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> OAuthHandler
-  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> API
-  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> Streamauth <span style="color:#f92672">=</span> OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-  auth<span style="color:#f92672">.</span>set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-  api <span style="color:#f92672">=</span> API(auth, wait_on_rate_limit<span style="color:#f92672">=</span>True,
-     wait_on_rate_limit_notify<span style="color:#f92672">=</span>True)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> OAuthHandler
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> API
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">from</span> tweepy <span style="color:#f92672">import</span> Streamauth <span style="color:#f92672">=</span> OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+</span></span><span style="display:flex;"><span>  auth<span style="color:#f92672">.</span>set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+</span></span><span style="display:flex;"><span>  api <span style="color:#f92672">=</span> API(auth, wait_on_rate_limit<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>     wait_on_rate_limit_notify<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)</span></span></code></pre></div>
 </div>
 <p>First we import all necessary classes from tweepy library.</p>
 <ul>
-<li>
-<p>OAuthHandler stores your credentials</p>
-</li>
-<li>
-<p>API class sets the connection to Twitter API using your credentials</p>
-</li>
-<li>
-<p>Stream class streams the downloaded data</p>
-</li>
+<li>OAuthHandler stores your credentials</li>
+<li>API class sets the connection to Twitter API using your credentials</li>
+<li>Stream class streams the downloaded data</li>
 </ul>
 <p>We set up the connection by providing our credentials to an <code>OAuthHandlerinstance</code>, and giving it to an <code>API</code> instance.</p>
 <p>
@@ -305,15 +289,11 @@ Set up the connection
 <dt>
 wait_on_rate_limit
 </dt>
-<dd>
-<p>when download limit is reach, the program will wait and try to reconnect when rate limit is replenished</p>
-</dd>
+<dd>when download limit is reach, the program will wait and try to reconnect when rate limit is replenished</dd>
 <dt>
 wait_on_rate_limit_notify
 </dt>
-<dd>
-<p>a notification will be printed when download limit is reached</p>
-</dd>
+<dd>a notification will be printed when download limit is reached</dd>
 </dl>
 </div>
 </div>
@@ -324,17 +304,17 @@ The listener
 <div id="outline-text-headline-4" class="outline-text-2">
 <p>The next step is defining our Listener, that will react on events from the API and handle the received data.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> sys
-  <span style="color:#f92672">from</span> tweepy.streaming <span style="color:#f92672">import</span> StreamListener
-  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Listener</span>(StreamListener):
-  <span style="color:#66d9ef">def</span> __init__(self, output_file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stdout):
-      super(Listener,self)<span style="color:#f92672">.</span>__init__()
-      self<span style="color:#f92672">.</span>output_file <span style="color:#f92672">=</span> output_file
-      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_status</span>(self, status):
-          <span style="color:#66d9ef">print</span>(status<span style="color:#f92672">.</span>text, file<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>output_file)
-      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_error</span>(self, status_code):
-          <span style="color:#66d9ef">print</span>(status_code)
-          <span style="color:#66d9ef">return</span> False</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">from</span> tweepy.streaming <span style="color:#f92672">import</span> StreamListener
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Listener</span>(StreamListener):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __init__(self, output_file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stdout):
+</span></span><span style="display:flex;"><span>      super(Listener,self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>output_file <span style="color:#f92672">=</span> output_file
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_status</span>(self, status):
+</span></span><span style="display:flex;"><span>          print(status<span style="color:#f92672">.</span>text, file<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>output_file)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_error</span>(self, status_code):
+</span></span><span style="display:flex;"><span>          print(status_code)
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span></span></span></code></pre></div>
 </div>
 <p><code>on_status</code> is the method that will be called when a tweet is downloaded. We print the tweet the file <code>output_file</code>. This file is by default the <em>standard output</em>, as we specify it in the <code>__init__</code> method.</p>
 <p>
@@ -342,8 +322,8 @@ The listener
 <p>
   Then, we have to create an instance of the Listener class. You can either choose to put the downloaded tweets into a file.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  output <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;stream_output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
-  listener <span style="color:#f92672">=</span> Listener(output_file<span style="color:#f92672">=</span>output)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  output <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;stream_output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
+</span></span><span style="display:flex;"><span>  listener <span style="color:#f92672">=</span> Listener(output_file<span style="color:#f92672">=</span>output)</span></span></code></pre></div>
 </div>
 <p>or to <em>standard output</em>, by not specifying any file, instantiating with <code>listener = Listener()</code>.</p>
 </div>
@@ -355,16 +335,16 @@ Streaming
 <div id="outline-text-headline-5" class="outline-text-2">
 <p>We are now ready to stream:</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)
-  <span style="color:#66d9ef">try</span>:
-      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Start streaming.&#39;</span>)
-      stream<span style="color:#f92672">.</span>sample(languages<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;en&#39;</span>])
-  <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span> <span style="color:#66d9ef">as</span> e :
-      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Stopped.&#34;</span>)
-  <span style="color:#66d9ef">finally</span>:
-      <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Done.&#39;</span>)
-      stream<span style="color:#f92672">.</span>disconnect()
-      output<span style="color:#f92672">.</span>close()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  stream <span style="color:#f92672">=</span> Stream(auth<span style="color:#f92672">=</span>api<span style="color:#f92672">.</span>auth, listener<span style="color:#f92672">=</span>listener)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>      print(<span style="color:#e6db74">&#39;Start streaming.&#39;</span>)
+</span></span><span style="display:flex;"><span>      stream<span style="color:#f92672">.</span>sample(languages<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;en&#39;</span>])
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span> <span style="color:#66d9ef">as</span> e :
+</span></span><span style="display:flex;"><span>      print(<span style="color:#e6db74">&#34;Stopped.&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>      print(<span style="color:#e6db74">&#39;Done.&#39;</span>)
+</span></span><span style="display:flex;"><span>      stream<span style="color:#f92672">.</span>disconnect()
+</span></span><span style="display:flex;"><span>      output<span style="color:#f92672">.</span>close()</span></span></code></pre></div>
 </div>
 <p>It is good practice to enclose the call to <code>stream.sample()</code> inside <code>try</code> statement to handle <code>KeyboardInterrupt</code> for example.</p>
 </div>
@@ -424,7 +404,7 @@ Final words
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -452,7 +432,7 @@ Final words
     <a href="/posts/tubechiller/" class="button"><div class="previous"><div>TubeChiller, an automatic youtube videos player</div></div></a>
   
   
-    <a href="/posts/japanese/bring-or-take/" class="button"><div class="next"><div>Bring and take concepts in languages</div></div></a>
+    <a href="/posts/language/bring-or-take/" class="button"><div class="next"><div>Bring and take concepts in languages</div></div></a>
   
 </div>
 
@@ -672,7 +652,7 @@ Final words
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -683,7 +663,7 @@ Final words
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

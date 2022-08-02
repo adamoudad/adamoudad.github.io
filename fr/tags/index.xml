@@ -6,13 +6,22 @@
     <description>Recent content in Tags on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>premier</title>
-      <link>https://adamoudad.github.io/fr/tags/premier/</link>
-      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      <title>anki</title>
+      <link>https://adamoudad.github.io/fr/tags/anki/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://adamoudad.github.io/fr/tags/premier/</guid>
+      <guid>https://adamoudad.github.io/fr/tags/anki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latex</title>
+      <link>https://adamoudad.github.io/fr/tags/latex/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/fr/tags/latex/</guid>
       <description></description>
     </item>
     

@@ -7,23 +7,23 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Training models with a progress bar">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Training models with a progress bar">
 <meta itemprop="description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
- I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."><meta itemprop="datePublished" content="2020-10-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-10-12T00:00:00&#43;00:00" />
+I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."><meta itemprop="datePublished" content="2020-10-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-10-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="875">
 <meta itemprop="keywords" content="machine-learning,python," /><meta property="og:title" content="Training models with a progress bar" />
 <meta property="og:description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
- I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update." />
+I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/progress_bar_with_tqdm/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-10-12T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-12T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Training models with a progress bar"/>
 <meta name="twitter:description" content="tqdm 1is a Python library for adding progress bar. It lets you configure and display a progress bar with metrics you want to track. Its ease of use and versatility makes it the perfect choice for tracking machine learning experiments.
- I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."/>
+I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the sleep function from Python&#39;s time library as it will let us slow down the program to see the progress bar update."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -87,9 +87,9 @@
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -231,7 +231,7 @@
 <p>
 I organize this tutorial in two parts. I will first introduce tqdm, then show an example for machine learning. For each code fragment in this article, we will import the <code>sleep</code> function from Python&#39;s <code>time</code> library as it will let us slow down the program to see the progress bar update.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep</span></span></code></pre></div>
 </div>
 <div id="outline-container-headline-1" class="outline-3">
 <h3 id="headline-1">
@@ -242,12 +242,12 @@ Tqdm
 <p>
    <code>tqdm</code> is the default iterator. It takes an iterator object as argument and displays a progress bar as it iterates over it.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm
-
-lst <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>]
-
-<span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> tqdm(lst):
-sleep(<span style="color:#ae81ff">0.1</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lst <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> tqdm(lst):
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">0.1</span>)</span></span></code></pre></div>
 </div>
 <p>Output is</p>
 <pre class="example">
@@ -257,11 +257,11 @@ sleep(<span style="color:#ae81ff">0.1</span>)</code></pre></div>
 <p>
    <code>trange</code> follows the same template as <code>range</code> in Python. For example, give to <code>trange</code> the number of iterations.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> trange
-
-iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> trange(iterations, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>):
-sleep(<span style="color:#ae81ff">0.1</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> trange
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> trange(iterations, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>):
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">0.1</span>)</span></span></code></pre></div>
 </div>
 <pre class="example">
 Proving P=NP: 100%|████████████| 20/20 [00:02&lt;00:00,  9.91carrots/s]
@@ -276,49 +276,45 @@ Update the progress bar during execution
 <div id="outline-text-headline-2" class="outline-text-3">
 <p><code>tqdm</code> has two methods that can update what is displayed in the progress bar.</p>
 <ul>
-<li>
-<p><code>.set_description</code>, is used to update the text prepended in front of the progress bar (the prefix).</p>
-</li>
-<li>
-<p><code>.set_postfix</code> is used to update the text appended after the progress bar (the postfix).</p>
-</li>
+<li><code>.set_description</code>, is used to update the text prepended in front of the progress bar (the prefix).</li>
+<li><code>.set_postfix</code> is used to update the text appended after the progress bar (the postfix).</li>
 </ul>
 <p>
    To use these methods, we need to assign the <code>tqdm</code> iterator instance to a variable. This can be done either with the <code>=</code> operator or the <code>with</code> keyword in Python.</p>
 <p>
    We can for example update the postfix with the list of divisors of the number <code>i</code>. Let&#39;s use this function to get the list of divisors</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_divisors</span>(n):
- divisors <span style="color:#f92672">=</span> []
- <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
-     <span style="color:#66d9ef">if</span> n <span style="color:#f92672">%</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-         divisors<span style="color:#f92672">.</span>append(m)
- <span style="color:#66d9ef">return</span> divisors</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_divisors</span>(n):
+</span></span><span style="display:flex;"><span> divisors <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> n <span style="color:#f92672">%</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>         divisors<span style="color:#f92672">.</span>append(m)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> divisors</span></span></code></pre></div>
 </div>
 <p>And here is our code with progress bar.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-pbar <span style="color:#f92672">=</span> trange(iterations, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>)
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> pbar:
- sleep(<span style="color:#ae81ff">0.5</span>)
- <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>:
-     pbar<span style="color:#f92672">.</span>set_description(f<span style="color:#e6db74">&#34;Testing odd number {i}&#34;</span>)
- <span style="color:#66d9ef">else</span>:
-     pbar<span style="color:#f92672">.</span>set_description(f<span style="color:#e6db74">&#34;Testing even number {i}&#34;</span>)
- pbar<span style="color:#f92672">.</span>set_postfix(divisors<span style="color:#f92672">=</span>get_divisors(i))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>pbar <span style="color:#f92672">=</span> trange(iterations, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> pbar:
+</span></span><span style="display:flex;"><span> sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>     pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing odd number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>     pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing even number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span> pbar<span style="color:#f92672">.</span>set_postfix(divisors<span style="color:#f92672">=</span>get_divisors(i))</span></span></code></pre></div>
 </div>
 <p>If you feel like a distinguished Python programmer, you may use <code>with</code> keyword like so</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">with</span> trange(iterations,
-         desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>) <span style="color:#66d9ef">as</span> pbar:
- <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> pbar:
-     sleep(<span style="color:#ae81ff">0.5</span>)
-     <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>:
-         pbar<span style="color:#f92672">.</span>set_description(f<span style="color:#e6db74">&#34;Testing odd number {i}&#34;</span>)
-     <span style="color:#66d9ef">else</span>:
-         pbar<span style="color:#f92672">.</span>set_description(f<span style="color:#e6db74">&#34;Testing even number {i}&#34;</span>)
-     pbar<span style="color:#f92672">.</span>set_postfix(divisors<span style="color:#f92672">=</span>get_divisors(i))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>iterations <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> trange(iterations,
+</span></span><span style="display:flex;"><span>         desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Proving P=NP&#34;</span>, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrots&#34;</span>) <span style="color:#66d9ef">as</span> pbar:
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> pbar:
+</span></span><span style="display:flex;"><span>     sleep(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>         pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing odd number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>         pbar<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Testing even number </span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>     pbar<span style="color:#f92672">.</span>set_postfix(divisors<span style="color:#f92672">=</span>get_divisors(i))</span></span></code></pre></div>
 </div>
 <p>Here is the status displayed at <code>i=6</code>.</p>
 <pre class="example">
@@ -334,76 +330,76 @@ Track loss and accuracy
 <p>In this section, we use a neural network wrote in PyTorch and train it using <code>tqdm</code> to display the loss and accuracy.
    Here is the model</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch
-<span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
-<span style="color:#f92672">import</span> torch.nn.functional <span style="color:#f92672">as</span> F
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Perceptron</span>(nn<span style="color:#f92672">.</span>Module):
- <span style="color:#66d9ef">def</span> __init__(self):
-     super()<span style="color:#f92672">.</span>__init__()
-     self<span style="color:#f92672">.</span>dropout2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.5</span>)
-     self<span style="color:#f92672">.</span>fc1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">28</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">128</span>)  <span style="color:#75715e"># 9216</span>
-     self<span style="color:#f92672">.</span>fc2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">10</span>)
-
- <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
-     x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>flatten(x, <span style="color:#ae81ff">1</span>)
-     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc1(x)
-     x <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>relu(x)
-     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>dropout2(x)
-     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc2(x)
-     output <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>log_softmax(x, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-     <span style="color:#66d9ef">return</span> output</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torch.nn.functional <span style="color:#66d9ef">as</span> F
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Perceptron</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>     super()<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>     self<span style="color:#f92672">.</span>dropout2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>     self<span style="color:#f92672">.</span>fc1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">28</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">128</span>)  <span style="color:#75715e"># 9216</span>
+</span></span><span style="display:flex;"><span>     self<span style="color:#f92672">.</span>fc2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>flatten(x, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc1(x)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>relu(x)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>dropout2(x)
+</span></span><span style="display:flex;"><span>     x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc2(x)
+</span></span><span style="display:flex;"><span>     output <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>log_softmax(x, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> output</span></span></code></pre></div>
 </div>
 <p>This is a simple perceptron model that we can use for processing images of digits from MNIST dataset. The following code for loading MNIST dataset is inspired from a PyTorch example<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torchvision <span style="color:#f92672">import</span> datasets, transforms
-<span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> DataLoader
-<span style="color:#f92672">from</span> torch.optim <span style="color:#f92672">import</span> Adam
-<span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
-
-transform<span style="color:#f92672">=</span>transforms<span style="color:#f92672">.</span>Compose([
- transforms<span style="color:#f92672">.</span>ToTensor(),
- transforms<span style="color:#f92672">.</span>Normalize((<span style="color:#ae81ff">0.1307</span>,), (<span style="color:#ae81ff">0.3081</span>,))
-])
-dataset <span style="color:#f92672">=</span> datasets<span style="color:#f92672">.</span>MNIST(<span style="color:#e6db74">&#39;./mnist_data&#39;</span>, train<span style="color:#f92672">=</span>True, download<span style="color:#f92672">=</span>True,
-                      transform<span style="color:#f92672">=</span>transform)
-
-device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
-
-model <span style="color:#f92672">=</span> Perceptron()<span style="color:#f92672">.</span>to(device)
-
-optimizer <span style="color:#f92672">=</span> Adam(model<span style="color:#f92672">.</span>parameters())
-criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss()
-batch_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
-
-train_loader <span style="color:#f92672">=</span> DataLoader(dataset,
-                       batch_size<span style="color:#f92672">=</span>batch_size,
-                       num_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,
-                       pin_memory<span style="color:#f92672">=</span>True,
-                       shuffle<span style="color:#f92672">=</span>True,
-                       drop_last<span style="color:#f92672">=</span>True)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> torchvision <span style="color:#f92672">import</span> datasets, transforms
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> DataLoader
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch.optim <span style="color:#f92672">import</span> Adam
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>transform<span style="color:#f92672">=</span>transforms<span style="color:#f92672">.</span>Compose([
+</span></span><span style="display:flex;"><span> transforms<span style="color:#f92672">.</span>ToTensor(),
+</span></span><span style="display:flex;"><span> transforms<span style="color:#f92672">.</span>Normalize((<span style="color:#ae81ff">0.1307</span>,), (<span style="color:#ae81ff">0.3081</span>,))
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>dataset <span style="color:#f92672">=</span> datasets<span style="color:#f92672">.</span>MNIST(<span style="color:#e6db74">&#39;./mnist_data&#39;</span>, train<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, download<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                      transform<span style="color:#f92672">=</span>transform)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> Perceptron()<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>optimizer <span style="color:#f92672">=</span> Adam(model<span style="color:#f92672">.</span>parameters())
+</span></span><span style="display:flex;"><span>criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss()
+</span></span><span style="display:flex;"><span>batch_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>train_loader <span style="color:#f92672">=</span> DataLoader(dataset,
+</span></span><span style="display:flex;"><span>                       batch_size<span style="color:#f92672">=</span>batch_size,
+</span></span><span style="display:flex;"><span>                       num_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>                       pin_memory<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                       shuffle<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                       drop_last<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)</span></span></code></pre></div>
 </div>
 <p>We just loaded our data, and defined our model and settings, we can now run a training experiment.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>train()
-<span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>):
- <span style="color:#66d9ef">with</span> tqdm(train_loader, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;batch&#34;</span>) <span style="color:#66d9ef">as</span> tepoch:
-     <span style="color:#66d9ef">for</span> data, target <span style="color:#f92672">in</span> tepoch:
-         tepoch<span style="color:#f92672">.</span>set_description(f<span style="color:#e6db74">&#34;Epoch {epoch}&#34;</span>)
-
-         data, target <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>to(device), target<span style="color:#f92672">.</span>to(device)
-         optimizer<span style="color:#f92672">.</span>zero_grad()
-         output <span style="color:#f92672">=</span> model(data)
-         predictions <span style="color:#f92672">=</span> output<span style="color:#f92672">.</span>argmax(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, keepdim<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>squeeze()
-         loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>nll_loss(output, target)
-         correct <span style="color:#f92672">=</span> (predictions <span style="color:#f92672">==</span> target)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
-         accuracy <span style="color:#f92672">=</span> correct <span style="color:#f92672">/</span> batch_size
-
-         loss<span style="color:#f92672">.</span>backward()
-         optimizer<span style="color:#f92672">.</span>step()
-         
-         tepoch<span style="color:#f92672">.</span>set_postfix(loss<span style="color:#f92672">=</span>loss<span style="color:#f92672">.</span>item(), accuracy<span style="color:#f92672">=</span><span style="color:#ae81ff">100.</span> <span style="color:#f92672">*</span> accuracy)
-         sleep(<span style="color:#ae81ff">0.1</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model<span style="color:#f92672">.</span>train()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">with</span> tqdm(train_loader, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;batch&#34;</span>) <span style="color:#66d9ef">as</span> tepoch:
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> data, target <span style="color:#f92672">in</span> tepoch:
+</span></span><span style="display:flex;"><span>         tepoch<span style="color:#f92672">.</span>set_description(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Epoch </span><span style="color:#e6db74">{</span>epoch<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         data, target <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>to(device), target<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>         optimizer<span style="color:#f92672">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>         output <span style="color:#f92672">=</span> model(data)
+</span></span><span style="display:flex;"><span>         predictions <span style="color:#f92672">=</span> output<span style="color:#f92672">.</span>argmax(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, keepdim<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>squeeze()
+</span></span><span style="display:flex;"><span>         loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>nll_loss(output, target)
+</span></span><span style="display:flex;"><span>         correct <span style="color:#f92672">=</span> (predictions <span style="color:#f92672">==</span> target)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
+</span></span><span style="display:flex;"><span>         accuracy <span style="color:#f92672">=</span> correct <span style="color:#f92672">/</span> batch_size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>         loss<span style="color:#f92672">.</span>backward()
+</span></span><span style="display:flex;"><span>         optimizer<span style="color:#f92672">.</span>step()
+</span></span><span style="display:flex;"><span>         
+</span></span><span style="display:flex;"><span>         tepoch<span style="color:#f92672">.</span>set_postfix(loss<span style="color:#f92672">=</span>loss<span style="color:#f92672">.</span>item(), accuracy<span style="color:#f92672">=</span><span style="color:#ae81ff">100.</span> <span style="color:#f92672">*</span> accuracy)
+</span></span><span style="display:flex;"><span>         sleep(<span style="color:#ae81ff">0.1</span>)</span></span></code></pre></div>
 </div>
 <p>I am once again using <code>sleep</code> function to pause the program so that we can see the update of the progress bar. As you can see, we just applied what we learned previously here, in particular with <code>tepoch.set_postfix</code> and <code>tepoch.set_description</code> which let you update the information displayed by the progress bar. Here is a capture of the output while the program was running</p>
 <pre class="example">
@@ -486,7 +482,7 @@ Footnotes
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -734,7 +730,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -745,7 +741,7 @@ Footnotes
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

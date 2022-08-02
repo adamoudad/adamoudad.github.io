@@ -7,26 +7,26 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Tips to write pythonic">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Tips to write pythonic">
 <meta itemprop="description" content="Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.
- I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
-Naming    Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0."><meta itemprop="datePublished" content="2020-02-02T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2020-02-02T03:49:04&#43;09:00" />
+I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+Naming Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0."><meta itemprop="datePublished" content="2020-02-02T03:49:04+09:00" />
+<meta itemprop="dateModified" content="2020-02-02T03:49:04+09:00" />
 <meta itemprop="wordCount" content="340">
 <meta itemprop="keywords" content="python," /><meta property="og:title" content="Tips to write pythonic" />
 <meta property="og:description" content="Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.
- I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
-Naming    Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0." />
+I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+Naming Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/pythonic/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-02-02T03:49:04&#43;09:00" />
-<meta property="article:modified_time" content="2020-02-02T03:49:04&#43;09:00" />
+<meta property="article:published_time" content="2020-02-02T03:49:04+09:00" />
+<meta property="article:modified_time" content="2020-02-02T03:49:04+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tips to write pythonic"/>
 <meta name="twitter:description" content="Python community has a special words for talking about code that follows the best practices for writing in python, pythonic. The following are some tips to make the most of Python programming language.
- I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
-Naming    Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0."/>
+I recommend as reference the PEP-81 (Python Enhancement Proposal) document which provides guidelines and best practices on how to write Python code. It enables to achieve better readability and consistency throughout code.
+Naming Never use l, 0 or I for variable names, as these can be mistaken for 1 and 0."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -90,9 +90,9 @@ Naming    Never use l, 0 or I for variable names, as these can be mistaken for 1
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -239,12 +239,8 @@ Naming
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
 <ul>
-<li>
-<p>Never use <code class="verbatim">l</code>, <code class="verbatim">0</code> or <code class="verbatim">I</code> for variable names, as these can be mistaken for <code class="verbatim">1</code> and <code class="verbatim">0</code>. <code>O = 2</code> is weird</p>
-</li>
-<li>
-<p>Choose explicit names. <code>learning_rate</code> is better than <code>lr</code></p>
-</li>
+<li>Never use <code class="verbatim">l</code>, <code class="verbatim">0</code> or <code class="verbatim">I</code> for variable names, as these can be mistaken for <code class="verbatim">1</code> and <code class="verbatim">0</code>. <code>O = 2</code> is weird</li>
+<li>Choose explicit names. <code>learning_rate</code> is better than <code>lr</code></li>
 </ul>
 <table class="table">
 <thead>
@@ -300,21 +296,19 @@ Blank lines
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <ul>
-<li>
-<p>Blank lines help readability</p>
-</li>
+<li>Blank lines help readability</li>
 </ul>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MIDIScore</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_method</span>(self):
-        <span style="color:#66d9ef">pass</span>
- 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_other_method</span>(self):
-        <span style="color:#66d9ef">pass</span>
-
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pianoroll</span>:
-    <span style="color:#66d9ef">pass</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MIDIScore</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_method</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_other_method</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pianoroll</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span></span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -324,18 +318,16 @@ Line breaking
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
 <ul>
-<li>
-<p>Use maximum line length of 79</p>
-</li>
+<li>Use maximum line length of 79</li>
 <li>
 <p>Break lines if necessary, with <code>( )</code>, <code>\</code></p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">total <span style="color:#f92672">=</span> (first_variable
-        <span style="color:#f92672">+</span> second_variable
-        <span style="color:#f92672">-</span> third_variable)
-
-<span style="color:#f92672">from</span> mypkg <span style="color:#f92672">import</span> example1, \
-                  example2, example3</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>total <span style="color:#f92672">=</span> (first_variable
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">+</span> second_variable
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> third_variable)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> mypkg <span style="color:#f92672">import</span> example1, \
+</span></span><span style="display:flex;"><span>                  example2, example3</span></span></code></pre></div>
 </div>
 </li>
 </ul>
@@ -350,10 +342,10 @@ Indentation
 <li>
 <p>Use it to improve readability</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>(model, weights, data,
-          epochs, batch_size):
-    model<span style="color:#f92672">.</span>load_weights(weights)
-    model<span style="color:#f92672">.</span>fit(data, epochs, batch_size)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>(model, weights, data,
+</span></span><span style="display:flex;"><span>          epochs, batch_size):
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">.</span>load_weights(weights)
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">.</span>fit(data, epochs, batch_size)</span></span></code></pre></div>
 </div>
 </li>
 </ul>
@@ -369,32 +361,28 @@ Use built-in libraries
 <dt>
 Handling command-line arguments
 </dt>
-<dd>
-<p>argparse</p>
-</dd>
+<dd>argparse</dd>
 <dt>
 Logging info, error or warning messages
 </dt>
-<dd>
-<p>logging</p>
-</dd>
+<dd>logging</dd>
 <dt>
 Using paths
 </dt>
 <dd>
 <p>pathlib</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-  <span style="color:#75715e"># Define Path object</span>
-  data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/data/&#34;</span>)
-  <span style="color:#75715e"># Composing paths</span>
-  mozart_k330_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;mozart_k330.mid&#34;</span>
-  <span style="color:#75715e"># Iterating over list of .mid files, following subdirectories</span>
-  <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> (data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span>)<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;**/*.mid&#34;</span>):
-<span style="color:#66d9ef">print</span>(p)
-  <span style="color:#75715e"># Open file</span>
-  <span style="color:#66d9ef">with</span> mozart_k330_path<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
-<span style="color:#66d9ef">pass</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Define Path object</span>
+</span></span><span style="display:flex;"><span>  data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/data/&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Composing paths</span>
+</span></span><span style="display:flex;"><span>  mozart_k330_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;mozart_k330.mid&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Iterating over list of .mid files, following subdirectories</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> (data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span>)<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#34;**/*.mid&#34;</span>):
+</span></span><span style="display:flex;"><span>print(p)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Open file</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">with</span> mozart_k330_path<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pass</span></span></span></code></pre></div>
 </div>
 </dd>
 </dl>
@@ -409,22 +397,22 @@ Implementations
 <li>
 <p>Use <code>startwith</code> and <code>endwith</code> methods for <code>str</code> objects</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Not recommended :(</span>
-<span style="color:#66d9ef">if</span> word[:<span style="color:#ae81ff">3</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;cat&#39;</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The word starts with &#34;cat&#34;&#39;</span>)
-
-<span style="color:#75715e"># Recommended :)</span>
-<span style="color:#66d9ef">if</span> word<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;cat&#39;</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The word starts with &#34;cat&#34;&#39;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Not recommended :(</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> word[:<span style="color:#ae81ff">3</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;cat&#39;</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;The word starts with &#34;cat&#34;&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Recommended :)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> word<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;cat&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;The word starts with &#34;cat&#34;&#39;</span>)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>Use <code>pathlib</code></p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/home/adam/&#34;</span>)
-midi_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span>
-<span style="color:#75715e"># Be careful of errors, sometimes use str(midi_)</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>data_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;/home/adam/&#34;</span>)
+</span></span><span style="display:flex;"><span>midi_path <span style="color:#f92672">=</span> data_path <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;midi&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Be careful of errors, sometimes use str(midi_)</span></span></span></code></pre></div>
 </div>
 </li>
 </ul>
@@ -484,7 +472,7 @@ Footnotes
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -509,7 +497,7 @@ Footnotes
 
 <div class="pagination">
   
-    <a href="/posts/japanese/bring-or-take/" class="button"><div class="previous"><div>Bring and take concepts in languages</div></div></a>
+    <a href="/posts/language/bring-or-take/" class="button"><div class="previous"><div>Bring and take concepts in languages</div></div></a>
   
   
     <a href="/posts/zen-of-python/" class="button"><div class="next"><div>Deciphering Python&#39;s &#34;import this&#34;</div></div></a>
@@ -732,7 +720,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -743,7 +731,7 @@ Footnotes
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

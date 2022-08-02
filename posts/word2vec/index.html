@@ -7,29 +7,29 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Vectorizing text: Word2Vec">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Vectorizing text: Word2Vec">
 <meta itemprop="description" content="The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics
-vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) &#43; vec(&#39;Woman&#39;)  Awesome ! How could such results be achieved ? They came from the following assumption
- The meaning of a word can be inferred by the company it keeps
- Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context."><meta itemprop="datePublished" content="2019-11-27T03:49:04&#43;09:00" />
-<meta itemprop="dateModified" content="2019-11-27T03:49:04&#43;09:00" />
+vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) &#43; vec(&#39;Woman&#39;) Awesome ! How could such results be achieved ? They came from the following assumption
+The meaning of a word can be inferred by the company it keeps
+Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context."><meta itemprop="datePublished" content="2019-11-27T03:49:04+09:00" />
+<meta itemprop="dateModified" content="2019-11-27T03:49:04+09:00" />
 <meta itemprop="wordCount" content="622">
 <meta itemprop="keywords" content="nlp,embedding," /><meta property="og:title" content="Vectorizing text: Word2Vec" />
 <meta property="og:description" content="The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics
-vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) &#43; vec(&#39;Woman&#39;)  Awesome ! How could such results be achieved ? They came from the following assumption
- The meaning of a word can be inferred by the company it keeps
- Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context." />
+vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) &#43; vec(&#39;Woman&#39;) Awesome ! How could such results be achieved ? They came from the following assumption
+The meaning of a word can be inferred by the company it keeps
+Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/word2vec/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-11-27T03:49:04&#43;09:00" />
-<meta property="article:modified_time" content="2019-11-27T03:49:04&#43;09:00" />
+<meta property="article:published_time" content="2019-11-27T03:49:04+09:00" />
+<meta property="article:modified_time" content="2019-11-27T03:49:04+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vectorizing text: Word2Vec"/>
 <meta name="twitter:description" content="The idea with greatest impact in Word2Vec1 2 was that vector representations could capture linguistic regularities, which can be retrieved through vector arithmetics
-vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) &#43; vec(&#39;Woman&#39;)  Awesome ! How could such results be achieved ? They came from the following assumption
- The meaning of a word can be inferred by the company it keeps
- Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context."/>
+vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&#39;Italy&#39;) vec(&#39;Queen&#39;) ≈ vec(&#39;King&#39;) - vec(&#39;Man&#39;) &#43; vec(&#39;Woman&#39;) Awesome ! How could such results be achieved ? They came from the following assumption
+The meaning of a word can be inferred by the company it keeps
+Indeed, Word2Vec was built using unsupervised learning on huge quantity of text, by predicting words, given their context."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -93,9 +93,9 @@ vec(&#39;Rome&#39;) ≈ vec(&#39;Paris&#39;) - vec(&#39;France&#39;) &#43; vec(&
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -256,10 +256,10 @@ Continuous Bag-of-words
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
 <p><figure><img src="https://iksinc.files.wordpress.com/2015/04/screen-shot-2015-04-12-at-10-58-21-pm.png"
-         alt="Word2vec model. Source: wildml.com" width="100%"/><figcaption>
-            <p>Word2vec model. Source: wildml.com</p>
-        </figcaption>
-</figure>
+           alt="Word2vec model. Source: wildml.com" width="100%"/><figcaption>
+              <p>Word2vec model. Source: wildml.com</p>
+          </figcaption>
+  </figure>
 
   The Word2Vec model is used to predict a word, given its context.</p>
 <div id="outline-container-headline-2" class="outline-3">
@@ -310,12 +310,12 @@ Gensim
 <div id="outline-text-headline-6" class="outline-text-3">
 <p>Let&#39;s use <em>gensim</em> library that implements word2vec model. We download english Wikipedia corpus using the convinent <a href="https://github.com/RaRe-Technologies/gensim-data">gensim-data api</a>.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> gensim.models.word2vec <span style="color:#f92672">import</span> Word2Vec
-  <span style="color:#f92672">import</span> gensim.downloader <span style="color:#f92672">as</span> api
-
-  corpus <span style="color:#f92672">=</span> api<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;text8&#39;</span>)  <span style="color:#75715e"># download english Wikipedia corpus</span>
-  model <span style="color:#f92672">=</span> Word2vec(corpus)
-  model<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74">&#34;cat&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">from</span> gensim.models.word2vec <span style="color:#f92672">import</span> Word2Vec
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> gensim.downloader <span style="color:#66d9ef">as</span> api
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  corpus <span style="color:#f92672">=</span> api<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;text8&#39;</span>)  <span style="color:#75715e"># download english Wikipedia corpus</span>
+</span></span><span style="display:flex;"><span>  model <span style="color:#f92672">=</span> Word2vec(corpus)
+</span></span><span style="display:flex;"><span>  model<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74">&#34;cat&#34;</span>)</span></span></code></pre></div>
 </div>
 <p>We obtain as result</p>
 <pre class="example">
@@ -340,23 +340,23 @@ spaCy
 <p><a href="https://spacy.io/">spaCy</a> is an advanced library for &#34;industrial-strength NLP&#34;.
    After installing spaCy, download the pretrained model </p>
 <div class="src src-bash">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m download en_core_web_lg</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m download en_core_web_lg</span></span></code></pre></div>
 </div>
 <p>Then</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> product
-  <span style="color:#f92672">import</span> spacy
-
-  nlp <span style="color:#f92672">=</span> spacy<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;en_core_web_md&#34;</span>)
-  tokens <span style="color:#f92672">=</span> nlp(<span style="color:#e6db74">&#34;dog cat banana afskfsd&#34;</span>)
-
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Info on each token dog, cat, banana, and afskfsd&#34;</span>)
-  <span style="color:#66d9ef">for</span> token <span style="color:#f92672">in</span> tokens:
-      <span style="color:#66d9ef">print</span>(token<span style="color:#f92672">.</span>text, token<span style="color:#f92672">.</span>has_vector, token<span style="color:#f92672">.</span>vector_norm, token<span style="color:#f92672">.</span>is_oov)
-
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;# Similarity of dog, cat and banana&#34;</span>)
-  <span style="color:#66d9ef">for</span> t1, t2 <span style="color:#f92672">in</span> product(tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
-      <span style="color:#66d9ef">print</span>(t1<span style="color:#f92672">.</span>similarity(t2))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> product
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> spacy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  nlp <span style="color:#f92672">=</span> spacy<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#34;en_core_web_md&#34;</span>)
+</span></span><span style="display:flex;"><span>  tokens <span style="color:#f92672">=</span> nlp(<span style="color:#e6db74">&#34;dog cat banana afskfsd&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;# Info on each token dog, cat, banana, and afskfsd&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> token <span style="color:#f92672">in</span> tokens:
+</span></span><span style="display:flex;"><span>      print(token<span style="color:#f92672">.</span>text, token<span style="color:#f92672">.</span>has_vector, token<span style="color:#f92672">.</span>vector_norm, token<span style="color:#f92672">.</span>is_oov)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;# Similarity of dog, cat and banana&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> t1, t2 <span style="color:#f92672">in</span> product(tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], tokens[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+</span></span><span style="display:flex;"><span>      print(t1<span style="color:#f92672">.</span>similarity(t2))</span></span></code></pre></div>
 </div>
 <p>Source: <a href="https://spacy.io/usage/vectors-similarity">https://spacy.io/usage/vectors-similarity</a></p>
 </div>
@@ -432,7 +432,7 @@ Footnotes
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -680,7 +680,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -691,7 +691,7 @@ Footnotes
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

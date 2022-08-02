@@ -7,26 +7,26 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="How many patterns are there to lock your android smartphone?">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="How many patterns are there to lock your android smartphone?">
 <meta itemprop="description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-  Android lockscreen.
-   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"><meta itemprop="datePublished" content="2021-01-16T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-01-16T00:00:00&#43;00:00" />
+Android lockscreen.
+This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"><meta itemprop="datePublished" content="2021-01-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-01-16T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1062">
 <meta itemprop="keywords" content="android,security,python," /><meta property="og:title" content="How many patterns are there to lock your android smartphone?" />
 <meta property="og:description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-  Android lockscreen.
-   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from" />
+Android lockscreen.
+This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/lock_pattern/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-01-16T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-01-16T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-01-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-16T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How many patterns are there to lock your android smartphone?"/>
 <meta name="twitter:description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-  Android lockscreen.
-   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"/>
+Android lockscreen.
+This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -90,9 +90,9 @@
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -241,12 +241,8 @@
 <p>
 This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</p>
 <ul>
-<li>
-<p>the fact that people generally use an unlocking pattern starting with the top-left corner. This kind of assumption drastically reduces the search space for the attacker</p>
-</li>
-<li>
-<p>the path drawn by the oily residues of your fingers because it is the pattern you draw most often</p>
-</li>
+<li>the fact that people generally use an unlocking pattern starting with the top-left corner. This kind of assumption drastically reduces the search space for the attacker</li>
+<li>the path drawn by the oily residues of your fingers because it is the pattern you draw most often</li>
 </ul>
 <p>These two attacks to the lock mechanism are commonly referred to as <em>heuristic attack</em> and <em>smudge attack</em><sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> <sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup> <sup class="footnote-reference"><a id="footnote-reference-3" href="#footnote-3">3</a></sup>.</p>
 <p>
@@ -260,23 +256,17 @@ Rules for a valid pattern
 <div id="outline-text-headline-1" class="outline-text-4">
 <p><a href="https://www.usenix.org/legacy/event/woot10/tech/full_papers/Aviv.pdf">As explained in this article</a><sup class="footnote-reference"><a id="footnote-reference-4" href="#footnote-4">4</a></sup>, there are three simple rules for a valid pattern</p>
 <ol>
-<li>
-<p>The pattern must connect at least four points</p>
-</li>
-<li>
-<p>A point should be used once at most in the pattern</p>
-</li>
-<li>
-<p>An intermediate point becomes a contact point, unless it has already been connected before</p>
-</li>
+<li>The pattern must connect at least four points</li>
+<li>A point should be used once at most in the pattern</li>
+<li>An intermediate point becomes a contact point, unless it has already been connected before</li>
 </ol>
 <p>
     Rules 1. and 2. imply that there should be at least one direction change in the pattern, so you cannot have obvious patterns like a straight line. However rule 3. is the most interesting because… sorry what? Oh, don&#39;t worry! It is a simple rule too, here is a graphical explanation.
     <figure><img src="screenlock_pattern_dots_rule3.png"
-         alt="Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point."/><figcaption>
-            <p>Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point.</p>
-        </figcaption>
-</figure>
+             alt="Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point."/><figcaption>
+                <p>Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point.</p>
+            </figcaption>
+    </figure>
 </p>
 <p>
     The rule tells you have to always include points you cross on your path, unless they have already been included before. This is what I mean by &#34;intermediate&#34; point.
@@ -307,71 +297,67 @@ Programmatical resolution
 <div id="outline-text-headline-3" class="outline-text-4">
 <p>In our code, we label each point using a digit.
     <figure><img src="screenlock_pattern.png"
-         alt="Labelled points"/><figcaption>
-            <p>Labelled points</p>
-        </figcaption>
-</figure>
+             alt="Labelled points"/><figcaption>
+                <p>Labelled points</p>
+            </figcaption>
+    </figure>
 
     From these labels, we need to construct a dictionary of connections which cross an intermediate point. This will be useful to check rule 3..</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">INTERMEDIATE_POINT <span style="color:#f92672">=</span> {
-<span style="color:#e6db74">&#34;13&#34;</span>: <span style="color:#e6db74">&#34;2&#34;</span>,
-<span style="color:#e6db74">&#34;46&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
-<span style="color:#e6db74">&#34;79&#34;</span>: <span style="color:#e6db74">&#34;8&#34;</span>,
-
-<span style="color:#e6db74">&#34;17&#34;</span>: <span style="color:#e6db74">&#34;4&#34;</span>,
-<span style="color:#e6db74">&#34;28&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
-<span style="color:#e6db74">&#34;39&#34;</span>: <span style="color:#e6db74">&#34;6&#34;</span>,
-
-<span style="color:#e6db74">&#34;19&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
-<span style="color:#e6db74">&#34;37&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>INTERMEDIATE_POINT <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;13&#34;</span>: <span style="color:#e6db74">&#34;2&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;46&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;79&#34;</span>: <span style="color:#e6db74">&#34;8&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;17&#34;</span>: <span style="color:#e6db74">&#34;4&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;28&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;39&#34;</span>: <span style="color:#e6db74">&#34;6&#34;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;19&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;37&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 </div>
 <p>How do we know a given pattern is valid? Let&#39;s code a function that does that.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_pattern_valid</span>(pattern):
-    <span style="color:#e6db74">&#34;&#34;&#34;We suppose the pattern is composed of unique characters. Returns True if no intermediate point is passed over, False otherwise.&#34;&#34;&#34;</span>
-    <span style="color:#66d9ef">for</span> sequence, point <span style="color:#f92672">in</span> INTERMEDIATE_POINT<span style="color:#f92672">.</span>items():
-        <span style="color:#66d9ef">if</span> sequence <span style="color:#f92672">in</span> pattern <span style="color:#f92672">or</span> sequence[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">in</span> pattern:
-            <span style="color:#66d9ef">if</span> point <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> pattern <span style="color:#f92672">or</span> pattern<span style="color:#f92672">.</span>index(point) <span style="color:#f92672">&gt;</span> pattern<span style="color:#f92672">.</span>index(sequence[<span style="color:#ae81ff">0</span>]):
-                <span style="color:#66d9ef">return</span> False
-    <span style="color:#66d9ef">return</span> True</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_pattern_valid</span>(pattern):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;We suppose the pattern is composed of unique characters. Returns True if no intermediate point is passed over, False otherwise.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> sequence, point <span style="color:#f92672">in</span> INTERMEDIATE_POINT<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> sequence <span style="color:#f92672">in</span> pattern <span style="color:#f92672">or</span> sequence[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">in</span> pattern:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> point <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> pattern <span style="color:#f92672">or</span> pattern<span style="color:#f92672">.</span>index(point) <span style="color:#f92672">&gt;</span> pattern<span style="color:#f92672">.</span>index(sequence[<span style="color:#ae81ff">0</span>]):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span></span></span></code></pre></div>
 </div>
 <p>We have all we need to code the main algorithm. I consider using a recursive function to be the most natural choice. There are two stopping conditions to recursion:</p>
 <ol>
-<li>
-<p>If the pattern is invalid</p>
-</li>
-<li>
-<p>If the pattern has maximum length, that is, it contains all points (because of Rule 2.)</p>
-</li>
+<li>If the pattern is invalid</li>
+<li>If the pattern has maximum length, that is, it contains all points (because of Rule 2.)</li>
 </ol>
 <p>
     We keep track of a variable <code>count</code> to count the number of valid patterns we found, and the recursive call is made on the pattern augmented with one point from the available points.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_patterns</span>(pattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>, points<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;123456789&#34;</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>, min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>):
-    <span style="color:#75715e"># First, check Rule 3.</span>
-    <span style="color:#66d9ef">if</span> is_pattern_valid(pattern):
-        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">if</span> len(pattern) <span style="color:#f92672">&gt;=</span> min_length:
-            <span style="color:#75715e"># Application of Rule 1.</span>
-            count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">if</span> len(pattern) <span style="color:#f92672">==</span> max_length <span style="color:#f92672">or</span> len(points) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-            <span style="color:#75715e"># Stopping condition 2.</span>
-            <span style="color:#66d9ef">return</span> count
-        <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> points:
-                <span style="color:#75715e"># Recursive call following Rule 2.</span>
-                count <span style="color:#f92672">+=</span> count_patterns(pattern <span style="color:#f92672">+</span> p, points<span style="color:#f92672">.</span>replace(p, <span style="color:#e6db74">&#34;&#34;</span>),
-                           max_length<span style="color:#f92672">=</span>max_length, min_length<span style="color:#f92672">=</span>min_length)
-            <span style="color:#66d9ef">return</span> count
-    <span style="color:#66d9ef">else</span>:
-        <span style="color:#75715e"># Stopping condition 1.</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_patterns</span>(pattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>, points<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;123456789&#34;</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>, min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># First, check Rule 3.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> is_pattern_valid(pattern):
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(pattern) <span style="color:#f92672">&gt;=</span> min_length:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Application of Rule 1.</span>
+</span></span><span style="display:flex;"><span>            count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(pattern) <span style="color:#f92672">==</span> max_length <span style="color:#f92672">or</span> len(points) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Stopping condition 2.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> count
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> points:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Recursive call following Rule 2.</span>
+</span></span><span style="display:flex;"><span>                count <span style="color:#f92672">+=</span> count_patterns(pattern <span style="color:#f92672">+</span> p, points<span style="color:#f92672">.</span>replace(p, <span style="color:#e6db74">&#34;&#34;</span>),
+</span></span><span style="display:flex;"><span>                           max_length<span style="color:#f92672">=</span>max_length, min_length<span style="color:#f92672">=</span>min_length)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> count
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Stopping condition 1.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span></span></span></code></pre></div>
 </div>
 <p>Let&#39;s run it.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_patterns(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;123456789&#34;</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>, min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>count_patterns(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;123456789&#34;</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>, min_length<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)</span></span></code></pre></div>
 </div>
 <p>This outputs 389,112. This confirms the result from the paper!</p>
 </div>
@@ -383,30 +369,30 @@ Appendix on the impact of Rule 3.
 <div id="outline-text-headline-4" class="outline-text-4">
 <p>The following code is to demonstrate the impact of Rule 3. on the effective number of patterns. I print and plot the number of patterns by the number of connected points.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
-<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
-
-all_permutations <span style="color:#f92672">=</span> []
-valid_patterns <span style="color:#f92672">=</span> []
-n_points <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>)
-<span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> n_points:
- all_permutations<span style="color:#f92672">.</span>append(math<span style="color:#f92672">.</span>perm(<span style="color:#ae81ff">9</span>, k))
- valid_patterns<span style="color:#f92672">.</span>append(count_patterns(max_length<span style="color:#f92672">=</span>k, min_length<span style="color:#f92672">=</span>k))
-
-
-plt<span style="color:#f92672">.</span>plot(n_points, valid_patterns, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Valid patterns&#34;</span>)
-plt<span style="color:#f92672">.</span>plot(n_points, all_permutations, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Permutations&#34;</span>)
-plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Patterns/Permutations&#39;</span>)
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Points in pattern/permutation&#39;</span>)
-plt<span style="color:#f92672">.</span>legend()
-plt<span style="color:#f92672">.</span>show()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>all_permutations <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>valid_patterns <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>n_points <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> n_points:
+</span></span><span style="display:flex;"><span> all_permutations<span style="color:#f92672">.</span>append(math<span style="color:#f92672">.</span>perm(<span style="color:#ae81ff">9</span>, k))
+</span></span><span style="display:flex;"><span> valid_patterns<span style="color:#f92672">.</span>append(count_patterns(max_length<span style="color:#f92672">=</span>k, min_length<span style="color:#f92672">=</span>k))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(n_points, valid_patterns, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Valid patterns&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(n_points, all_permutations, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Permutations&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Patterns/Permutations&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Points in pattern/permutation&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()</span></span></code></pre></div>
 </div>
 <p>
    <figure><img src="screenlock_patterns-permutations_points.png"
-         alt="Number of patterns and permutations by the number of connected points"/><figcaption>
-            <p>Number of patterns and permutations by the number of connected points</p>
-        </figcaption>
-</figure>
+            alt="Number of patterns and permutations by the number of connected points"/><figcaption>
+               <p>Number of patterns and permutations by the number of connected points</p>
+           </figcaption>
+   </figure>
 </p>
 <p>
    This last graph shows the number of patterns connecting the same given number of dots. So if you sum them all, you should obtain the number of total patterns that we computed. Remember to discard patterns with less than 3 dots and you get the number 389,112 for the blue line. We can also notice that the number of 8-dot patterns is the same as 9-dot patterns how is that so? Well, since there are only 9 dots available, when we have joined 8 dots together, there is only one remaining to form a 9-dot pattern, so in practical, 8-dot patterns are equivalent to 9-dot patterns.</p>
@@ -501,7 +487,7 @@ Footnotes
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -749,7 +735,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -760,7 +746,7 @@ Footnotes
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

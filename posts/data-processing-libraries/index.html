@@ -7,23 +7,23 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Data processing libraries in Python">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Data processing libraries in Python">
 <meta itemprop="description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
- Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."><meta itemprop="datePublished" content="2020-05-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-05-12T00:00:00&#43;00:00" />
+Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."><meta itemprop="datePublished" content="2020-05-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-05-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="768">
 <meta itemprop="keywords" content="machine-learning,python," /><meta property="og:title" content="Data processing libraries in Python" />
 <meta property="og:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
- Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do." />
+Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/data-processing-libraries/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-05-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-05-12T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-05-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-12T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Data processing libraries in Python"/>
 <meta name="twitter:description" content="With most popular libraries and most of bleeding-edge technologies implemented, Python is usually recommended as a good choice for machine learning related projects. Yet it can be daunting when looking at all different libraries that exist, and difficult to choose a couple to get started.
- Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."/>
+Machine learning is founded on data processing, and performances of models will heavily depend on your ability to read and transform data in a suitable format for the task you wish to do."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -87,9 +87,9 @@
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -240,11 +240,11 @@ Tabular data
    <a href="https://pandas.pydata.org/">Pandas</a> is the library that can handle such data. Created for the use of stock markets that heavily require operations on series, such as moving averages, it has evolved in a full-featured library that can handle well tabular data.
    Here is an example.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
-df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(<span style="color:#e6db74">&#39;data.csv&#39;</span>)
-df<span style="color:#f92672">.</span>head()               <span style="color:#75715e"># Prints head of the table</span>
-df<span style="color:#f92672">.</span>describe()           <span style="color:#75715e"># Describes each column with common statistics</span>
-df<span style="color:#f92672">.</span>prices<span style="color:#f92672">.</span>plot()        <span style="color:#75715e"># Will plot column &#34;prices&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(<span style="color:#e6db74">&#39;data.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>head()               <span style="color:#75715e"># Prints head of the table</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>describe()           <span style="color:#75715e"># Describes each column with common statistics</span>
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>prices<span style="color:#f92672">.</span>plot()        <span style="color:#75715e"># Will plot column &#34;prices&#34;</span></span></span></code></pre></div>
 </div>
 <p>As you can see, syntax is quite easy to understand. A sometimes difficult part to understand is the way <code>pandas</code> manages indexing and selecting. It comes down to the what you define as your index column. If no arguments are passed to <code>pd.DataFrame</code>, pandas creates a index column it increments at each row. You can use different ways for selecting a range of values.</p>
 </div>
@@ -256,15 +256,15 @@ Text data
 <div id="outline-text-headline-2" class="outline-text-3">
 <p>It is first important to note that Python comes with quite a lot of powerful built-in text-processing capabilities.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw_data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Some text&#34;</span>
-processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>lower()
-processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>strip()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>raw_data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Some text&#34;</span>
+</span></span><span style="display:flex;"><span>processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>processed_data <span style="color:#f92672">=</span> raw_data<span style="color:#f92672">.</span>strip()</span></span></code></pre></div>
 </div>
 <p>Yet natural language processing involves many processing techniques, such as tokenization, lemmatization, which are doable using <a href="https://www.nltk.org/">NLTK</a>.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> nltk
-nltk<span style="color:#f92672">.</span>download()
-tokens <span style="color:#f92672">=</span> nltk<span style="color:#f92672">.</span>tokenize(s)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> nltk
+</span></span><span style="display:flex;"><span>nltk<span style="color:#f92672">.</span>download()
+</span></span><span style="display:flex;"><span>tokens <span style="color:#f92672">=</span> nltk<span style="color:#f92672">.</span>tokenize(s)</span></span></code></pre></div>
 </div>
 <p>For more advanced natural language processing, and if you are aiming for optimized pipelines, <a href="https://spacy.io/">spacy</a> is a solid choice.</p>
 </div>
@@ -278,27 +278,27 @@ Audio and musical data
 <p>
    For symbolic music, that is when working with MIDI for example, <a href="https://mido.readthedocs.io/en/latest/">mido</a> and <a href="https://craffel.github.io/pretty-midi/">pretty_midi</a> are a good choice. More advanced, there is <a href="https://web.mit.edu/music21/">music21</a>, a powerful library which is aimed mainly at musicology analysis, with wide range of abstractions, for example dividing a score into Stream, Part, Track and Measure objects. It also has a straightforward syntax.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> converter
-<span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> note, chord
-midi <span style="color:#f92672">=</span> converter<span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;file.mid&#39;</span>)
-<span style="color:#75715e"># Lets print out notes and chords of the MIDI file</span>
-<span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> midi<span style="color:#f92672">.</span>flat:
- <span style="color:#66d9ef">if</span> isinstance(element, note<span style="color:#f92672">.</span>Note):
-     <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;We have the note {} of duration {} at offset time {}&#34;</span><span style="color:#f92672">.</span>format(
-         element<span style="color:#f92672">.</span>pitch,
-         element<span style="color:#f92672">.</span>quarterLength,
-         element<span style="color:#f92672">.</span>offset
-     ) )
- <span style="color:#66d9ef">elif</span> isinstance(element, chord<span style="color:#f92672">.</span>Chord):
-     <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;We have the chord {} of duration {} at offset time {}&#34;</span><span style="color:#f92672">.</span>format(
-         element<span style="color:#f92672">.</span>name,
-         element<span style="color:#f92672">.</span>quarterLength,
-         element<span style="color:#f92672">.</span>offset
-     ) )
-<span style="color:#75715e"># Music21 has some nice display functions</span>
-midi<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;text&#34;</span>)               <span style="color:#75715e"># Print out all MIDI file with indentation reflecting hierarchy</span>
-midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;midi&#34;</span>)               <span style="color:#75715e"># Show a PNG image of the score from measures 5 to 10</span>
-midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>plot()                     <span style="color:#75715e"># Display pianoroll of measures 5 to 10</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> converter
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> music21 <span style="color:#f92672">import</span> note, chord
+</span></span><span style="display:flex;"><span>midi <span style="color:#f92672">=</span> converter<span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;file.mid&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Lets print out notes and chords of the MIDI file</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> midi<span style="color:#f92672">.</span>flat:
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> isinstance(element, note<span style="color:#f92672">.</span>Note):
+</span></span><span style="display:flex;"><span>     print(<span style="color:#e6db74">&#34;We have the note </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> of duration </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> at offset time </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>pitch,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>quarterLength,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>offset
+</span></span><span style="display:flex;"><span>     ) )
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">elif</span> isinstance(element, chord<span style="color:#f92672">.</span>Chord):
+</span></span><span style="display:flex;"><span>     print(<span style="color:#e6db74">&#34;We have the chord </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> of duration </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> at offset time </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>name,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>quarterLength,
+</span></span><span style="display:flex;"><span>         element<span style="color:#f92672">.</span>offset
+</span></span><span style="display:flex;"><span>     ) )
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Music21 has some nice display functions</span>
+</span></span><span style="display:flex;"><span>midi<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;text&#34;</span>)               <span style="color:#75715e"># Print out all MIDI file with indentation reflecting hierarchy</span>
+</span></span><span style="display:flex;"><span>midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>show(<span style="color:#e6db74">&#34;midi&#34;</span>)               <span style="color:#75715e"># Show a PNG image of the score from measures 5 to 10</span>
+</span></span><span style="display:flex;"><span>midi<span style="color:#f92672">.</span>measures(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>plot()                     <span style="color:#75715e"># Display pianoroll of measures 5 to 10</span></span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -309,9 +309,9 @@ Images
 <div id="outline-text-headline-4" class="outline-text-3">
 <p><a href="https://python-pillow.org/">Pillow</a> is the library in Python for handling images. It can do what an image editor program would do.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageFilter
-im <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/home/adam/Pictures/test.png&#39;</span>)
-new_im <span style="color:#f92672">=</span> im<span style="color:#f92672">.</span>rotate(<span style="color:#ae81ff">90</span>)<span style="color:#f92672">.</span>filter(ImageFilter<span style="color:#f92672">.</span>GaussianBlur())</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageFilter
+</span></span><span style="display:flex;"><span>im <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/home/adam/Pictures/test.png&#39;</span>)
+</span></span><span style="display:flex;"><span>new_im <span style="color:#f92672">=</span> im<span style="color:#f92672">.</span>rotate(<span style="color:#ae81ff">90</span>)<span style="color:#f92672">.</span>filter(ImageFilter<span style="color:#f92672">.</span>GaussianBlur())</span></span></code></pre></div>
 </div>
 <p><a href="https://scikit-image.org/">scikit-image</a> is also used for image processing, and provides most of filters and algorithms. <a href="https://opencv.org/">opencv</a> is a library aimed at computer vision, and can serve for processing videos or working with data from a camera.
    If you work with uncommon or very specific image formats, <a href="https://imageio.github.io/">imageio</a> will be able to provide the image data to your python script thanks to its <a href="https://imageio.readthedocs.io/en/stable/formats.html">wide range of supported format</a>.</p>
@@ -381,7 +381,7 @@ Conclusion
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -629,7 +629,7 @@ Conclusion
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -640,7 +640,7 @@ Conclusion
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

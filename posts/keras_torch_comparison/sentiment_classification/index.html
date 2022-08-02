@@ -7,26 +7,23 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.83.1" /><meta itemprop="name" content="Comparing Keras and PyTorch on sentiment classification">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="Comparing Keras and PyTorch on sentiment classification">
 <meta itemprop="description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
-  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc
-  PyTorch is aimed at modularity and versatility."><meta itemprop="datePublished" content="2021-03-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-20T00:00:00&#43;00:00" />
+Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc PyTorch is aimed at modularity and versatility."><meta itemprop="datePublished" content="2021-03-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-20T00:00:00+00:00" />
 <meta itemprop="wordCount" content="2194">
 <meta itemprop="keywords" content="machine-learning,pytorch,keras," /><meta property="og:title" content="Comparing Keras and PyTorch on sentiment classification" />
 <meta property="og:description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
-  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc
-  PyTorch is aimed at modularity and versatility." />
+Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc PyTorch is aimed at modularity and versatility." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/keras_torch_comparison/sentiment_classification/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-20T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-03-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-20T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Comparing Keras and PyTorch on sentiment classification"/>
 <meta name="twitter:description" content="After part one which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.
-  Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc
-  PyTorch is aimed at modularity and versatility."/>
+Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc PyTorch is aimed at modularity and versatility."/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -90,9 +87,9 @@
   
     
       
-    
-      
         <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
+      
+    
       
     
   
@@ -233,12 +230,8 @@
 <p>
 After <a href="syntax">part one</a> which covered an overview of Keras and PyTorch syntaxes, this is part two of how to switch between Keras and PyTorch. We will implement a neural network to classify movie reviews by sentiment.</p>
 <ul>
-<li>
-<p>Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc</p>
-</li>
-<li>
-<p>PyTorch is aimed at modularity and versatility. Fine-grained control on the flow of computations</p>
-</li>
+<li>Keras is aimed at fast prototyping. It is designed to write less code, letting the developper focus on other tasks such as data preparation, processing, cleaning, etc</li>
+<li>PyTorch is aimed at modularity and versatility. Fine-grained control on the flow of computations</li>
 </ul>
 <p>
   Yet both frameworks are meant to do the same, that is training deep neural networks. The number of resources of &#34;rosetta stone&#34; style tutorials is very limited on internet, especially resources demonstrating practical examples, so I hope this will help demistifying the differences and similarities between the two frameworks. Now let&#39;s get started!</p>
@@ -251,11 +244,11 @@ Dataset of IMDB movie reviews
 <p>
 Both Keras and PyTorch have helper functions to download and load the IMDB dataset. So instead of using dataloaders as we saw in <a href="syntax">part one</a> we will use this code in which we import the IMDB dataset in Keras.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> imdb
-input_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">20000</span>
-(x_train, y_train), (x_val, y_val) <span style="color:#f92672">=</span> imdb<span style="color:#f92672">.</span>load_data(num_words<span style="color:#f92672">=</span>input_dim)
-<span style="color:#66d9ef">print</span>(len(x_train), <span style="color:#e6db74">&#34;Training sequences&#34;</span>)
-<span style="color:#66d9ef">print</span>(len(x_val), <span style="color:#e6db74">&#34;Validation sequences&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> imdb
+</span></span><span style="display:flex;"><span>input_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">20000</span>
+</span></span><span style="display:flex;"><span>(x_train, y_train), (x_val, y_val) <span style="color:#f92672">=</span> imdb<span style="color:#f92672">.</span>load_data(num_words<span style="color:#f92672">=</span>input_dim)
+</span></span><span style="display:flex;"><span>print(len(x_train), <span style="color:#e6db74">&#34;Training sequences&#34;</span>)
+</span></span><span style="display:flex;"><span>print(len(x_val), <span style="color:#e6db74">&#34;Validation sequences&#34;</span>)</span></span></code></pre></div>
 </div>
 <p>This creates a <code class="verbatim">data/</code> folder and downloads the dataset inside. It splits the data in half into training and validation sets. The output gives the number of sequences</p>
 <pre class="example">
@@ -267,26 +260,26 @@ With <a href="https://pytorch.org/text/_modules/torchtext/datasets/imdb.html">to
 <p>
 In addition, we will pad the movie reviews to have sequences of same length. This is important to train on batches as it is not possible to parallelize computation of the error gradient on sequences of variable length.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tensorflow.keras.preprocessing.sequence <span style="color:#f92672">import</span> pad_sequences
-maxlen <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
-x_train <span style="color:#f92672">=</span> pad_sequences(x_train, maxlen<span style="color:#f92672">=</span>maxlen)
-x_val <span style="color:#f92672">=</span> pad_sequences(x_val, maxlen<span style="color:#f92672">=</span>maxlen)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tensorflow.keras.preprocessing.sequence <span style="color:#f92672">import</span> pad_sequences
+</span></span><span style="display:flex;"><span>maxlen <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>x_train <span style="color:#f92672">=</span> pad_sequences(x_train, maxlen<span style="color:#f92672">=</span>maxlen)
+</span></span><span style="display:flex;"><span>x_val <span style="color:#f92672">=</span> pad_sequences(x_val, maxlen<span style="color:#f92672">=</span>maxlen)</span></span></code></pre></div>
 </div>
 <p>We fix the length of reviews to 200 word tokens and the vocabulary to 20k different word tokens. The dataset is already cleaned and tokenized so we can directly feed it to the neural networks! Before proceeding, We may take a look at some examples in our dataset out of curiosity. We need to get the word vocabulary using <code>imdb.get_word_index</code> which will let us decode that bunch of integers from the dataset into plain english.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">index_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
-word_index <span style="color:#f92672">=</span> imdb<span style="color:#f92672">.</span>get_word_index(path<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;imdb_word_index.json&#34;</span>)
-word_index <span style="color:#f92672">=</span> {k: (v <span style="color:#f92672">+</span> index_offset) <span style="color:#66d9ef">for</span> k,v <span style="color:#f92672">in</span> word_index<span style="color:#f92672">.</span>items()}
-word_index[<span style="color:#e6db74">&#34;&lt;PAD&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-word_index[<span style="color:#e6db74">&#34;&lt;START&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-word_index[<span style="color:#e6db74">&#34;&lt;UNK&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
-word_index[<span style="color:#e6db74">&#34;&lt;UNUSED&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
-index_to_word <span style="color:#f92672">=</span> { v: k <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> word_index<span style="color:#f92672">.</span>items()}
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">recover_text</span>(sample, index_to_word):
- <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([index_to_word[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> sample])
-
-recover_text(x_train[<span style="color:#ae81ff">50</span>], index_to_word)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>index_offset <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>word_index <span style="color:#f92672">=</span> imdb<span style="color:#f92672">.</span>get_word_index(path<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;imdb_word_index.json&#34;</span>)
+</span></span><span style="display:flex;"><span>word_index <span style="color:#f92672">=</span> {k: (v <span style="color:#f92672">+</span> index_offset) <span style="color:#66d9ef">for</span> k,v <span style="color:#f92672">in</span> word_index<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>word_index[<span style="color:#e6db74">&#34;&lt;PAD&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>word_index[<span style="color:#e6db74">&#34;&lt;START&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>word_index[<span style="color:#e6db74">&#34;&lt;UNK&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>word_index[<span style="color:#e6db74">&#34;&lt;UNUSED&gt;&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>index_to_word <span style="color:#f92672">=</span> { v: k <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> word_index<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">recover_text</span>(sample, index_to_word):
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([index_to_word[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> sample])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>recover_text(x_train[<span style="color:#ae81ff">50</span>], index_to_word)</span></span></code></pre></div>
 </div>
 <p>With the above code we can check that the sequence <code class="verbatim">1, 13, 165, 219, 14, 20, 33, 6, 750, ...</code> from the dataset corresponds to</p>
 <div class="verse-block">
@@ -296,11 +289,11 @@ recover_text(x_train[<span style="color:#ae81ff">50</span>], index_to_word)</cod
 <p>
    But wait! We need to adapt our data for PyTorch. This code will do the job.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> TensorDataset, DataLoader
-train_data <span style="color:#f92672">=</span> TensorDataset(torch<span style="color:#f92672">.</span>from_numpy(x_train), torch<span style="color:#f92672">.</span>from_numpy(y_train))
-valid_data <span style="color:#f92672">=</span> TensorDataset(torch<span style="color:#f92672">.</span>from_numpy(x_val), torch<span style="color:#f92672">.</span>from_numpy(y_val))
-train_loader <span style="color:#f92672">=</span> DataLoader(train_data, shuffle<span style="color:#f92672">=</span>True, batch_size<span style="color:#f92672">=</span>batch_size, drop_last<span style="color:#f92672">=</span>True)
-valid_loader <span style="color:#f92672">=</span> DataLoader(valid_data, shuffle<span style="color:#f92672">=</span>True, batch_size<span style="color:#f92672">=</span>batch_size, drop_last<span style="color:#f92672">=</span>True)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> TensorDataset, DataLoader
+</span></span><span style="display:flex;"><span>train_data <span style="color:#f92672">=</span> TensorDataset(torch<span style="color:#f92672">.</span>from_numpy(x_train), torch<span style="color:#f92672">.</span>from_numpy(y_train))
+</span></span><span style="display:flex;"><span>valid_data <span style="color:#f92672">=</span> TensorDataset(torch<span style="color:#f92672">.</span>from_numpy(x_val), torch<span style="color:#f92672">.</span>from_numpy(y_val))
+</span></span><span style="display:flex;"><span>train_loader <span style="color:#f92672">=</span> DataLoader(train_data, shuffle<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, batch_size<span style="color:#f92672">=</span>batch_size, drop_last<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>valid_loader <span style="color:#f92672">=</span> DataLoader(valid_data, shuffle<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, batch_size<span style="color:#f92672">=</span>batch_size, drop_last<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)</span></span></code></pre></div>
 </div>
 <p>The <code>TensorDataset</code> class will convert our data to torch tensors, slice into batches, and  shuffle. Then with a <code>DataLoader</code> instance we will be able to iterate over the batches.</p>
 <p>
@@ -318,104 +311,104 @@ Classifier model
 <p>
   We will define the two following  hyperparameters to make sure both implementations match.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">embedding_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">128</span>
-hidden_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>embedding_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">128</span>
+</span></span><span style="display:flex;"><span>hidden_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">64</span></span></span></code></pre></div>
 </div>
 <p>
   Let&#39;s start with Keras (credits to the official Keras documentation<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>.)</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Bidirectional, LSTM, Dense, Embedding
-<span style="color:#f92672">from</span> tensorflow.keras.models <span style="color:#f92672">import</span> Sequential
-model <span style="color:#f92672">=</span> Sequential([
-  Embedding(input_dim, <span style="color:#ae81ff">128</span>),
-  Bidirectional(LSTM(hidden_dim, return_sequences<span style="color:#f92672">=</span>True)),
-  Bidirectional(LSTM(hidden_dim)),
-  Dense(<span style="color:#ae81ff">1</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sigmoid&#34;</span>)
-])
-model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>, loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;accuracy&#34;</span>])
-model<span style="color:#f92672">.</span>summary()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Bidirectional, LSTM, Dense, Embedding
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tensorflow.keras.models <span style="color:#f92672">import</span> Sequential
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> Sequential([
+</span></span><span style="display:flex;"><span>  Embedding(input_dim, <span style="color:#ae81ff">128</span>),
+</span></span><span style="display:flex;"><span>  Bidirectional(LSTM(hidden_dim, return_sequences<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)),
+</span></span><span style="display:flex;"><span>  Bidirectional(LSTM(hidden_dim)),
+</span></span><span style="display:flex;"><span>  Dense(<span style="color:#ae81ff">1</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sigmoid&#34;</span>)
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>, loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;accuracy&#34;</span>])
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>summary()</span></span></code></pre></div>
 </div>
 <p>
   Now, let&#39;s implement the same in PyTorch. Hang in there, because there are some technical subtelties to be aware of. I want to show you first what would be a naive implementation</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch
-<span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BiLSTM</span>(nn<span style="color:#f92672">.</span>Module):
-  <span style="color:#66d9ef">def</span> __init__(self, input_dim, embedding_dim, hidden_dim):
-      super()<span style="color:#f92672">.</span>__init__()
-      self<span style="color:#f92672">.</span>input_dim <span style="color:#f92672">=</span> input_dim
-      self<span style="color:#f92672">.</span>embedding_dim <span style="color:#f92672">=</span> embedding_dim
-      self<span style="color:#f92672">.</span>hidden_dim <span style="color:#f92672">=</span> hidden_dim
-      self<span style="color:#f92672">.</span>encoder <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Embedding(input_dim, embedding_dim)
-      self<span style="color:#f92672">.</span>lstm <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LSTM(embedding_dim, hidden_dim,
-                          num_layers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, bidirectional<span style="color:#f92672">=</span>True)
-      self<span style="color:#f92672">.</span>linear <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(hidden_dim <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
-      self<span style="color:#f92672">.</span>activation <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sigmoid()
-
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, src):
-      batch_size <span style="color:#f92672">=</span> src<span style="color:#f92672">.</span>size(<span style="color:#ae81ff">1</span>)
-      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(src)
-      output, _ <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lstm(output)
-       output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>linear(output)
-      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>activation(output)
-      <span style="color:#66d9ef">return</span> output</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BiLSTM</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __init__(self, input_dim, embedding_dim, hidden_dim):
+</span></span><span style="display:flex;"><span>      super()<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>input_dim <span style="color:#f92672">=</span> input_dim
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>embedding_dim <span style="color:#f92672">=</span> embedding_dim
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>hidden_dim <span style="color:#f92672">=</span> hidden_dim
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>encoder <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Embedding(input_dim, embedding_dim)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>lstm <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LSTM(embedding_dim, hidden_dim,
+</span></span><span style="display:flex;"><span>                          num_layers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, bidirectional<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>linear <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(hidden_dim <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>activation <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sigmoid()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, src):
+</span></span><span style="display:flex;"><span>      batch_size <span style="color:#f92672">=</span> src<span style="color:#f92672">.</span>size(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(src)
+</span></span><span style="display:flex;"><span>      output, _ <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lstm(output)
+</span></span><span style="display:flex;"><span>       output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>linear(output)
+</span></span><span style="display:flex;"><span>      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>activation(output)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> output</span></span></code></pre></div>
 </div>
 <p>If you read <a href="syntax">part one</a>, there won&#39;t be any surprise in this code. In PyTorch we simply detail a bit more the computation whereas Keras infer them as we stack the layers.</p>
 <p>
   Now the sad news is this implementation is not exactly the same as the one with Keras. And the main difference is initialization! It requires a fair amount of digging to make both frameworks agree on initializations. For example, you can see that the <code>Embedding</code> layer <a href="https://keras.io/api/layers/core_layers/embedding/">from Keras initialize its weights with a uniform distribution</a>, whereas it is <a href="https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html">a normal distribution which is used by PyTorch</a>. Let&#39;s get straight to the point and use the following method to adapt PyTorch initialization to Keras. </p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_weights</span>(self):
-  self<span style="color:#f92672">.</span>encoder<span style="color:#f92672">.</span>weight<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>uniform_(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.5</span>)
-  ih <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_ih&#39;</span> <span style="color:#f92672">in</span> name)
-  hh <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_hh&#39;</span> <span style="color:#f92672">in</span> name)
-  b <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;bias&#39;</span> <span style="color:#f92672">in</span> name)
-  <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> ih:
-      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>xavier_uniform(t)
-  <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> hh:
-      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>orthogonal(t)
-  <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> b:
-      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>constant(t, <span style="color:#ae81ff">0</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_weights</span>(self):
+</span></span><span style="display:flex;"><span>  self<span style="color:#f92672">.</span>encoder<span style="color:#f92672">.</span>weight<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>uniform_(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>  ih <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_ih&#39;</span> <span style="color:#f92672">in</span> name)
+</span></span><span style="display:flex;"><span>  hh <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_hh&#39;</span> <span style="color:#f92672">in</span> name)
+</span></span><span style="display:flex;"><span>  b <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;bias&#39;</span> <span style="color:#f92672">in</span> name)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> ih:
+</span></span><span style="display:flex;"><span>      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>xavier_uniform(t)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> hh:
+</span></span><span style="display:flex;"><span>      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>orthogonal(t)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> b:
+</span></span><span style="display:flex;"><span>      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>constant(t, <span style="color:#ae81ff">0</span>)</span></span></code></pre></div>
 </div>
 <p>It is a nice snippet taken from <code>torchMoji</code>, <a href="https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983">a PyTorch implementation of DeepMoji by HuggingFace</a>. We now have our updated BiLSTM class in PyTorch</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch
-<span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BiLSTM</span>(nn<span style="color:#f92672">.</span>Module):
-  <span style="color:#66d9ef">def</span> __init__(self, input_dim, embedding_dim, hidden_dim):
-      super()<span style="color:#f92672">.</span>__init__()
-      self<span style="color:#f92672">.</span>input_dim <span style="color:#f92672">=</span> input_dim
-      self<span style="color:#f92672">.</span>embedding_dim <span style="color:#f92672">=</span> embedding_dim
-      self<span style="color:#f92672">.</span>hidden_dim <span style="color:#f92672">=</span> hidden_dim
-      self<span style="color:#f92672">.</span>encoder <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Embedding(input_dim, embedding_dim)
-      self<span style="color:#f92672">.</span>lstm <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LSTM(embedding_dim, hidden_dim,
-                          num_layers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, bidirectional<span style="color:#f92672">=</span>True)
-      self<span style="color:#f92672">.</span>linear <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(hidden_dim <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
-      self<span style="color:#f92672">.</span>activation <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sigmoid()
-
-      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>xavier_uniform_(self<span style="color:#f92672">.</span>linear<span style="color:#f92672">.</span>weight)
-      self<span style="color:#f92672">.</span>linear<span style="color:#f92672">.</span>bias<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>zero_()
-      self<span style="color:#f92672">.</span>init_weights()
-
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_weights</span>(self):
-      ih <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_ih&#39;</span> <span style="color:#f92672">in</span> name)
-      hh <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_hh&#39;</span> <span style="color:#f92672">in</span> name)
-      b <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;bias&#39;</span> <span style="color:#f92672">in</span> name)
-      self<span style="color:#f92672">.</span>encoder<span style="color:#f92672">.</span>weight<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>uniform_(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.5</span>)
-      <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> ih:
-          nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>xavier_uniform(t)
-      <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> hh:
-          nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>orthogonal(t)
-      <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> b:
-          nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>constant(t, <span style="color:#ae81ff">0</span>)
-
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, src):
-      batch_size <span style="color:#f92672">=</span> src<span style="color:#f92672">.</span>size(<span style="color:#ae81ff">1</span>)
-      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(src)
-      output, _ <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lstm(output)
-      output <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>functional<span style="color:#f92672">.</span>tanh(output[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
-      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>linear(output)
-      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>activation(output)
-      <span style="color:#66d9ef">return</span> output, None</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BiLSTM</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __init__(self, input_dim, embedding_dim, hidden_dim):
+</span></span><span style="display:flex;"><span>      super()<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>input_dim <span style="color:#f92672">=</span> input_dim
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>embedding_dim <span style="color:#f92672">=</span> embedding_dim
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>hidden_dim <span style="color:#f92672">=</span> hidden_dim
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>encoder <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Embedding(input_dim, embedding_dim)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>lstm <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LSTM(embedding_dim, hidden_dim,
+</span></span><span style="display:flex;"><span>                          num_layers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, bidirectional<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>linear <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(hidden_dim <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>activation <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sigmoid()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>xavier_uniform_(self<span style="color:#f92672">.</span>linear<span style="color:#f92672">.</span>weight)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>linear<span style="color:#f92672">.</span>bias<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>zero_()
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>init_weights()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_weights</span>(self):
+</span></span><span style="display:flex;"><span>      ih <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_ih&#39;</span> <span style="color:#f92672">in</span> name)
+</span></span><span style="display:flex;"><span>      hh <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;weight_hh&#39;</span> <span style="color:#f92672">in</span> name)
+</span></span><span style="display:flex;"><span>      b <span style="color:#f92672">=</span> (param<span style="color:#f92672">.</span>data <span style="color:#66d9ef">for</span> name, param <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>named_parameters() <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;bias&#39;</span> <span style="color:#f92672">in</span> name)
+</span></span><span style="display:flex;"><span>      self<span style="color:#f92672">.</span>encoder<span style="color:#f92672">.</span>weight<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>uniform_(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> ih:
+</span></span><span style="display:flex;"><span>          nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>xavier_uniform(t)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> hh:
+</span></span><span style="display:flex;"><span>          nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>orthogonal(t)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> b:
+</span></span><span style="display:flex;"><span>          nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>constant(t, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, src):
+</span></span><span style="display:flex;"><span>      batch_size <span style="color:#f92672">=</span> src<span style="color:#f92672">.</span>size(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(src)
+</span></span><span style="display:flex;"><span>      output, _ <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lstm(output)
+</span></span><span style="display:flex;"><span>      output <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>functional<span style="color:#f92672">.</span>tanh(output[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>linear(output)
+</span></span><span style="display:flex;"><span>      output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>activation(output)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> output, <span style="color:#66d9ef">None</span></span></span></code></pre></div>
 </div>
 <p>
   Well… As you can see, even for very basic architectures, transferring code is not an easy job. And even the details are quite important to achieve similar results, but bear with me, because this is the closest I could get to the Keras implementation.</p>
@@ -451,7 +444,7 @@ BiLSTM(
 <p>
       But this does not inform us on the number of parameters. This line gives what we want (<a href="https://discuss.pytorch.org/t/how-do-i-check-the-number-of-parameters-of-a-model/4325/8">thanks to Federico Baldassare</a>)</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sum(p<span style="color:#f92672">.</span>numel() <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> model<span style="color:#f92672">.</span>parameters() <span style="color:#66d9ef">if</span> p<span style="color:#f92672">.</span>requires_grad)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sum(p<span style="color:#f92672">.</span>numel() <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> model<span style="color:#f92672">.</span>parameters() <span style="color:#66d9ef">if</span> p<span style="color:#f92672">.</span>requires_grad)</span></span></code></pre></div>
 </div>
 <p>This gives 2758785 parameters. Oh! The numbers of parameters are different!? After digging this issue, I found out PyTorch has a second bias tensor <a href="https://discuss.pytorch.org/t/why-lstm-has-two-bias-parameters/45025">for compatibility reasons with CuDNN in its implementation of the LSTM</a>. You can effectively check that the count difference is equal to <code class="verbatim">2,758,785 - 2,757,761 = 1024</code>, which is <code class="verbatim">2 * 4 * 2 * 64 = 1024</code>. where we multiply 64, the size of the bias vector of one LSTM cell by 2, because we have a forward and a backward LSTM, 2 again because we use two layers, and 4 which is the number of gates in the definition of the LSTM. Even with a basic architecture like this one, subtle yet important differences arise.</p>
 <p>
@@ -465,60 +458,60 @@ Training
 <div id="outline-text-headline-3" class="outline-text-2">
 <p>We will use the following parameters for training.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>
-epochs <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>
+</span></span><span style="display:flex;"><span>epochs <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span></span></span></code></pre></div>
 </div>
 <p>
 In Keras, this one line will do</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>fit(x<span style="color:#f92672">=</span>x_train, y<span style="color:#f92672">=</span>y_train,
-        batch_size<span style="color:#f92672">=</span>batch_size, epochs<span style="color:#f92672">=</span>epochs,
-        validation_data<span style="color:#f92672">=</span>(x_val, y_val))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model<span style="color:#f92672">.</span>fit(x<span style="color:#f92672">=</span>x_train, y<span style="color:#f92672">=</span>y_train,
+</span></span><span style="display:flex;"><span>        batch_size<span style="color:#f92672">=</span>batch_size, epochs<span style="color:#f92672">=</span>epochs,
+</span></span><span style="display:flex;"><span>        validation_data<span style="color:#f92672">=</span>(x_val, y_val))</span></span></code></pre></div>
 </div>
 <p>
 Now with PyTorch, remember that everything Keras does under the hood must be explicitly written. First is to initialize the logs, loss criterion, model, device and optimizer.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model <span style="color:#f92672">=</span> BiLSTM(input_dim, embedding_dim, hidden_dim)
-device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
-criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BCELoss()<span style="color:#f92672">.</span>to(device)
-optimizer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(model<span style="color:#f92672">.</span>parameters())
-model<span style="color:#f92672">.</span>to(device)
-batch_history <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#34;loss&#34;</span>: [],
-    <span style="color:#e6db74">&#34;accuracy&#34;</span>: []
-}
-epoch_history <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#34;loss&#34;</span>: [],
-    <span style="color:#e6db74">&#34;accuracy&#34;</span>: [],
-    <span style="color:#e6db74">&#34;val_loss&#34;</span>: [],
-    <span style="color:#e6db74">&#34;val_accuracy&#34;</span>: [],
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model <span style="color:#f92672">=</span> BiLSTM(input_dim, embedding_dim, hidden_dim)
+</span></span><span style="display:flex;"><span>device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+</span></span><span style="display:flex;"><span>criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BCELoss()<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>optimizer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(model<span style="color:#f92672">.</span>parameters())
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>batch_history <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;loss&#34;</span>: [],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;accuracy&#34;</span>: []
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>epoch_history <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;loss&#34;</span>: [],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;accuracy&#34;</span>: [],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;val_loss&#34;</span>: [],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;val_accuracy&#34;</span>: [],
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 </div>
 <p>
 What follows  is the training loop. I use the <code>tqdm</code> library <a href="https://towardsdatascience.com/training-models-with-a-progress-a-bar-2b664de3e13e">which I recommend for printing a nice progress bar in the same fashion as Keras</a>.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm, trange
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> trange(epochs, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;epoch&#34;</span>, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Train&#34;</span>):
-    model<span style="color:#f92672">.</span>train()
-    <span style="color:#66d9ef">with</span> tqdm(train_loader, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Train&#34;</span>) <span style="color:#66d9ef">as</span> tbatch:
-        <span style="color:#66d9ef">for</span> i, (samples, targets) <span style="color:#f92672">in</span> enumerate(tbatch):
-            model<span style="color:#f92672">.</span>train()
-            samples <span style="color:#f92672">=</span> samples<span style="color:#f92672">.</span>to(device)<span style="color:#f92672">.</span>long()
-            targets <span style="color:#f92672">=</span> targets<span style="color:#f92672">.</span>to(device)
-            model<span style="color:#f92672">.</span>zero_grad()
-            predictions, _ <span style="color:#f92672">=</span> model(samples<span style="color:#f92672">.</span>transpose(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>))
-            loss <span style="color:#f92672">=</span> criterion(predictions<span style="color:#f92672">.</span>squeeze(), targets<span style="color:#f92672">.</span>float())
-            acc <span style="color:#f92672">=</span> (predictions<span style="color:#f92672">.</span>round()<span style="color:#f92672">.</span>squeeze() <span style="color:#f92672">==</span> targets)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
-            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">/</span> batch_size
-            loss<span style="color:#f92672">.</span>backward()
-            torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>clip_grad_norm_(model<span style="color:#f92672">.</span>parameters(), <span style="color:#ae81ff">5</span>)
-            optimizer<span style="color:#f92672">.</span>step()
-
-            batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]<span style="color:#f92672">.</span>append(loss<span style="color:#f92672">.</span>item())
-            batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]<span style="color:#f92672">.</span>append(acc)
-            
-            tbatch<span style="color:#f92672">.</span>set_postfix(loss<span style="color:#f92672">=</span>sum(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]),
-                               acc<span style="color:#f92672">=</span>sum(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]))</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm, trange
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> trange(epochs, unit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;epoch&#34;</span>, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Train&#34;</span>):
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">.</span>train()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> tqdm(train_loader, desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Train&#34;</span>) <span style="color:#66d9ef">as</span> tbatch:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, (samples, targets) <span style="color:#f92672">in</span> enumerate(tbatch):
+</span></span><span style="display:flex;"><span>            model<span style="color:#f92672">.</span>train()
+</span></span><span style="display:flex;"><span>            samples <span style="color:#f92672">=</span> samples<span style="color:#f92672">.</span>to(device)<span style="color:#f92672">.</span>long()
+</span></span><span style="display:flex;"><span>            targets <span style="color:#f92672">=</span> targets<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>            model<span style="color:#f92672">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>            predictions, _ <span style="color:#f92672">=</span> model(samples<span style="color:#f92672">.</span>transpose(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>            loss <span style="color:#f92672">=</span> criterion(predictions<span style="color:#f92672">.</span>squeeze(), targets<span style="color:#f92672">.</span>float())
+</span></span><span style="display:flex;"><span>            acc <span style="color:#f92672">=</span> (predictions<span style="color:#f92672">.</span>round()<span style="color:#f92672">.</span>squeeze() <span style="color:#f92672">==</span> targets)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
+</span></span><span style="display:flex;"><span>            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">/</span> batch_size
+</span></span><span style="display:flex;"><span>            loss<span style="color:#f92672">.</span>backward()
+</span></span><span style="display:flex;"><span>            torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>clip_grad_norm_(model<span style="color:#f92672">.</span>parameters(), <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>            optimizer<span style="color:#f92672">.</span>step()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]<span style="color:#f92672">.</span>append(loss<span style="color:#f92672">.</span>item())
+</span></span><span style="display:flex;"><span>            batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]<span style="color:#f92672">.</span>append(acc)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            tbatch<span style="color:#f92672">.</span>set_postfix(loss<span style="color:#f92672">=</span>sum(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]),
+</span></span><span style="display:flex;"><span>                               acc<span style="color:#f92672">=</span>sum(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]))</span></span></code></pre></div>
 </div>
 <p>
 Notice the use of <code>model.train()</code> and <code>model.eval()</code> methods which set <code>model.training</code> to either <code>True</code> or <code>False</code>. It decides whether or not to keep the gradient during the forward pass, which will be used for optimizing the network in the backward pass.</p>
@@ -529,14 +522,14 @@ A final remark concerns the ordering of dimensions. As I explained in <a href="s
 <p>
 Now, likewise Keras, when we reach the end of an epoch, we want to evaluate the model.</p>
 <div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">epoch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]<span style="color:#f92672">.</span>append(sum(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]))
-epoch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]<span style="color:#f92672">.</span>append(sum(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]))
-model<span style="color:#f92672">.</span>eval()
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Validation...&#34;</span>)
-val_loss, val_accuracy <span style="color:#f92672">=</span> validate(model, valid_loader)
-epoch_history[<span style="color:#e6db74">&#34;val_loss&#34;</span>]<span style="color:#f92672">.</span>append(val_loss)
-epoch_history[<span style="color:#e6db74">&#34;val_accuracy&#34;</span>]<span style="color:#f92672">.</span>append(val_accuracy)
-<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{epoch_history=}&#34;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>epoch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]<span style="color:#f92672">.</span>append(sum(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;loss&#34;</span>]))
+</span></span><span style="display:flex;"><span>epoch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]<span style="color:#f92672">.</span>append(sum(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]) <span style="color:#f92672">/</span> len(batch_history[<span style="color:#e6db74">&#34;accuracy&#34;</span>]))
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>eval()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Validation...&#34;</span>)
+</span></span><span style="display:flex;"><span>val_loss, val_accuracy <span style="color:#f92672">=</span> validate(model, valid_loader)
+</span></span><span style="display:flex;"><span>epoch_history[<span style="color:#e6db74">&#34;val_loss&#34;</span>]<span style="color:#f92672">.</span>append(val_loss)
+</span></span><span style="display:flex;"><span>epoch_history[<span style="color:#e6db74">&#34;val_accuracy&#34;</span>]<span style="color:#f92672">.</span>append(val_accuracy)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>epoch_history<span style="color:#e6db74">=}</span><span style="color:#e6db74">&#34;</span>)</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -700,7 +693,7 @@ Footnotes
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -948,7 +941,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.83.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -959,7 +952,7 @@ Footnotes
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.87ac6c6c289e975bd6bceeaae259519b76127189022e0c32bc07bd359c0d083a.js" integrity="sha256-h6xsbCiel1vWvO6q4llRm3YScYkCLgwyvAe9NZwNCDo="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
