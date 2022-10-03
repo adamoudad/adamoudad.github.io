@@ -14,8 +14,8 @@
       
       <guid>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</guid>
       <description>Emacs has this very powerful package Elpy which is usually recommended if you want to code in Python.
-Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
-In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
+ Docker can containerize your Python interpreter so that you can seemlessly run your applications on any device.
+ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-shell-send-region-to-buffer and is very handy for running on the fly python commands for testing your code. It actually use the content of the variable python-shell-interpreter for the python interpreter.</description>
     </item>
     
     <item>
@@ -25,9 +25,9 @@ In Emacs with elpy installed, C-c C-c binding (C is for Control key) runs elpy-s
       
       <guid>https://adamoudad.github.io/posts/productivity/</guid>
       <description>The idea behind most productivity tips is that you lose if you touch your mouse, as it is such a time consuming move and unbearable physical effort.
-But you also lose points when doing big jumps on your keyboard, for example when you try reaching for the arrow keys.
-So what should we do ? Here are some tips.
-Tridactyl on Firefox Tridactyl is an extension available for Firefox that enable a keyboard-based navigation.</description>
+ But you also lose points when doing big jumps on your keyboard, for example when you try reaching for the arrow keys.
+ So what should we do ? Here are some tips.
+Tridactyl on Firefox  Tridactyl is an extension available for Firefox that enable a keyboard-based navigation.</description>
     </item>
     
   </channel>

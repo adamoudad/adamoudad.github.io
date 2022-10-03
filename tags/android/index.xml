@@ -14,8 +14,8 @@
       
       <guid>https://adamoudad.github.io/posts/lock_pattern/</guid>
       <description>If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-Android lockscreen.
-This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from</description>
     </item>
     
   </channel>

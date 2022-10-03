@@ -13,8 +13,8 @@
       <pubDate>Mon, 02 Dec 2019 03:49:04 +0900</pubDate>
       
       <guid>https://adamoudad.github.io/posts/stream_tweets_tweepy/</guid>
-      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python. Twitter API overview Twitter offers several API, or methods you can use to retrieve tweets.
-Streaming API Search API What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &amp;#34;statuses/sample&amp;#34; endpoint (documentation).</description>
+      <description>In this tutorial, you will learn how to stream tweets with Tweepy library in Python.  Twitter API overview  Twitter offers several API, or methods you can use to retrieve tweets.
+ Streaming API Search API  What we are interested in here is the streaming API. We will use it to stream statuses (this is the name given to tweets in Twitter’s API documentation). We want to connect the &amp;#34;statuses/sample&amp;#34; endpoint (documentation).</description>
     </item>
     
   </channel>

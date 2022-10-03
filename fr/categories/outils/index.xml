@@ -14,8 +14,8 @@
       
       <guid>https://adamoudad.github.io/fr/posts/anki-latex/</guid>
       <description>Anki est un logiciel de d&amp;#39;apprentissage par répétitions espacées1. Il supporte la saisie de formules en utilisant le langage \(\LaTeX\). Nous allons voir ici comment faire.
-Vous pouvez commencer par créer un nouveau paquet de cartes dans Anki qu&amp;#39;on nommera par exemple Trigonométrie.
-Les balises de formule Pour commencer à écrire une formule, il faut d&amp;#39;abord spécifier le début et la fin de la formule. Selon les logiciels ou les interpréteurs, la syntaxe varie.</description>
+ Vous pouvez commencer par créer un nouveau paquet de cartes dans Anki qu&amp;#39;on nommera par exemple Trigonométrie.
+Les balises de formule  Pour commencer à écrire une formule, il faut d&amp;#39;abord spécifier le début et la fin de la formule. Selon les logiciels ou les interpréteurs, la syntaxe varie.</description>
     </item>
     
   </channel>

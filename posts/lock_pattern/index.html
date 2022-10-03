@@ -7,16 +7,16 @@
 <meta name="monetization" content="$ilp.uphold.com/iN8Xkq2iHNHB">
 
 
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="How many patterns are there to lock your android smartphone?">
+<meta name="generator" content="Hugo 0.99.1" /><meta itemprop="name" content="How many patterns are there to lock your android smartphone?">
 <meta itemprop="description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-Android lockscreen.
-This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"><meta itemprop="datePublished" content="2021-01-16T00:00:00+00:00" />
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"><meta itemprop="datePublished" content="2021-01-16T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-16T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1062">
 <meta itemprop="keywords" content="android,security,python," /><meta property="og:title" content="How many patterns are there to lock your android smartphone?" />
 <meta property="og:description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-Android lockscreen.
-This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from" />
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://adamoudad.github.io/posts/lock_pattern/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-16T00:00:00+00:00" />
@@ -25,8 +25,8 @@ This lock mechanism is more intuitive than using a sequence of numbers (such as 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How many patterns are there to lock your android smartphone?"/>
 <meta name="twitter:description" content="If you own an Android smartphone, you are familiar with that pattern you chose to lock your phone with. Every time, you pick your phone and mechanically draw these lines on your screen, connecting the dots to form the unlock pattern.
-Android lockscreen.
-This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"/>
+  Android lockscreen.
+   This lock mechanism is more intuitive than using a sequence of numbers (such as PIN), but has its drawbacks, as research papers show how you can efficiently guess the unlock pattern from"/>
 <meta name="twitter:site" content="@OudadAdam"/>
 <link rel="stylesheet" href="/css/bundle.min.262e62e9c1615dd1ac95d339cfc4ca2167aee72b71d853838920a22e7088b06b.css" integrity="sha256-Ji5i6cFhXdGsldM5z8TKIWeu5ytx2FODiSCiLnCIsGs=">
         <link rel="stylesheet" href="/css/add-on.css">
@@ -263,10 +263,10 @@ Rules for a valid pattern
 <p>
     Rules 1. and 2. imply that there should be at least one direction change in the pattern, so you cannot have obvious patterns like a straight line. However rule 3. is the most interesting because… sorry what? Oh, don&#39;t worry! It is a simple rule too, here is a graphical explanation.
     <figure><img src="screenlock_pattern_dots_rule3.png"
-             alt="Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point."/><figcaption>
-                <p>Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point.</p>
-            </figcaption>
-    </figure>
+         alt="Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point."/><figcaption>
+            <p>Examples of valid and invalid patterns. You cannot cross without connecting a prececedently unconnected point.</p>
+        </figcaption>
+</figure>
 </p>
 <p>
     The rule tells you have to always include points you cross on your path, unless they have already been included before. This is what I mean by &#34;intermediate&#34; point.
@@ -297,10 +297,10 @@ Programmatical resolution
 <div id="outline-text-headline-3" class="outline-text-4">
 <p>In our code, we label each point using a digit.
     <figure><img src="screenlock_pattern.png"
-             alt="Labelled points"/><figcaption>
-                <p>Labelled points</p>
-            </figcaption>
-    </figure>
+         alt="Labelled points"/><figcaption>
+            <p>Labelled points</p>
+        </figcaption>
+</figure>
 
     From these labels, we need to construct a dictionary of connections which cross an intermediate point. This will be useful to check rule 3..</p>
 <div class="src src-python">
@@ -389,10 +389,10 @@ Appendix on the impact of Rule 3.
 </div>
 <p>
    <figure><img src="screenlock_patterns-permutations_points.png"
-            alt="Number of patterns and permutations by the number of connected points"/><figcaption>
-               <p>Number of patterns and permutations by the number of connected points</p>
-           </figcaption>
-   </figure>
+         alt="Number of patterns and permutations by the number of connected points"/><figcaption>
+            <p>Number of patterns and permutations by the number of connected points</p>
+        </figcaption>
+</figure>
 </p>
 <p>
    This last graph shows the number of patterns connecting the same given number of dots. So if you sum them all, you should obtain the number of total patterns that we computed. Remember to discard patterns with less than 3 dots and you get the number 389,112 for the blue line. We can also notice that the number of 8-dot patterns is the same as 9-dot patterns how is that so? Well, since there are only 9 dots available, when we have joined 8 dots together, there is only one remaining to form a 9-dot pattern, so in practical, 8-dot patterns are equivalent to 9-dot patterns.</p>
@@ -735,7 +735,7 @@ Footnotes
         (Machine) Learning log.
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.101.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.99.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -746,7 +746,7 @@ Footnotes
 
 
       <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.d0b3e0b5f2cfc7467ead7d316ecb9dea4d29ef3c23ad300df9d7017ff98b2331.js" integrity="sha256-0LPgtfLPx0Z&#43;rX0xbsud6k0p7zwjrTAN&#43;dcBf/mLIzE="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

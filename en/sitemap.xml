@@ -119,6 +119,16 @@
   </url><url>
     <loc>https://adamoudad.github.io/categories/linux/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://adamoudad.github.io/fr/categories/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://adamoudad.github.io/categories/linux/"
+                />
   </url><url>
     <loc>https://adamoudad.github.io/posts/random-aphorism-notifications/</loc>
     <lastmod>2020-06-18T00:00:00+00:00</lastmod>
