@@ -6,7 +6,27 @@
     <description>Recent content in Posts on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>These Python keywords will simplify your code</title>
+      <link>https://adamoudad.github.io/posts/python-statements/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/python-statements/</guid>
+      <description>Python embeds very nifty keywords and writing shorthands to help us in the writing of code that is short and easy to read. In the following, I will review some which are often overlooked.
+Control the flow of execution, and filter data on the fly  You may have to work with raw data, with unpredictable structure. Loading or processing such data will likely raise many errors. Here is a way to ignore some minor inconsistencies and at least run your script for, say, a proof of concept.</description>
+    </item>
+    
+    <item>
+      <title>Keynote presentation on Linux</title>
+      <link>https://adamoudad.github.io/posts/pdfpc/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/pdfpc/</guid>
+      <description>A great presentation software is a precious tool, even so when working remotely. If you are on MacOS, you will likely want to use Keynote, which has great features such as displaying a presenter view on one screen with a timer while displaying the presentation on another screen. On Linux, however, most PDF readers, like evince if you are using GNOME, have quite limited features for presenting.
+ Recently I found about pdfpc, a great tool to do presentations with a PDF document, on Linux.</description>
+    </item>
+    
     <item>
       <title>Swap Control and Caps keys to relieve stress on the pinky</title>
       <link>https://adamoudad.github.io/posts/swap_control_caps/</link>
