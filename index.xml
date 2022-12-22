@@ -6,7 +6,20 @@
     <description>Recent content on (Machine) Learning log.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adamoudad.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run a command on a remote server with Emacs.</title>
+      <link>https://adamoudad.github.io/posts/emacs/remote-command-ssh/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adamoudad.github.io/posts/emacs/remote-command-ssh/</guid>
+      <description>Being able to automate things with Emacs can be painfully hard at times, and ridiculously easy, once we get our hands on the right tool.
+ Let&amp;#39;s illustrate this by solving the following problem with Emacs.
+ How to run a command on a remote server?
+  There are many commands, in Emacs, for running a subprocess or an inferior shell. For example
+ process-file start-file-process start-process shell-command shell …  In a following article, I plan to cover all of these commands to show in what they differ.</description>
+    </item>
+    
     <item>
       <title>These Python keywords will simplify your code</title>
       <link>https://adamoudad.github.io/posts/python-statements/</link>

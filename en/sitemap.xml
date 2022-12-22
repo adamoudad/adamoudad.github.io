@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adamoudad.github.io/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://adamoudad.github.io/categories/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -28,8 +28,14 @@
                 href="https://adamoudad.github.io/categories/"
                 />
   </url><url>
+    <loc>https://adamoudad.github.io/tags/emacs/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adamoudad.github.io/categories/emacs/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://adamoudad.github.io/posts/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -41,14 +47,17 @@
                 href="https://adamoudad.github.io/posts/"
                 />
   </url><url>
-    <loc>https://adamoudad.github.io/tags/python/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+    <loc>https://adamoudad.github.io/tags/productivity/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adamoudad.github.io/categories/python/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+    <loc>https://adamoudad.github.io/tags/programming/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adamoudad.github.io/posts/emacs/remote-command-ssh/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/tags/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -59,6 +68,12 @@
                 hreflang="en"
                 href="https://adamoudad.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://adamoudad.github.io/tags/python/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adamoudad.github.io/categories/python/</loc>
+    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/python-statements/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>
@@ -78,9 +93,6 @@
                 hreflang="en"
                 href="https://adamoudad.github.io/categories/linux/"
                 />
-  </url><url>
-    <loc>https://adamoudad.github.io/tags/productivity/</loc>
-    <lastmod>2022-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/categories/tools/</loc>
     <lastmod>2022-10-15T00:00:00+00:00</lastmod>
@@ -158,15 +170,6 @@
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/tags/docker/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adamoudad.github.io/tags/emacs/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adamoudad.github.io/categories/emacs/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adamoudad.github.io/tags/programming/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adamoudad.github.io/posts/emacs/docker-python-shell-emacs/</loc>
