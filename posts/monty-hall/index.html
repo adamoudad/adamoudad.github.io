@@ -12,7 +12,7 @@
  But there is no superpower needed, it is just statistics. Moreover, with computing, we can simulate and understand better games involving randomness.
  In this article, we will see if we can find some mathematician&#39;s hacks to a popular TV game requiring psychology and some calculations."><meta itemprop="datePublished" content="2024-02-24T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-02-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1590">
+<meta itemprop="wordCount" content="1561">
 <meta itemprop="keywords" content="statistics,python,psychology," /><meta property="og:title" content="The Monty Hall problem... Should I stay or should I change?" />
 <meta property="og:description" content="If you set up a lottery game, and your game happens to have some flaws, it is a bad idea to let mathematicians participate. They would just ruin the game1!
  But there is no superpower needed, it is just statistics. Moreover, with computing, we can simulate and understand better games involving randomness.
@@ -293,7 +293,7 @@ From this quick simulation, it turns out the change strategy gives two times mor
 <p>
 If we take a closer look at the win rates, we see that the stick strategy roughly wins a third of the trials, while the change strategy roughly takes the other two thirds. It is trivial to see that the probability of winning on our first choice, without further prior knowledge than &#34;only one door leads to the prize&#34; bestow a win rate of 1/3 upon us.</p>
 <p>
-But here is the mind twist, if we were to have been able to chose the two other doors at once, we would have won 2/3 of the time, because it would have been equivalent to winning the rest of the time when we would have lost by sticking to our first choice. Due to the game&#39;s rules, it is not possible to chose such a set of two doors. But thanks to the revelation of the losing door after our first choice, choosing the other one equates to the same!</p>
+But here is the mind twist, if we were to have been able to choose the two other doors at once, we would have won 2/3 of the time, because it would have been equivalent to winning the rest of the time when we would have lost by sticking to our first choice. Due to the game&#39;s rules, it is not possible to chose such a set of two doors. But thanks to the revelation of the losing door after our first choice, choosing the other one equates to the same!</p>
 </div>
 </div>
 <div id="outline-container-headline-3" class="outline-2">
@@ -311,7 +311,7 @@ I have seen several contents available out there discussing the case of four doo
 <li>The participant is given the choice to stick to his first choice, or to switch to the other remaining door.</li>
 </ol>
 <p>
-Switching, equates to choosing the set of three other doors we did not chose on our first choice, and taking advantage of the revelation of the two doors, this time. Due to this greater advantage, we get 3/4 win rate if we change to the other door, and 1/4 win rate if we stick to our first choice.</p>
+Switching, equates to choosing the set of three other doors we did not choose on our first choice, and taking advantage of the revelation of the two doors, this time. Due to this greater advantage, we get 3/4 win rate if we change to the other door, and 1/4 win rate if we stick to our first choice.</p>
 <p>
 In my sense, this ruleset is not so interesting, as the optimal strategy remains identical and easy to guess given our knowledge from the game with three doors. Fortunately, another way to view the Monty Hall problem with four doors exist.</p>
 </div>
@@ -334,19 +334,23 @@ In this set of rules, the strategy of sticking to the first choice is 1/4, becau
 Let&#39;s define the following.</p>
 <dl>
 <dt>
+\(\mathcal{D}\)
+</dt>
+<dd>the set of doors at the beginning of the game.</dd>
+<dt>
 \(c_1\)
 </dt>
-<dd>door chosen randomly in \(\mathcal{S}\).</dd>
+<dd>the first door chosen randomly in \(\mathcal{D}\).</dd>
 <dt>
 \(t\)
 </dt>
-<dd>door with the prize.</dd>
+<dd>the door with the prize.</dd>
 <dt>
 \(r\)
 </dt>
-<dd>door revealed after \(c_{1}\), in \(\mathcal{S} \setminus \{c_{1}_{}, t\}\). The revealed door is neither the door selected by the participant, nor the door with the prize.</dd>
+<dd>the door revealed after \(c_{1}\), in \( \mathcal{D} \setminus \{c_{1}, t\} \). The revealed door is neither the door selected by the participant, nor the door with the prize.</dd>
 </dl>
-<p>With the Bayes theoreom, we can calculate the win rate of the change strategy.
+<p>With the Bayes theorem, we can calculate the win rate of the change strategy.
 \[
 P(c_{2} = t) = P(c_{1} \neq t) \cdot P(c_{2} = t | c_{1} \neq t) + P(c_{1} = t) \cdot P(c_{2} = t | c_{1} = t)
 \]
@@ -359,20 +363,7 @@ We can thus calculate our odds for winning with the change strategy, in the case
 P(c_{2} = t) = \frac{3}{4} \cdot \frac{1}{2} + \frac{1}{4} \cdot 0 = \frac{3}{8}
 \]</p>
 <p>
-As expected, the edge provided by the change strategy here is thinner, but \(\frac{3}{8} \gt \frac{1}{4}\) means that would we still win more often with the change strategy!</p>
-<dl>
-<dt>
-\(c_{2}\)
-</dt>
-<dd>door chosen for the change strategy after the revelation of \(r\), in \(\mathcal{S} \setminus \{c_{1}, r\}\). The change strategy chose another door which is neither the first chosen door \(c_{1}\).</dd>
-</dl>
-<p>\(\mathcal{S}\) the set of doors at the beginning of the game.</p>
-<dl>
-<dt>
-\(n\)
-</dt>
-<dd>number of doors</dd>
-</dl>
+As expected, the edge provided by the change strategy here is thinner, but \(\frac{3}{8} &gt; \frac{1}{4}\) means that would we still win more often with the change strategy!</p>
 </div>
 </div>
 <div id="outline-container-headline-5" class="outline-2">
@@ -425,7 +416,7 @@ Conclusion
 </h2>
 <div id="outline-text-headline-6" class="outline-text-2">
 <p>
-As you reach the conclusion of this article, you may want to know the win rate in case for any number of doors, when just one door is revealed. Let&#39;s call \(n\) the number of door. The first choice strategy will give a win rate of \(\frac{1}{n}\), while the change strategy will give us a win rate of \(\frac{n-1}{n(n-2)}\). Do you agree?</p>
+As you reach the conclusion of this article, you may want to know the win rate in case for any number of doors, when just one door is revealed. Let&#39;s call \(n\) the number of doors. The first choice strategy will give a win rate of \(\frac{1}{n}\), while the change strategy will give us a win rate of \(\frac{n-1}{n(n-2)}\). Do you agree?</p>
 <p>
 Because \(\frac{n-1}{n-2} \gt 1\), we still verify the optimality of the change strategy.</p>
 <p>
