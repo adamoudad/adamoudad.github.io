@@ -12,7 +12,7 @@
  Here comes rsync. By reading this article, you will be able to synchronize and backup your data with rsync within one minute!
 What is rsync  rsync stands for remote syncrhonization. It is a tool written in C language which lets you synchronize your data seemlessly through a large number of protocols."><meta itemprop="datePublished" content="2024-06-30T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-06-30T00:00:00+00:00" />
-<meta itemprop="wordCount" content="468">
+<meta itemprop="wordCount" content="721">
 <meta itemprop="keywords" content="rsync," /><meta property="og:title" content="The easy way to synchronize your data." />
 <meta property="og:description" content="Backing up data is a wise choice, but it can become a hassle for large amount of data.
  Here comes rsync. By reading this article, you will be able to synchronize and backup your data with rsync within one minute!
@@ -90,9 +90,9 @@ What is rsync  rsync stands for remote syncrhonization. It is a tool written in 
   
     
       
-        <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
-      
     
+      
+        <a href="/fr" lang="fr" class="no-lang link">Français (fr)</a>
       
     
   
@@ -200,7 +200,7 @@ What is rsync  rsync stands for remote syncrhonization. It is a tool written in 
     </time>
     <span class="author"></span>
     
-      <p>3 minutes read</p>
+      <p>4 minutes read</p>
     
   </div>
 </header>
@@ -248,7 +248,7 @@ How to synchronize your data with Rsync
 </h2>
 <div id="outline-text-headline-2" class="outline-text-2">
 <p>
-This is quite simple, all you need to know are three options, and one fine detail.</p>
+This is quite simple, all you need to know are three options, and a few details to keep in mind.</p>
 <dl>
 <dt>
 a
@@ -287,7 +287,7 @@ The result of the above command will be the <code class="verbatim">/path/to/dir2
 Heads up on folder paths!
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
-<p>The fine detail to note is that <code>rsync</code> care about whether you write a folder as <code class="verbatim">dir2</code> or with a trailing slash, as <code class="verbatim">dir2/</code>. If we change the previous command, by removing the slash,</p>
+<p>The first detail I would like to note here, is that <code>rsync</code> care about whether you write a folder as <code class="verbatim">dir2</code> or with a trailing slash, as <code class="verbatim">dir2/</code>. If we change the previous command, by removing the slash,</p>
 <div class="src src-bash">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  rsync -avP ./dir1/ /path/to/dir2</span></span></code></pre></div>
 </div>
@@ -299,9 +299,45 @@ Be careful if you have some files already in <code class="verbatim">/path/to/dir
 </div>
 <div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
-Conclusion
+Careful when modifying both source and destination folders
 </h2>
 <div id="outline-text-headline-4" class="outline-text-2">
+<p>The second detail to take away arises when one wants to synchronize two different versions of the same file.</p>
+<p>
+Say <code class="verbatim">dir1/hello.txt</code> and <code class="verbatim">dir2/dir1/hello.txt</code> are two files with different contents.</p>
+<p>
+If you use the command I showed above, <code>rsync -avP ./dir1 /path/to/dir2</code>, <code class="verbatim">dir1/hello.txt</code> will overwrite the destination file <code class="verbatim">/path/to/dir2/dir1/hello.txt</code>.</p>
+<p>
+There are two ways to keep the destination file, if it differs from the source file.</p>
+<ol>
+<li>If you want to keep the destination file only when its modification date is more recent than the source file, use the <code>--update</code> option.</li>
+<li>If you want to keep the destination file anyway, use <code>--ignore-existing</code> option.</li>
+</ol>
+<p>
+Now that you&#39;ve arrived to this point, I&#39;ll give you an exercise.</p>
+<p>
+Say the source file <code class="verbatim">./dir1/hello.txt</code> was last modified 4 days ago, while the destination file <code class="verbatim">/path/to/dir2/dir1/hello.txt</code> was last modified yesterday. What is the result of each of the three following commands?</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  rsync -avP ./dir1 /path/to/dir2	<span style="color:#75715e"># 1.</span>
+</span></span><span style="display:flex;"><span>  rsync -avP --update ./dir1 /path/to/dir2 <span style="color:#75715e"># 2.</span>
+</span></span><span style="display:flex;"><span>  rsync -avP --ignore-existing ./dir1 /path/to/dir2 <span style="color:#75715e"># 3.</span></span></span></code></pre></div>
+</div>
+<p>
+I&#39;ll give you a minute…</p>
+<p>
+Alright, the solution.</p>
+<ol>
+<li>Source file overwrites destination. Indeed, the basic command just updates the destination with the source.</li>
+<li>Destination remains unchanged. Due to the <code>--update</code> option, the command will check the modification times. The destination time has the most recent time, and it will be preserved.</li>
+<li>Destination remains unchanged. The command will simply ignore the source file, since it is already existing in the destination, regardless its modification time.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+Conclusion
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
 <p>As a rule of thumb, I suggest you stick to the practice of omitting the trailing slash at the end of the path to the source folder <code class="verbatim">dir1</code>.</p>
 <div class="src src-bash">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  rsync -avP ./dir1 /path/to/dir2</span></span></code></pre></div>
